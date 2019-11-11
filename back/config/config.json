@@ -1,0 +1,14 @@
+[
+  {
+    "development": {
+      "user"          : "theater",
+      "password"      : "1234",
+      "connectString" : "localhost/XE"
+    },
+    "test": {
+      "user"          : "BS",
+      "password"      : "1234",
+      "connectString" : "localhost/XE"
+    }
+  }
+]
