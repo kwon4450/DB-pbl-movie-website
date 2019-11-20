@@ -12,8 +12,8 @@ function App() {
         </p>
         <a
           className="App-link"
-          href="http://localhost:8008"
-          target="_self"
+          href="https://reactjs.org"
+          target="_blank"
           rel="noopener noreferrer"
         >
           Learn React
