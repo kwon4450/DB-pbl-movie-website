@@ -29,7 +29,7 @@ app.use(sessionMiddleware);
 app.use(morgan('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '../front/build')));
 app.use(passport.initialize());
 app.use(passport.session());
 
