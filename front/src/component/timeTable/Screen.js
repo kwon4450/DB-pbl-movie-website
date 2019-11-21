@@ -12,7 +12,7 @@ class Screen extends Component{
         </div>
         <div className='times'>
           {this.props.timeTable.map((info, index) => {
-            return(<ScreenTimeTable {...info} key={{index}}></ScreenTimeTable>);
+            return(<ScreenTimeTable {...info} key={index}></ScreenTimeTable>);
           })}
         </div>
       </div>
