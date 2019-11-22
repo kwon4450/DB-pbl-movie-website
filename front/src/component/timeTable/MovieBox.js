@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import Movie from './Movie';
-import "style/MovieBox.css"
+import "./style/MovieBox.css"
 
 class MovieBox extends Component{
   render() {

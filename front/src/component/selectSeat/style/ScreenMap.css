@@ -1,0 +1,25 @@
+.SeatSectionRow{
+  display: flex;
+  margin: 10px;
+}
+
+.SeatRow{
+  display: flex;
+  margin: 10px;
+}
+
+.Seat{
+  border: 1px solid black;
+  width: 30px;
+  height: 30px;
+
+  text-align: center;
+}
+
+.Seat.full{
+  background-color: grey;
+}
+
+.Seat.deactive{
+  visibility: hidden;
+}

@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 
 import MovieBox from './MovieBox';
+import './style/TimeTable.css';
+import './style/TabMenu.css';
 
 class TimeTable extends Component{
   timeTableData = [
@@ -263,8 +265,10 @@ class TimeTable extends Component{
             <div className={'Item'+(this.state.currentTabIndex!==index?' deactive':'')}
             key={index}
             onClick={()=>{this.selectTab(index)}}>
-              <span>{item.month}월</span>
-              <span>{item.date}일</span>
+              <div>
+                <span>{item.month}월</span>
+                <span>{item.date}일</span>
+              </div>
               <span>{item.day}</span>
             </div>
           );
