@@ -5,12 +5,15 @@ table.SeatMap {
   margin-bottom: 10px;
 }
 
-.Seat{
-  border: 1px solid black;
+.Seat, .rowName{
   width: 30px;
   height: 30px;
-
+  
   text-align: center;
+}
+
+.Seat{
+  border: 1px solid black;
 }
 
 .Seat.full{
