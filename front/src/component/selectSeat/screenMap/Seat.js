@@ -5,10 +5,15 @@ class Seat extends Component{
     isDummy: false
   }
   render() {
-    return(
-      <div className={'Seat'+(this.props.seatInfo.full?' full':'')+(this.props.isDummy?' deactive':'')}>
+    if(this.props.isDummy) {
+      return (
+        <td className='Seat dummy'></td>
+      );
+    }
+    return (
+      <td className={'Seat'+(this.props.seatInfo.full?' full':'')}>
         {this.props.seatInfo.col}
-      </div>
+      </td>
     );
   }
 }

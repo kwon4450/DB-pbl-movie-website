@@ -8,23 +8,26 @@ class ScreenMap extends Component{
   renderSeatSection = () => {
     let jsx = [];
     let tmp = [];
-    let bSection = null;
+    let bSection = {
+      row_i: sampleData[0].row_i,
+      col_i: 0
+    };
     for(const section of sampleData) {
-      if(bSection != null && bSection.row_i < section.row_i) {
-        jsx.push(<div className='SeatSectionRow' key={bSection.row_i}>{tmp}</div>);
+      if(bSection.row_i < section.row_i) {
+        jsx.push(<tr className='SeatSectionRow' key={bSection.row_i}>{tmp}</tr>);
         tmp = [];
       }
-      // if(section.col_i-bSection.col_i > 1) {
-      //   for(let i=bSection.col_i+1; i<section.col_i; i++) {
-      //     tmp.push(<SeatSection isDummy={true} key={i}></SeatSection>)
-      //   }
-      // }
+      if(section.col_i-bSection.col_i > 1) {
+        for(let i=bSection.col_i+1; i<section.col_i; i++) {
+          tmp.push(<SeatSection isDummy={true} key={i}></SeatSection>)
+        }
+      }
 
       tmp.push((<SeatSection seats={section.seats} startCol={section.start_col} key={section.col_i}></SeatSection>));
 
       bSection = section;
     }
-    jsx.push(<div className='SeatSectionRow' key={bSection.row_i}>{tmp}</div>);
+    jsx.push(<tr className='SeatSectionRow' key={bSection.row_i}>{tmp}</tr>);
 
     return jsx;
   }
@@ -33,9 +36,9 @@ class ScreenMap extends Component{
     return(
       <sectionRow className='ScreenMap'>
         <div className='screen'>screen</div>
-        <div className='SeatMap'>
+        <table className='SeatMap'>
           {this.renderSeatSection()}
-        </div>
+        </table>
       </sectionRow>
     );
   }

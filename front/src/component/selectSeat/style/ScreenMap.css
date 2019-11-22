@@ -1,11 +1,8 @@
-.SeatSectionRow{
-  display: flex;
-  margin: 10px;
+table.SeatMap {
+  border-spacing: 10px;
 }
-
-.SeatRow{
-  display: flex;
-  margin: 10px;
+.ScreenMap tr {
+  margin-bottom: 10px;
 }
 
 .Seat{
@@ -20,6 +17,6 @@
   background-color: grey;
 }
 
-.Seat.deactive{
+.Seat.dummy{
   visibility: hidden;
 }

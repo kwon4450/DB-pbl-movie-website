@@ -3,37 +3,46 @@ import React, { Component } from 'react';
 import Seat from './Seat';
 
 class SeatSection extends Component{
+  static defaultProps = {
+    isDummy: false
+  }
+  
   renderSeat = () => {
     let jsx = [];
     let tmp = [];
-    let bSeat = {col:this.props.startCol-1};
+    let bSeat = {
+      row:this.props.seats[0].row,
+      col:this.props.startCol-1
+    };
     for(const seat of this.props.seats) {
       if(bSeat.row < seat.row) {
-        jsx.push(<div className='SeatRow' key={bSeat.row}>{tmp}</div>);
+        jsx.push(<tr className='SeatRow' key={bSeat.row}>{tmp}</tr>);
         tmp = [];
       }
       if(seat.col-bSeat.col > 1) {
         for(let i=bSeat.col+1; i<seat.col; i++) {
-          tmp.push(<Seat seatInfo={{col:i, full:false}} isDummy={true} key={i}></Seat>)
+          tmp.push(<Seat isDummy={true} key={i}></Seat>)
         }
       }
       tmp.push((<Seat seatInfo={seat} key={seat.col}></Seat>));
 
       bSeat = seat;
     }
-    jsx.push(<div className='SeatRow' key={bSeat.row}>{tmp}</div>);
+    jsx.push(<tr className='SeatRow' key={bSeat.row}>{tmp}</tr>);
 
     return jsx;
   }
 
   render() {
-    // if(this.props.isDummy){
-    //   return(<div></div>)
-    // }
+    if(this.props.isDummy){
+      return(<td className='SeatSection dummy'></td>);
+    }
     return(
-      <div className='SeatSection'>
-        {this.renderSeat()}
-      </div>
+      <td className='SeatSection'>
+        <table>
+          {this.renderSeat()}
+        </table>
+      </td>
     );
   }
 }
