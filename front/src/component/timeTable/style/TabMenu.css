@@ -1,0 +1,23 @@
+.TabMenu{
+  display: flex;
+}
+
+.TabMenu .Item{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  border: 1px solid black;
+}
+
+.TabMenu .Item>div{
+  display: flex;
+  flex-direction: column;
+}
+
+.TabMenu .Item>span:last-child{
+  font-size: 20px;
+}
+
+.TabMenu .Item.deactive{
+  color: darkgrey;
+}

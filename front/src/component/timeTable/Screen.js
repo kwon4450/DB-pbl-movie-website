@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import ScreenTimeTable from './ScreenTimeTable';
+
+import './style/Screen.css';
 
 class Screen extends Component{
   render() {
@@ -12,7 +13,10 @@ class Screen extends Component{
         </div>
         <div className='times'>
           {this.props.timeTable.map((info, index) => {
-            return(<ScreenTimeTable {...info} key={{index}}></ScreenTimeTable>);
+            return(<div className='item' key={index}>
+              <div className='time'>{info.time}</div>
+              <div className='seatLeft'>{info.seat}석</div>
+            </div>);
           })}
         </div>
       </div>
