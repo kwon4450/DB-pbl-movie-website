@@ -9,8 +9,8 @@ class Home extends Component {
   render() {
     return (
       <PageTamplate className='Home'>
-        <MovieChart></MovieChart>
-        {/* <SelectSeat></SelectSeat> */}
+        {/* <MovieChart></MovieChart> */}
+        <SelectSeat></SelectSeat>
       </PageTamplate>
     );
   }

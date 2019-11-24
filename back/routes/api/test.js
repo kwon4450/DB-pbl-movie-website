@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 const { select, change } = require('../../oracle');
 
 const router = express.Router();
@@ -21,6 +22,18 @@ router.post('/signup', async (req, res, next) => {
 router.get('signup', async (req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
   return res.json({info: "ㅋㅋ"});
+})
+
+router.get('/idCheck', async (req, res) => {
+  console.log(1);
+  res.header('Access-Control-Allow-Origin', '*');
+  const { id } = req.query;
+  console.log(id);
+  const sql = `select * from client where id = '${id}'`;
+  const exUser = await select(sql);
+  console.log("exUser:  ",exUser);
+  if (exUser) return res.json({ info: "이미 등록된 아이디입니다. "});
+  return res.json({ info: "사용가능한 아이디입니다. "})
 })
 
 module.exports = router;
