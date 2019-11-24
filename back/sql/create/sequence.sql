@@ -1,0 +1,15 @@
+create sequence cardinfoAI start with 1 increment by 1 maxvalue 99999999;
+create sequence theaterAI start with 1 increment by 1 maxvalue 99999999;
+create sequence favoritetheaterAI start with 1 increment by 1 maxvalue 99999999;
+create sequence theateraddressAI start with 1 increment by 1 maxvalue 99999999;
+create sequence screenAI start with 1 increment by 1 maxvalue 99999999;
+create sequence seatAI start with 1 increment by 1 maxvalue 99999999;
+create sequence timetableAI start with 1 increment by 1 maxvalue 99999999;
+create sequence ticketAI start with 1 increment by 1 maxvalue 99999999;
+create sequence personAI start with 1 increment by 1 maxvalue 99999999;
+create sequence movieAI start with 1 increment by 1 maxvalue 99999999;
+create sequence moviegenreAI start with 1 increment by 1 maxvalue 99999999;
+create sequence directorAI start with 1 increment by 1 maxvalue 99999999;
+create sequence actorAI start with 1 increment by 1 maxvalue 99999999;
+create sequence reviewAI start with 1 increment by 1 maxvalue 99999999;
+create sequence wishlistAI start with 1 increment by 1 maxvalue 99999999;
