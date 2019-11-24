@@ -48,8 +48,9 @@ class MovieChart extends Component{
       oneMovie.push(<div class='num'>{movieData.num}</div>);
       oneMovie.push(<div class='image'>{movieData.image}</div>);
       oneMovie.push(<div class='title'>{movieData.title}</div>);
-      oneMovie.push(<div class='rate'>{movieData.rate}%</div>);
+      oneMovie.push(<div class='rate'>{movieData.rate}</div>);
       oneMovie.push(<div class='releasedate'>{movieData.releasedate} 개봉</div>);
+      oneMovie.push(<div class='ticket'>예매</div>);
       jsx.push(<div class='movie'>{oneMovie}</div>);
     })
     return jsx;
