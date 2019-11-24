@@ -2,7 +2,7 @@ const passport = require('passport');
 const { Strategy: LocalStrategy } = require('passport-local');
 const bcrypt = require('bcrypt');
 
-const { select } = require('../oracle/query');
+const { select } = require('../oracle');
 
 module.exports = () => {
   passport.use(new LocalStrategy({

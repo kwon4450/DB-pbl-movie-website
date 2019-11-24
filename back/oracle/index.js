@@ -11,7 +11,6 @@ exports.select = async (sql) => {
       connectString : config.connectString
     });
     const result = await connection.execute(sql);
-    // return result
     var col = result.metaData;
     var rows = result.rows;
     var data = new Array();
