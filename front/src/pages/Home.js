@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-import PageTamplate from 'component/template/PageTemplate.js';
-// import TimeTable from 'component/timeTable';
+import PageTemplate from 'component/template/PageTemplate.js';
+import TimeTable from 'component/timeTable';
 import SelectSeat from '../component/selectSeat';
 import MovieChart from '../component/moviechart';
 
