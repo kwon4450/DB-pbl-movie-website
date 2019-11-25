@@ -1,7 +1,7 @@
 const passport = require('passport');
 const local = require('./local');
 
-const { select } = require('../oracle/query');
+const { select } = require('../oracle');
 
 module.exports = () => {
   passport.serializeUser((user, done) => {
