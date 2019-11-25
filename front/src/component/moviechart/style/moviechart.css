@@ -1,14 +1,16 @@
 .MovieChart{
     background-color:ivory;
-
+    display:inline-block;
+    margin: 30px;
+    background-color:white;
+    border:3px solid black;
+    text-align:center;
 }
 
-
-
-.MovieChart> .movie{
-    float:left;
-    margin-left:54px;
-
+h1{
+    text-align:center;
+    margin-right:auto;
+    margin-left:auto;
 }
 
 .movie{
@@ -30,4 +32,15 @@
     width: 150px;
 }
 
+.overall{
+    margin-left:auto;
+    margin-right:auto;
 
+
+}
+
+.overall2{
+    margin-left:auto;
+    margin-right:auto;
+
+}

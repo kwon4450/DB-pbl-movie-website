@@ -8,10 +8,10 @@ import MovieChart from '../component/moviechart';
 class Home extends Component {
   render() {
     return (
-      <PageTamplate className='Home'>
+      <PageTemplate className='Home'>
         {/* <MovieChart></MovieChart> */}
         <SelectSeat></SelectSeat>
-      </PageTamplate>
+      </PageTemplate>
     );
   }
 }
