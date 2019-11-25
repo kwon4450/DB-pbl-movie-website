@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './style/moviechart.css';
 
 class MovieChart extends Component{
   static defaultProps = { 
@@ -8,6 +9,7 @@ class MovieChart extends Component{
         title: "Frozen2",
         rate: "93.2",
         releasedate:"2019.11.21"
+        
       },
 
       {
@@ -41,26 +43,33 @@ class MovieChart extends Component{
     ]
   }
 
-  renderMovieChart() {
-    var jsx = new Array();
-    this.props.movieChartData.map(movieData => {
-      var oneMovie = new Array();
-      oneMovie.push(<div class='num'>{movieData.num}</div>);
-      oneMovie.push(<div class='image'>{movieData.image}</div>);
-      oneMovie.push(<div class='title'>{movieData.title}</div>);
-      oneMovie.push(<div class='rate'>{movieData.rate}</div>);
-      oneMovie.push(<div class='releasedate'>{movieData.releasedate} 개봉</div>);
-      oneMovie.push(<div class='ticket'>예매</div>);
-      jsx.push(<div class='movie'>{oneMovie}</div>);
-    })
-    return jsx;
-  }
+  // renderMovieChart() {
+  //   var jsx = new Array();
+  //   this.props.movieChartData.map(movieData => {
+  //     var oneMovie = new Array();
+  //     oneMovie.push(<div class='num'>{movieData.num}</div>);
+  //     oneMovie.push(<div class='image'></div>);
+  //     oneMovie.push(<div class='title'>{movieData.title}</div>);
+  //     oneMovie.push(<div class='releasedate'>{movieData.releasedate} 개봉</div>);
+  //     oneMovie.push(<div class='rate'>{movieData.rate}%</div>);
+  //     oneMovie.push(<div class='ticket'>예매</div>);
+  //     jsx.push(<div class='movie'>{oneMovie}</div>);
+  //   })
+  //   return jsx;
+  // }
 
   render() {
+
     return(
-      <div className='Moviechart'>
-        {this.renderMovieChart()}
+      <div className='MovieChart'>
+      <div class='num'>{this.props.num}</div>
+      <div class='image'></div>
+      <div class='title'>{this.props.title}</div>
+      <div class='releasedate'>{this.props.releasedate} 개봉</div>
+      <div class='rate'>{this.props.rate}%</div>
+      <div class='ticket'>예매</div>
       </div>
+
     );
   }
 }

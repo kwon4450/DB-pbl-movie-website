@@ -1,0 +1,33 @@
+.MovieChart{
+    background-color:ivory;
+
+}
+
+
+
+.MovieChart> .movie{
+    float:left;
+    margin-left:54px;
+
+}
+
+.movie{
+    display:inline-block;
+    margin: 30px;
+    background-color:white;
+    border:3px solid black;
+    text-align:center;
+
+}
+
+
+.num{
+    display:inline-block;
+    text-align:center;
+    background-color:pink;
+    color:black;
+    border: 1px solid black;
+    width: 150px;
+}
+
+
