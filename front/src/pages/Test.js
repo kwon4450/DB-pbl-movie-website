@@ -59,7 +59,7 @@ class Test extends Component{
         })}
         </div>
 
-
+        <hr/>
         <div class="overall2">
         {this.movieChartData.slice(3).map(movieData => {
           return (
