@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-import PageTemplate from 'component/template/PageTemplate.js';
 import MovieChart from '../component/moviechart';
 
 class Test extends Component{
@@ -49,7 +48,7 @@ class Test extends Component{
 
   render() {
     return(
-      <PageTemplate className="Test">
+      <div className="Test">
         <h1>무비차트</h1>
         <hr/>
         <div class="overall">
@@ -69,7 +68,7 @@ class Test extends Component{
 
 
 
-      </PageTemplate>
+      </div>
     );
   }
 }
