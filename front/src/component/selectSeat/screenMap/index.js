@@ -8,7 +8,6 @@ class ScreenMap extends Component{
   renderSeatSection = () => {
     let jsx = [];
     let tmp = [];
-    let index = 0;
     let bSection = {
       row_i: sampleData[0].row_i,
       col_i: 0
@@ -18,16 +17,13 @@ class ScreenMap extends Component{
         jsx.push(<tr className='SeatSectionRow' key={bSection.row_i}>{tmp}</tr>);
         tmp = [];
       }
-      if(section.col_i-bSection.col_i > 1) {
-        for(let i=bSection.col_i+1; i<section.col_i; i++) {
-          tmp.push(<SeatSection isDummy={true} key={i}></SeatSection>)
-        }
-      }
-      console.log(index);
-      tmp.push(<SeatSection data={section} key={index}></SeatSection>);
+      if(section.col_i-bSection.col_i > 1)
+        for(let i=bSection.col_i+1; i<section.col_i; i++)
+          tmp.push(<SeatSection isDummy={true} key={section.row_i+'-'+i}></SeatSection>);
+
+      tmp.push(<SeatSection data={section} key={section.row_i+'-'+section.col_i}></SeatSection>);
 
       bSection = section;
-      index++
     }
     jsx.push(<tr className='SeatSectionRow' key={bSection.row_i}>{tmp}</tr>);
 

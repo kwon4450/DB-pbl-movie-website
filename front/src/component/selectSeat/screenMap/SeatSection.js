@@ -8,25 +8,25 @@ class SeatSection extends Component{
   }
 
   renderSeat = () => {
-    let jsx = [];
+    let tableBody = [];
+    let tableHead = [];
     let tmp = [];
-    // let tableHead = [];
     let bSeat = {
       row:this.props.data.seats[0].row,
       col:this.props.data.start_col-1
     };
 
-    // if(this.props.data.start_col === 1){
-    //   tableHead.push((<td className="rowName" key={0}>{String.fromCharCode(bSeat.row+64)}</td>));
-    // }
+    if(this.props.data.start_col === 1){
+      tableHead.push((<tr><td className="rowName" key={0}>{String.fromCharCode(bSeat.row+64)}</td></tr>));
+    }
     
     for(const seat of this.props.data.seats) {
       if(bSeat.row < seat.row) {
-        jsx.push(<tr className='SeatRow' key={bSeat.row}>{tmp}</tr>);
+        tableBody.push(<tr className='SeatRow' key={bSeat.row}>{tmp}</tr>);
         tmp = [];
-        // if(this.props.data.start_col === 1){
-        //   tableHead.push((<td className="rowName" key={bSeat.row}>{String.fromCharCode(bSeat.row+65)}</td>));
-        // }
+        if(this.props.data.start_col === 1){
+          tableHead.push((<tr><td className="rowName" key={bSeat.row}>{String.fromCharCode(bSeat.row+65)}</td></tr>));
+        }
       }
       if(seat.col-bSeat.col > 1) {
         for(let i=bSeat.col+1; i<seat.col; i++) {
@@ -37,9 +37,9 @@ class SeatSection extends Component{
 
       bSeat = seat;
     }
-    jsx.push(<tr className='SeatRow' key={bSeat.row}>{tmp}</tr>);
+    tableBody.push(<tr className='SeatRow' key={bSeat.row}>{tmp}</tr>);
 
-    return jsx;
+    return [tableBody, tableHead];
   }
 
   render() {
@@ -51,9 +51,10 @@ class SeatSection extends Component{
 
       if (this.props.data.col_i === 1){
         retVal.push(
-          <td className='RowAlphabet'>
+          <td className='RowAlphabet' key='RowAlphabet'>
             <table>
               <thead>
+                {jsx[1]}
               </thead>
             </table>
           </td>
@@ -61,10 +62,10 @@ class SeatSection extends Component{
       }
 
       retVal.push(
-        <td className='SeatSection'>
+        <td className='SeatSection' key={this.props.data.col_i}>
           <table>
             <tbody>
-              {jsx}
+              {jsx[0]}
             </tbody>
           </table>
         </td>
