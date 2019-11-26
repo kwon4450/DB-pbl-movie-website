@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import 'style/dropdownMenu.css';
+import './style/dropdownMenu.css';
 import Menu, { MenuItem } from './Menu';
 
 class DropdownMenu extends Component{
