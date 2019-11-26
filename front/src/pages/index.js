@@ -21,8 +21,16 @@ let pages = [
   },
   {
     exact:true,
+    path:'/theater',
+    component:require('./Theater').default
+  },
+  {
+    exact:true,
     path:'/test',
     component:require('./Test').default
+  },
+  {
+    component:require('./NoMatch').default
   }
 ];
 
