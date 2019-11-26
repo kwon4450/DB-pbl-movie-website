@@ -10,7 +10,7 @@ class Test extends Component{
       // img: {
       //   src:"",
       //   alt:"",
-      // }
+      // } db에서 불러올거라 img는 임시로안넣음
       title: "Frozen2",
       rate: "93.2",
       releasedate:"2019.11.21"
@@ -53,18 +53,22 @@ class Test extends Component{
         <h1>무비차트</h1>
         <hr/>
         <div class="overall">
-        {this.movieChartData.slice(0,3).map(movieData => {
-          return (
-          <MovieChart {...movieData}></MovieChart> );
-        })}
+          <div class="inner_overall">
+          {this.movieChartData.slice(0,3).map(movieData => {
+            return (
+            <MovieChart {...movieData}></MovieChart> );
+          })}
+          </div>
         </div>
 
         <hr/>
-        <div class="overall2">
-        {this.movieChartData.slice(3).map(movieData => {
-          return (
-          <MovieChart {...movieData}></MovieChart> );
-        })}
+        <div class="overall">
+          <div class="inner_overall">
+          {this.movieChartData.slice(3).map(movieData => {
+            return (
+            <MovieChart {...movieData}></MovieChart> );
+          })}
+          </div>
         </div>
 
 
