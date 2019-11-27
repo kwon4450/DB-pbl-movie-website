@@ -4,6 +4,7 @@ const cookieParser = require('cookie-parser');
 const morgan = require('morgan');
 const session = require('express-session');
 const passport = require('passport');
+const cors = require('cors');
 require('dotenv').config();
 
 const passportConfig = require('./passport');
@@ -16,22 +17,24 @@ const app = express();
 passportConfig();
 app.set('port', process.env.PORT || 8008);
 
-const sessionMiddleware = session({
+app.use(cors({
+  origin: true,
+  credentials: true,
+}));
+app.use(morgan('dev'));
+app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(cookieParser(process.env.COOKIE_SECRET));
+app.use(session({
   secret: process.env.COOKIE_SECRET,
-  resave: true,
+  resave: false,
   saveUninitialized: false,
   cookie: {
     httpOnly: true,
     secure: false,
   },
-});
-
-app.use(cookieParser(process.env.COOKIE_SECRET));
-app.use(sessionMiddleware);
-app.use(morgan('dev'));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(express.static(path.join(__dirname, 'public')));
+}));
 app.use(passport.initialize());
 app.use(passport.session());
 

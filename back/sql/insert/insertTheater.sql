@@ -1,8 +1,8 @@
--- insert into theater(id, name) values(theaterAI.nextval, '안산');
+insert into theater(id, name) values(theaterAI.nextval, '안산');
 
--- insert into theateraddress(screen_id, postal, street, street_num, detail, state, city, district) values(theateraddressAI.nextval, 15462, '광덕대로', 194, '고잔동, NC백화점 A관 6층', '경기도', '안산시', '단원구');
+insert into theateraddress(screen_id, postal, street, street_num, detail, state, city, district) values(theateraddressAI.nextval, 15462, '광덕대로', 194, '고잔동, NC백화점 A관 6층', '경기도', '안산시', '단원구');
 
--- insert into screen(id, screen_id, name) values(screenAI.nextval, (select id from theater where name='안산'), '1관');
+insert into screen(id, screen_id, name) values(screenAI.nextval, (select id from theater where name='안산'), '1관');
 
 insert into seat(id, screen_id, row_index, col_index, row_num, col_num) values(seatAI.nextval, (select id from screen where name='1관'), 1, 1, 1, 2);
 insert into seat(id, screen_id, row_index, col_index, row_num, col_num) values(seatAI.nextval, (select id from screen where name='1관'), 1, 1, 1, 3);
