@@ -1,14 +1,21 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
-import { Home, Auth, Join } from 'pages';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+
+import Header from 'component/header';
+import Footer from 'component/footer';
+import pages from 'pages';
 
 class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        <Route exact path="/" component={Home} />
-        <Route exact path='/login' component={Auth} />
-        <Route exact path='/join' component={Join} />
+        <Header></Header>
+        <main>
+          <Switch>
+            {pages.map((item, index) => (<Route {...item} key={index}></Route>))}
+          </Switch>
+        </main>
+        <Footer></Footer>
       </BrowserRouter>
     );
   }

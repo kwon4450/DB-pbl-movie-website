@@ -8,22 +8,24 @@ class SeatSection extends Component{
   }
 
   renderSeat = () => {
-    let jsx = [];
+    let tableBody = [];
+    let tableHead = [];
     let tmp = [];
     let bSeat = {
-      row:this.props.seats[0].row,
-      col:this.props.startCol-1
+      row:this.props.data.seats[0].row,
+      col:this.props.data.start_col-1
     };
-    if(this.props.startCol == 1){
-      tmp.push((<td className="rowName">{String.fromCharCode(bSeat.row+64)}</td>));
+
+    if(this.props.data.start_col === 1){
+      tableHead.push((<tr><td className="rowName" key={0}>{String.fromCharCode(bSeat.row+64)}</td></tr>));
     }
     
-    for(const seat of this.props.seats) {
+    for(const seat of this.props.data.seats) {
       if(bSeat.row < seat.row) {
-        jsx.push(<tr className='SeatRow' key={bSeat.row}>{tmp}</tr>);
+        tableBody.push(<tr className='SeatRow' key={bSeat.row}>{tmp}</tr>);
         tmp = [];
-        if(this.props.startCol == 1){
-          tmp.push((<td className="rowName">{String.fromCharCode(bSeat.row+65)}</td>));
+        if(this.props.data.start_col === 1){
+          tableHead.push((<tr><td className="rowName" key={bSeat.row}>{String.fromCharCode(bSeat.row+65)}</td></tr>));
         }
       }
       if(seat.col-bSeat.col > 1) {
@@ -35,22 +37,41 @@ class SeatSection extends Component{
 
       bSeat = seat;
     }
-    jsx.push(<tr className='SeatRow' key={bSeat.row}>{tmp}</tr>);
+    tableBody.push(<tr className='SeatRow' key={bSeat.row}>{tmp}</tr>);
 
-    return jsx;
+    return [tableBody, tableHead];
   }
 
   render() {
-    if(this.props.isDummy){
-      return(<td className='SeatSection dummy'></td>);
+    let retVal = [];
+    if (this.props.isDummy) {
+      retVal.push(<td className='SeatSection dummy'></td>);
+    } else {
+      let jsx = this.renderSeat();
+
+      if (this.props.data.col_i === 1){
+        retVal.push(
+          <td className='RowAlphabet' key='RowAlphabet'>
+            <table>
+              <thead>
+                {jsx[1]}
+              </thead>
+            </table>
+          </td>
+        );
+      }
+
+      retVal.push(
+        <td className='SeatSection' key={this.props.data.col_i}>
+          <table>
+            <tbody>
+              {jsx[0]}
+            </tbody>
+          </table>
+        </td>
+      );
     }
-    return(
-      <td className='SeatSection'>
-        <table>
-          {this.renderSeat()}
-        </table>
-      </td>
-    );
+    return retVal;
   }
 }
 

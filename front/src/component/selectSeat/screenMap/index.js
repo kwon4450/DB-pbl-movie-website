@@ -17,13 +17,11 @@ class ScreenMap extends Component{
         jsx.push(<tr className='SeatSectionRow' key={bSection.row_i}>{tmp}</tr>);
         tmp = [];
       }
-      if(section.col_i-bSection.col_i > 1) {
-        for(let i=bSection.col_i+1; i<section.col_i; i++) {
-          tmp.push(<SeatSection isDummy={true} key={i}></SeatSection>)
-        }
-      }
+      if(section.col_i-bSection.col_i > 1)
+        for(let i=bSection.col_i+1; i<section.col_i; i++)
+          tmp.push(<SeatSection isDummy={true} key={section.row_i+'-'+i}></SeatSection>);
 
-      tmp.push((<SeatSection seats={section.seats} startCol={section.start_col} key={section.col_i}></SeatSection>));
+      tmp.push(<SeatSection data={section} key={section.row_i+'-'+section.col_i}></SeatSection>);
 
       bSection = section;
     }
@@ -34,12 +32,14 @@ class ScreenMap extends Component{
 
   render() {
     return(
-      <sectionRow className='ScreenMap'>
+      <div className='ScreenMap'>
         <div className='screen'>screen</div>
         <table className='SeatMap'>
-          {this.renderSeatSection()}
+          <tbody>
+            {this.renderSeatSection()}
+          </tbody>
         </table>
-      </sectionRow>
+      </div>
     );
   }
 }

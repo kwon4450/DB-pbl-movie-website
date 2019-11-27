@@ -4,6 +4,7 @@ import ScreenMap from './screenMap';
 
 class SelectSeat extends Component{
   render() {
+    console.log("child component's props\n", this.props);
     return(
       <section className='SelectSeat'>
         <header>인원/좌석</header>
