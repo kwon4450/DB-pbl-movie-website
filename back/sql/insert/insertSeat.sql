@@ -32,7 +32,7 @@ end;
 insert into screen(id, theater_id, name) values(screenAI.nextval, (select id from theater where name='안산'), '2관');
 
 declare
-  c_idx	number  :=  1;
+  c_idx  number  :=  1;
 begin
   for y in 1..13 loop
     for x in 1..16 loop
@@ -54,8 +54,8 @@ end;
 insert into screen(id, theater_id, name) values(screenAI.nextval, (select id from theater where name='안산'), '3관');
 
 declare
-  r_idx	number	:=  1;
-  c_idx	number	:=  1;
+  r_idx  number	:=  1;
+  c_idx  number	:=  1;
 begin
   for y in 1..13 loop
     for x in 1..18 loop
@@ -80,7 +80,7 @@ end;
 insert into screen(id, theater_id, name) values(screenAI.nextval, (select id from theater where name='안산'), '4DX관');
 
 declare
-  c_idx	number	:=  1;
+  c_idx  number	:=  1;
 begin
   for y in 1..11 loop
     for x in 1..12 loop
@@ -98,7 +98,7 @@ end;
 insert into screen(id, theater_id, name) values(screenAI.nextval, (select id from theater where name='안산'), '8관');
 
 declare
-  c_idx	number	:=  1;
+  c_idx  number	:=  1;
 begin
   for y in 1..13 loop
     for x in 1..16 loop
