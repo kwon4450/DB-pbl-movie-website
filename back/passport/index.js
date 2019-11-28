@@ -5,14 +5,15 @@ const { select } = require('../oracle');
 
 module.exports = () => {
   passport.serializeUser((user, done) => {
-    done(null, user.user_id);
+    console.log("serialize");
+    return done(null, user.id);
   });
 
   passport.deserializeUser(async (id, done) => {
     try{
-      const sql = `select firstrow(*) from users where user_id = '${id}'`;
+      console.log("deserialize");
+      const sql = `select * from client where id = '${id}' and rownum = 1`;
       const user = await select(sql);
-      console.log(user);
       return done(null, user);
     } catch (e) {
       console.error(e);

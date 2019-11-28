@@ -1,0 +1,18 @@
+header{
+
+}
+
+header .logo{
+  float: left;
+}
+
+header .user-menu{
+  display: flex;
+  justify-content: flex-end;
+}
+
+header .nav-menu{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}

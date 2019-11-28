@@ -5,30 +5,35 @@ let pages = [
     component: require('./Home').default
   },
   {
-    exact:true,
+    exact: true,
     path:'/login',
     component:require('./Auth').default
   },
   {
-    exact:true,
+    exact: true,
+    path:'/join',
+    component:require('./Join').default
+  },
+  {
+    exact: true,
     path:'/movies',
     component:require('./Movies').default
   },
   {
-    exact:true,
+    exact: true,
     path:'/ticketing',
     component:require('./Ticketing').default
   },
   {
-    exact:true,
+    exact: true,
     path:'/theater',
     component:require('./Theater').default
   },
-  {
-    exact:true,
-    path:'/test',
-    component:require('./Test').default
-  },
+  // {
+  //   exact: true,
+  //   path:'/test',
+  //   component:require('./Test').default
+  // },
   {
     component:require('./NoMatch').default
   }
