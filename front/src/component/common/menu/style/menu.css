@@ -1,8 +1,8 @@
-.Menu{
+.Menu {
   display: flex;
 }
 
-.Menu .MenuItem{
+.Menu .MenuItem {
   flex: 0 0 auto;
   width: 160px;
   height: 50px;
@@ -16,9 +16,9 @@
   background-color: #fefefe;
 }
 
-.Menu .item{
-  width: 100%;
-  height: 100%;
+.Menu .item {
+  width: 160px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
