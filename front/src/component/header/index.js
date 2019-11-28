@@ -14,8 +14,8 @@ class Header extends Component {
         </div>
         
         <Menu className='user-menu'>
-          <MenuItem><Link to='/login'>로그인</Link></MenuItem>
-          <MenuItem><Link to='/sign-up'>회원가입</Link></MenuItem>
+          <Link to='/login'><MenuItem>로그인</MenuItem></Link>
+          <Link to='/join'><MenuItem>회원가입</MenuItem></Link>
         </Menu>
 
         <Menu className='nav-menu'>

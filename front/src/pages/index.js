@@ -11,7 +11,7 @@ let pages = [
   },
   {
     exact: true,
-    path:'/login',
+    path:'/join',
     component:require('./Join').default
   },
   {
@@ -29,11 +29,11 @@ let pages = [
     path:'/theater',
     component:require('./Theater').default
   },
-  {
-    exact: true,
-    path:'/test',
-    component:require('./Test').default
-  },
+  // {
+  //   exact: true,
+  //   path:'/test',
+  //   component:require('./Test').default
+  // },
   {
     component:require('./NoMatch').default
   }

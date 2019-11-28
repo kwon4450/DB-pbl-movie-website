@@ -5,9 +5,12 @@ import './style/LogIn.css';
 import axios from 'axios';
 
 class LogIn extends Component {
-  state = {
-    id: '',
-    password: ''
+  constructor(props) {
+    super(props);
+    this.state = {
+      id: '',
+      password: ''
+    }
   }
 
   onChange = event => {
@@ -17,22 +20,24 @@ class LogIn extends Component {
   submitAction = event => {
     event.preventDefault();
     var user = this.state;
-    axios.post('http://localhost:8008/api/user/login', { id: user.id, password: user.password }, { withCredentials: true })
+    axios.post('/api/user/login', { id: user.id, password: user.password }, { withCredentials: true })
       .then(res => {
-        console.log(res.headers);
-        switch(res.status) {
-          case 200:
-            this.props.history.push('/');
-            break;
-          case 401:
-            alert(res.reason);
-        }
+        this.props.handleAuth(true);
+        this.props.history.push('/');
+      })
+      .catch(err => {
+        console.log(err);
+        // const res = err.response;
+        // switch (res.status) {
+        //   case 401:
+        //     alert(res.data.reason)
+        // }
       })
   }
 
   render() {
     return (
-      <section className="login">
+      <div className="login">
         <h2>로그인</h2>
         <form onSubmit={this.submitAction}>
           <ul>
@@ -48,7 +53,7 @@ class LogIn extends Component {
             <li><Link to="/join">회원가입</Link></li>
           </ul>
         </div>
-      </section>
+      </div>
     )
   }
 }
