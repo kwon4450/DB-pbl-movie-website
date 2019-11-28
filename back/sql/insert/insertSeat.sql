@@ -1,4 +1,9 @@
+insert into theater(id, name) values(theaterAI.nextval, '안산');
+
+insert into theateraddress(theater_id, postal, street, street_num, detail, state, city, district) values(theateraddressAI.nextval, 15462, '광덕대로', 194, '고잔동, NC백화점 A관 6층', '경기도', '안산시', '단원구');
+
 -- 1관, 7관 --
+insert into screen(id, theater_id, name) values(screenAI.nextval, (select id from theater where name='안산'), '1관');
 
 declare
   r_idx  number	:=  1;
@@ -24,6 +29,7 @@ end;
 /
 
 -- 2관, 6관 --
+insert into screen(id, theater_id, name) values(screenAI.nextval, (select id from theater where name='안산'), '2관');
 
 declare
   c_idx	number  :=  1;
@@ -45,6 +51,7 @@ end;
 /
 
 -- 3관, 5관--
+insert into screen(id, theater_id, name) values(screenAI.nextval, (select id from theater where name='안산'), '3관');
 
 declare
   r_idx	number	:=  1;
@@ -70,6 +77,7 @@ end;
 /
 
 -- 4DX 관 --
+insert into screen(id, theater_id, name) values(screenAI.nextval, (select id from theater where name='안산'), '4DX관');
 
 declare
   c_idx	number	:=  1;
@@ -87,6 +95,7 @@ end;
 /
 
 -- 8관 --
+insert into screen(id, theater_id, name) values(screenAI.nextval, (select id from theater where name='안산'), '8관');
 
 declare
   c_idx	number	:=  1;
