@@ -1,42 +1,52 @@
 let pages = [
   {
     exact: true,
-    path: '/',
-    component: require('./Home').default
+    path: "/",
+    isPublic: true,
+    component: require("./Home").default
   },
   {
     exact: true,
-    path:'/login',
-    component:require('./Auth').default
+    path: "/login",
+    isPublic: true,
+    component: require("./Auth").default
   },
   {
     exact: true,
-    path:'/join',
-    component:require('./Join').default
+    path: "/join",
+    isPublic: true,
+    component: require("./Join").default
   },
   {
     exact: true,
-    path:'/movies',
-    component:require('./Movies').default
+    path: "/movies",
+    isPublic: true,
+    component: require("./Movies").default
   },
   {
     exact: true,
-    path:'/ticketing',
-    component:require('./Ticketing').default
+    path: "/ticketing",
+    isPublic: true,
+    component: require("./Ticketing").default
   },
   {
     exact: true,
-    path:'/theater',
-    component:require('./Theater').default
+    path: "/theater",
+    isPublic: true,
+    component: require("./Theater").default
   },
-  // {
-  //   exact: true,
-  //   path:'/test',
-  //   component:require('./Test').default
-  // },
   {
-    component:require('./NoMatch').default
+    exact: true,
+    path: "/test",
+    isPublic: true,
+    component: require("./Test").default
+  },
+  {
+    isPublic: true,
+    component: require("./NoMatch").default
   }
+  // selectSeat, myPage 등
+  // if isPublic: false, it may have redirectTo item
 ];
 
 export default pages;
