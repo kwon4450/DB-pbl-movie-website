@@ -12,11 +12,16 @@ code {
     monospace;
 }
 
-main {
-  min-height: 50em;
-}
 
 a {
   color: black;
   text-decoration: none;
+}
+
+.parent {
+  min-height: fit-content;
+}
+
+.content {
+  min-height: fit-content;
 }

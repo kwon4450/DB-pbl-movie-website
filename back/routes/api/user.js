@@ -8,9 +8,9 @@ const { select, change } = require('../../oracle');
 
 const router = express.Router();
 
-router.get('/', isLoggedIn, (req, res) => {
-  console.log(req.user);
-  return res.json(req.user);
+router.get('/loginCheck', (req, res) => {
+  console.log(req.isAuthenticated());
+  return res.json({ auth: req.isAuthenticated() });
 });
 
 router.get('/idCheck', isNotLoggedIn, async (req, res) => {
@@ -37,7 +37,7 @@ router.get('/phoneCheck', isNotLoggedIn, async (req, res) => {
   const sql = `select * from phone where phone_num = '${phone}'`;
   const exUser = await select(sql);
   console.log("exUser:  ",exUser);
-  if (exUser) return res.json({ info: "이미 등록된 휴대전화입니다." });
+  if (exUser) return res.json({ info: "이미 등록된 휴대전화 번호입니다." });
   return res.json({ info: '' });
 })
 

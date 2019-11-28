@@ -19,7 +19,7 @@ class SignUp extends Component {
       f_nameInfo: '',
       l_name: '',
       L_nameInfo: '',
-      gender: '',
+      gender: '비공개',
       mail: '',
       mailInfo: '',
       phone: '',
@@ -33,7 +33,7 @@ class SignUp extends Component {
 
   idBlur = event => {
     if (this.state.id){
-      axios.get(`http://localhost:8008/api/user/idCheck?id=${event.target.value}`)
+      axios.get(`/api/user/idCheck?id=${event.target.value}`)
         .then(res => {
         this.setState({ idInfo: res.data.info, idPossible: res.data.possible });
       })
@@ -44,7 +44,6 @@ class SignUp extends Component {
   }
 
   passwordBlur = event => {
-    console.log(this.state);
     if (this.state.password) {
       const rule = /^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{8,16}$/;
       if (rule.test(this.state.password)) {
@@ -70,7 +69,7 @@ class SignUp extends Component {
     if (this.state.mail) {
       const rule = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
       if (rule.test(this.state.mail)) {
-        axios.get(`http://localhost:8008/api/user/mailCheck?mail=${event.target.value}`)
+        axios.get(`/api/user/mailCheck?mail=${event.target.value}`)
           .then(res => {
             this.setState({ mailInfo: res.data.info })
           })
@@ -84,7 +83,7 @@ class SignUp extends Component {
     if (this.state.phone) {
       const rule = /^\d{3}\d{3,4}\d{4}$/;;
       if (rule.test(this.state.phone)) {
-        axios.get(`http://localhost:8008/api/user/phoneCheck?phone=${event.target.value}`)
+        axios.get(`/api/user/phoneCheck?phone=${event.target.value}`)
           .then(res => {
             this.setState({ phoneInfo: res.data.info })
           })
@@ -115,17 +114,16 @@ class SignUp extends Component {
       alert("필수 정보를 입력해주세요.");
     }
     else {
-      axios.post('http://localhost:8008/api/user/signup', { user })
+      axios.post('/api/user/signup', { user })
         .then(res => {
-          console.log(res);
+          alert(res.info);
+          this.props.history.push('/login');
+        })
+        .catch(err => {
+          var res = err.response;
           switch(res.status) {
-            case 200:
-              alert(res.info);
-              this.props.history.push('/login');
-              break;
             case 403:
               alert(res.info);
-              break;
           }
         })
     }
@@ -133,7 +131,7 @@ class SignUp extends Component {
 
   render() {
     return (
-      <section className="signup">
+      <div className="signup">
         <h2>회원가입</h2>
         <form onSubmit={this.submitAction}>
           <ul>
@@ -194,7 +192,7 @@ class SignUp extends Component {
           </ul>
           <button type="submit">가입하기</button>
         </form>
-      </section>
+      </div>
     );
   }
 }
