@@ -30,7 +30,7 @@
   display: block;
 } */
 
-.Dropdown .content .item:hover {background-color: #f1f1f1}
+.Dropdown .content .item:hover {background-color: #f1f1f1;}
 
 .Dropdown:hover .content {
   display: block;
