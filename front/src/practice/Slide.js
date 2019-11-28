@@ -6,7 +6,20 @@ const fadeImages = [
   '/assets/images/movies/2.jpg',
   '/assets/images/movies/3.jpg'
 ];
- 
+
+const data=[1,2,3,4,5,6,7,8,9,10];
+
+
+let RendFade=()=>{
+
+
+
+  for(let i=0;i<=data; i+=3){
+    data.slice(i,i+3).map(<h2>(</h2> =>{});
+
+
+}
+
 const fadeProperties = {
   duration: 5000,
   transitionDuration: 500,
@@ -21,24 +34,7 @@ const Slideshow = () => {
   return (
     <div className="slide-container">
       <Fade {...fadeProperties}>
-        <div className="each-fade">
-          <div className="image-container">
-            <img src={fadeImages[0]} />
-          </div>
-          <h2>First Slide</h2>
-        </div>
-        <div className="each-fade">
-          <div className="image-container">
-            <img src={fadeImages[1]} />
-          </div>
-          <h2>Second Slide</h2>
-        </div>
-        <div className="each-fade">
-          <div className="image-container">
-            <img src={fadeImages[2]} />
-          </div>
-          <h2>Third Slide</h2>
-        </div>
+        {RendFade()};
       </Fade>
     </div>
   )
