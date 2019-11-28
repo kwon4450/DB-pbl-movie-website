@@ -11,7 +11,7 @@ const passportConfig = require('./passport');
 const userAPIRouter = require('./routes/api/user');
 const theatersAPIRouter = require('./routes/api/theaters');
 const testAPIRouter = require('./routes/api/test');
- 
+
 const app = express();
 
 passportConfig();
@@ -41,9 +41,10 @@ app.use(passport.session());
 app.use('/api/user', userAPIRouter);
 app.use('/api/theaters', theatersAPIRouter);
 app.use('/api/test', testAPIRouter);
-app.use('/', (req, res) => {
-  res.send('api 서버');
-});
+// app.use('/', (req, res) => {
+  //   res.send('api 서버');
+  // });
+app.use('/', express.static(path.join(__dirname, '../front/build')));
 
 app.listen(app.get('port'), () => {
   console.log('server start at: ',app.get('port'));
