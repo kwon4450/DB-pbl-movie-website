@@ -1,0 +1,44 @@
+.selector ul li {
+  list-style: none;
+}
+
+.selector {
+  display: flex;
+}
+
+.flex-container {
+  margin: 10px;
+  padding: 15px;
+  border-radius: 5px;
+  width: 10%;
+  float: left;
+  background: wheat;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.flex-container > * {
+  text-align: center;
+}
+
+.flex-container2 {
+  margin: 10px;
+  padding: 15px;
+  border-radius: 5px;
+  float: right;
+  width: 70%;
+  background: wheat;
+  align-content: stretch;
+}
+
+.theaters {
+  display: flex;
+  flex-wrap: wrap;
+}
+.theaters .item {
+  padding: 0px 10px;
+  border-right: 2px solid black;
+}
+.theaters .item:last-child {
+  border-right: none;
+}
