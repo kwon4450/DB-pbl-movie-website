@@ -7,7 +7,8 @@
 }
 
 .flex-container {
-  margin: 10px;
+  
+  margin:3px;
   padding: 15px;
   border-radius: 5px;
   width: 10%;
@@ -22,7 +23,7 @@
 }
 
 .flex-container2 {
-  margin: 10px;
+  margin: 3px;
   padding: 15px;
   border-radius: 5px;
   float: right;
@@ -37,8 +38,12 @@
 }
 .theaters .item {
   padding: 0px 10px;
-  border-right: 2px solid black;
+  border-right: 1px solid black;
 }
 .theaters .item:last-child {
   border-right: none;
 }
+/* 
+.item{
+  text-align:center;
+} */

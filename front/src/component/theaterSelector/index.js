@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import style from "./style/selector.css";
 
 import theaterData from "assets/testData/TheaterName.json";
 let favorateTheater = [
@@ -37,19 +38,20 @@ class TheaterSelector extends Component {
             </div>
           ))}
         </div>
-        <div className="selector">
-          <Tabs
-            selectedIndex={this.state.tabIndex}
-            onSelect={tabIndex => this.handleState(tabIndex)}
-          >
-            <TabList>
-              {Object.keys(theaterData).map((region, index) => (
-                <Tab key={index}>{region}</Tab>
-              ))}
-            </TabList>
-
+        <Tabs
+          className="selector"
+          selectedTabClassName="selected"
+          selectedIndex={this.state.tabIndex}
+          onSelect={tabIndex => this.handleState(tabIndex)}
+        >
+          <TabList className="flex-container">
             {Object.keys(theaterData).map((region, index) => (
-              <TabPanel key={index}>
+              <Tab key={index}>{region}</Tab>
+            ))}
+          </TabList>
+          <div className="flex-container2">
+            {Object.keys(theaterData).map((region, index) => (
+              <TabPanel className="theaters" key={index}>
                 {theaterData[region].map((theater, jndex) => (
                   <div
                     className="item"
@@ -61,8 +63,8 @@ class TheaterSelector extends Component {
                 ))}
               </TabPanel>
             ))}
-          </Tabs>
-        </div>
+          </div>
+        </Tabs>
       </div>
     );
   }
