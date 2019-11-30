@@ -1,9 +1,12 @@
+@import url(http://fonts.googleapis.com/earlyaccess/jejumyeongjo.css);
+
 .login {
   width: 410px;
   position: relative;
   padding: 40px;
   left: 50%;
   transform: translate(-50%);
+  font-family: 'Jeju Myeongjo', serif;
   text-align: center;
 }
 .login h2 {
@@ -11,14 +14,14 @@
   font-size: 32px;
   color:black;
   border-bottom: 3px solid  #DC7633; 
-  
   text-align: center;
   line-height: 1;
-  font-family: Helvetica;
+  font-family: 'Jeju Myeongjo', serif;
 }
 .login > form > ul {
   list-style: none;
   padding:0 0 10px;
+  
 }
 .login > form > ul li {
   padding: 0 0 12px;
@@ -30,7 +33,8 @@
   font-size: 16px;
   box-sizing: border-box;
   text-indent: 16px;
-  border: 2px solid gray;
+  font-family: 'Jeju Myeongjo', serif;
+  border: 2px solid #F4F6F7;
 }
 .login > form > ul li input::-webkit-input-placeholder {
   font-size: 14px;
@@ -42,6 +46,7 @@
   width: 100%;
   height: 56px;
   background: #DC7633;
+  font-family: 'Jeju Myeongjo', serif;
   font-size: 18px;
   color: #fff;
 }
