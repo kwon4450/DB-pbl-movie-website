@@ -27,7 +27,7 @@ let pages = [
     exact: true,
     path: "/ticketing",
     isPublic: true,
-    component: require("./Ticketing").default
+    component: require("./ticketing/TimeTable").default
   },
   {
     exact: true,

@@ -1,17 +1,16 @@
-header{
-
+header {
 }
 
-header .logo{
-  float: left;
-}
-
-header .user-menu{
+header .user {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
 }
 
-header .nav-menu{
+header .user-menu {
+  display: flex;
+}
+
+header .nav-menu {
   display: flex;
   justify-content: center;
   margin-bottom: 40px;
