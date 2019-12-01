@@ -4,18 +4,37 @@
 
 .selector {
   display: flex;
+  justify-content: center;
 }
 
-.flex-container {
-  
-  margin:3px;
+.TheaterSelector {
+  justify-content: center;
+  font-family: NanumGothic;
+}
+
+.favorite {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  left: 6.5%;
+  margin: 10px;
   padding: 15px;
   border-radius: 5px;
-  width: 10%;
+  width: 83.5%;
+  background: #333333;
+  color: #ffffff;
+}
+.flex-container {
+  margin: 3px;
+  padding: 15px;
+  border-radius: 5px;
+  width: 8%;
   float: left;
-  background: wheat;
+  background: #333333;
   flex-direction: column;
   justify-content: center;
+  color: #ffffff;
+  font-size: 17px;
 }
 
 .flex-container > * {
@@ -27,9 +46,11 @@
   padding: 15px;
   border-radius: 5px;
   float: right;
-  width: 70%;
-  background: wheat;
+  width: 73%;
+  background: #333333;
   align-content: stretch;
+  color: #ffffff;
+  font-size: 15px;
 }
 
 .theaters {
@@ -37,13 +58,19 @@
   flex-wrap: wrap;
 }
 .theaters .item {
-  padding: 0px 10px;
+  padding: 5px 10px;
   border-right: 1px solid black;
 }
+
 .theaters .item:last-child {
   border-right: none;
 }
-/* 
-.item{
-  text-align:center;
-} */
+
+.favorite .item {
+  padding: 0px 10px;
+  border-right: 1px solid black;
+}
+
+.favorite .item:last-child {
+  border-right: none;
+}
