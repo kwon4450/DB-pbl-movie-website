@@ -13,7 +13,7 @@ let pages = [
   },
   {
     exact: true,
-    path: "/:userID",
+    path: "/mypage/:userID",
     isPublic: true,
     component: require("./MyPage").default
   }
