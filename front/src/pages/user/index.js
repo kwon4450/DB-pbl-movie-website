@@ -3,7 +3,7 @@ import { Route } from "react-router-dom";
 
 import pages from "./pages";
 
-class Ticketing extends Component {
+class User extends Component {
   render() {
     return (
       <Fragment>
@@ -20,4 +20,4 @@ class Ticketing extends Component {
   }
 }
 
-export default Ticketing;
+export default User;
