@@ -10,6 +10,7 @@ class MovieChart extends Component {
           <img
             className="logo"
             {...this.props.img}
+            alt={this.props.title + " poster"}
             title={this.props.title}
             width="280px"
             height="300px"
