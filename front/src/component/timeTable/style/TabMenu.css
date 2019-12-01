@@ -1,23 +1,27 @@
-.TabMenu{
+.TabMenu {
   display: flex;
+  justify-content: center;
 }
 
-.TabMenu .Item{
+.TabMenu .Item {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   border: 1px solid black;
+  width: 120px;
+  height: 80px;
+  text-align: center;
 }
 
-.TabMenu .Item>div{
+.TabMenu .Item > div {
   display: flex;
   flex-direction: column;
 }
 
-.TabMenu .Item>span:last-child{
+.TabMenu .Item > span:last-child {
   font-size: 20px;
 }
 
-.TabMenu .Item.deactive{
+.TabMenu .Item.deactive {
   color: darkgrey;
 }
