@@ -23,9 +23,10 @@ h1 {
 .num {
   display: inline-block;
   text-align: center;
-  background-color: #85929e;
-  color: black;
-  width: 150px;
+  background-color: #5D6D7E  ;
+  color: white;
+  font-weight:bold;
+  width: 280px;
 }
 
 .overall {
@@ -34,5 +35,13 @@ h1 {
   display: flex;
 }
 
-.img {
+.img{
+  padding:10px 10px;
+  margin:10px;
+}
+.title{
+  display: inline-block;
+  background-color: #5D6D7E;
+  color:white;
+  width:280px;
 }
