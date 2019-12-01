@@ -1,18 +1,18 @@
 let pages = [
   {
-    exact: true,
+    exact: false,
     path: "/time-table",
     isPublic: true,
     component: require("./TimeTable").default
   },
   {
-    exact: true,
+    exact: false,
     path: "/fast",
     isPublic: true,
     component: require("./Fast").default
   },
   {
-    exact: true,
+    exact: false,
     path: "/reserve",
     isPublic: true,
     component: require("./Reserve").default
