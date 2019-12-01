@@ -1,4 +1,5 @@
-import React, { Component } from "react";
+import React , { Component } from 'react';
+import style from './style/TheaterInfo.css';
 
 class TheaterInfo extends Component {
   render() {
