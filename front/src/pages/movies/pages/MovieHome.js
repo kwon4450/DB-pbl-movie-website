@@ -40,7 +40,7 @@ class MovieHome extends Component {
     {
       num: 4,
       img: {
-        src: "assets/images/movies/love_at.jpg",
+        src: "assets/images/movies/loveat.jpg",
         alt: "러브앳 poster"
       },
       title: "러브앳",

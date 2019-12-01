@@ -11,7 +11,7 @@ class MovieChart extends Component {
             className="logo"
             {...this.props.img}
             title={this.props.title}
-            width="150px"
+            width="280px"
           ></img>
         </div>
         <div className="title">{this.props.title}</div>
