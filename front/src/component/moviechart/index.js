@@ -1,21 +1,24 @@
-import React, { Component } from 'react';
-import './style/moviechart.css';
-class MovieChart extends Component{
-  
+import React, { Component } from "react";
+import "./style/moviechart.css";
+
+class MovieChart extends Component {
   render() {
-
-    return(
-      <div className='MovieChart'>
-      <div class='num'>{this.props.num}</div>
-      {/* <div class="img"> */}
-      {/* <img src" className="logo" alt="poster"></img>
-        </div> */}
-      <div class='title'>{this.props.title}</div>
-      <div class='releasedate'>{this.props.releasedate} 개봉</div>
-      <div class='rate'>{this.props.rate}%</div>
-      <div class='ticket'>예매</div>
+    return (
+      <div className="MovieChart">
+        <div className="num">No.{this.props.num}</div>
+        <div className="img">
+          <img
+            className="logo"
+            {...this.props.img}
+            title={this.props.title}
+            width="150px"
+          ></img>
+        </div>
+        <div className="title">{this.props.title}</div>
+        <div className="releasedate">{this.props.releasedate} 개봉</div>
+        <div className="rate">{this.props.rate}%</div>
+        <div className="ticket">예매</div>
       </div>
-
     );
   }
 }
