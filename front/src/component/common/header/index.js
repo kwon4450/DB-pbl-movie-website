@@ -17,10 +17,10 @@ class Header extends Component {
           </div>
 
           <Menu className="user-menu">
-            <Link to="/login">
+            <Link to="/user/login">
               <MenuItem>로그인</MenuItem>
             </Link>
-            <Link to="/join">
+            <Link to="/user/join">
               <MenuItem>회원가입</MenuItem>
             </Link>
           </Menu>

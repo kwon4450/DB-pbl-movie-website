@@ -6,28 +6,22 @@ let pages = [
     component: require("./Home").default
   },
   {
-    exact: true,
-    path: "/login",
+    exact: false,
+    path: "/user",
     isPublic: true,
-    component: require("./Auth").default
+    component: require("./user").default
   },
   {
-    exact: true,
-    path: "/join",
-    isPublic: true,
-    component: require("./Join").default
-  },
-  {
-    exact: true,
+    exact: false,
     path: "/movies",
     isPublic: true,
-    component: require("./Movies").default
+    component: require("./movies/").default
   },
   {
-    exact: true,
+    exact: false,
     path: "/ticketing",
     isPublic: true,
-    component: require("./ticketing/TimeTable").default
+    component: require("./ticketing/").default
   },
   {
     exact: true,

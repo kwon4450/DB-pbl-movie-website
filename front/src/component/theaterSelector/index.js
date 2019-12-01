@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-import style from "./style/selector.css";
+import "./style/selector.css";
 
 import theaterData from "assets/testData/TheaterName.json";
 let favorateTheater = [

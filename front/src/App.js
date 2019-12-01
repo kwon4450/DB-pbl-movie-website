@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { instanceOf } from "prop-types";
 import { withCookies, Cookies } from "react-cookie";
-import { LoginRoute, LogoutRoute } from "routes";
+import { LoginRoute } from "routes";
 
 import Header from "component/common/header";
 import Footer from "component/common/footer";

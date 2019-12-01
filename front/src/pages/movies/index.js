@@ -3,8 +3,9 @@ import { Route } from "react-router-dom";
 
 import pages from "./pages";
 
-class Ticketing extends Component {
+class Movies extends Component {
   render() {
+    console.log(this.props);
     return (
       <Fragment>
         {pages.map((item, index) => {
@@ -20,4 +21,4 @@ class Ticketing extends Component {
   }
 }
 
-export default Ticketing;
+export default Movies;
