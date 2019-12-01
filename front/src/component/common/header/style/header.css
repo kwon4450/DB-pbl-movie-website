@@ -1,10 +1,29 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
 header {
+  background:#212F3D ;
 }
 
 header .user {
   display: flex;
+  
   justify-content: space-between;
 }
+
+.menuItem{
+  background:#212F3D ;
+
+}
+
+
+header h1{
+  color: white;
+  font-family: 'Noto Sans KR', sans-serif;
+  text-align:center;
+  margin: 5px;
+  padding: 5px;
+  font-size: px;
+}
+  
 
 header .user-menu {
   display: flex;

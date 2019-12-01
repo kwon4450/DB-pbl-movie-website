@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/earlyaccess/jejumyeongjo.css);
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
 
 .login {
   width: 410px;
@@ -6,17 +6,18 @@
   padding: 40px;
   left: 50%;
   transform: translate(-50%);
-  font-family: 'Jeju Myeongjo', serif;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size:20px;
   text-align: center;
 }
 .login h2 {
   padding: 0 0 20px;
   font-size: 32px;
   color:black;
-  border-bottom: 3px solid  #DC7633; 
+  border-bottom: 3px solid#5D6D7E; 
   text-align: center;
   line-height: 1;
-  font-family: 'Jeju Myeongjo', serif;
+  font-family: 'Noto Sans KR', sans-serif;
 }
 .login > form > ul {
   list-style: none;
@@ -33,7 +34,7 @@
   font-size: 16px;
   box-sizing: border-box;
   text-indent: 16px;
-  font-family: 'Jeju Myeongjo', serif;
+  font-family: 'Noto Sans KR', sans-serif;
   border: 2px solid #F4F6F7;
 }
 .login > form > ul li input::-webkit-input-placeholder {
@@ -45,8 +46,8 @@
 .login li button {
   width: 100%;
   height: 56px;
-  background: #DC7633;
-  font-family: 'Jeju Myeongjo', serif;
+  background: #5D6D7E;
+  font-family: 'Noto Sans KR', sans-serif;
   font-size: 18px;
   color: #fff;
 }
