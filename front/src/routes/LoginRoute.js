@@ -14,30 +14,30 @@ class LoginRoute extends Component {
     redirectTo: "/login"
   };
 
-  renderContent() {
+  render() {
     const {
       isAuthenticated,
       redirectTo,
       component: LoginComponent,
+      isPublic,
+      handleAuth,
       ...rest
     } = this.props;
     if (isAuthenticated) {
       alert("로그인이 필요한 페이지입니다.");
-      return (
-        <Route>
-          <Redirect to={redirectTo} />
-        </Route>
-      );
+      return <Route {...rest} render={() => <Redirect to={redirectTo} />} />;
     } else
       return (
-        <Route>
-          <LoginComponent {...rest} />
-        </Route>
+        <Route
+          {...rest}
+          render={props => (
+            <LoginComponent
+              handleAuth={handleAuth}
+              isAuthenticated={isAuthenticated}
+            />
+          )}
+        />
       );
-  }
-
-  render() {
-    return this.renderContent();
   }
 }
 

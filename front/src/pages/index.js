@@ -30,9 +30,9 @@ let pages = [
     component: require("./Theater").default
   },
   {
-    exact: true,
+    exact: false,
     path: "/test",
-    isPublic: true,
+    isPublic: false,
     component: require("./Test").default
   },
   {
