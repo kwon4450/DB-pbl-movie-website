@@ -1,12 +1,11 @@
-@import url(http://fonts.googleapis.com/earlyaccess/jejumyeongjo.css);
-
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
 
 footer{
   clear: both;
   text-align: center;
   background-color: white;
   color: gray;
-  font-family: 'Jeju Myeongjo', serif;
+  font-family: 'Noto Sans KR', sans-serif;
 }
 
 footer p{

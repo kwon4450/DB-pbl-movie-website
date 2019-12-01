@@ -8,6 +8,7 @@ class MovieHome extends Component {
       img: {
         src: "assets/images/movies/1.jpg"
       },
+
       title: "Frozen2",
       rate: "93.2",
       releasedate: "2019.11.21"
