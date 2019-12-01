@@ -6,8 +6,7 @@ class MovieHome extends Component {
     {
       num: 1,
       img: {
-        src: "assets/images/movies/1.jpg",
-        alt: "frozen2 poster"
+        src: "assets/images/movies/1.jpg"
       },
       title: "Frozen2",
       rate: "93.2",
@@ -17,8 +16,7 @@ class MovieHome extends Component {
     {
       num: 2,
       img: {
-        src: "assets/images/movies/find_me.jpg",
-        alt: "나를 찾아줘 poster"
+        src: "assets/images/movies/find_me.jpg"
       },
       title: "나를 찾아줘",
       rate: "9.2",
@@ -28,8 +26,7 @@ class MovieHome extends Component {
     {
       num: 3,
       img: {
-        src: "assets/images/movies/2.jpg",
-        alt: "블랙머니 poster"
+        src: "assets/images/movies/2.jpg"
       },
       title: "블랙머니",
       rate: "4.2",
@@ -39,8 +36,7 @@ class MovieHome extends Component {
     {
       num: 4,
       img: {
-        src: "assets/images/movies/love_at.jpg",
-        alt: "러브앳 poster"
+        src: "assets/images/movies/love_at.jpg"
       },
       title: "러브앳",
       rate: "2.8",
@@ -50,8 +46,7 @@ class MovieHome extends Component {
     {
       num: 5,
       img: {
-        src: "assets/images/movies/4.jpg",
-        alt: "82년생 김지영 poster"
+        src: "assets/images/movies/4.jpg"
       },
       title: "82년생 김지영",
       rate: "1.4",
@@ -61,8 +56,7 @@ class MovieHome extends Component {
     {
       num: 6,
       img: {
-        src: "assets/images/movies/5.jpg",
-        alt: "윤희에게 poster"
+        src: "assets/images/movies/5.jpg"
       },
       title: "윤희에게",
       rate: "0.9",
