@@ -1,10 +1,11 @@
-@import url(http://fonts.googleapis.com/earlyaccess/jejumyeongjo.css);
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
 
 .signup {
   width: 460px;
   position: relative;
   left: 50%;
-  font-family: 'Jeju Myeongjo', serif;
+  font-family: 'Noto Sans KR', sans-serif;
   padding:30px;
   transform: translate(-50%);
   text-align: center;
@@ -57,7 +58,7 @@
   width: 100%;
   height: 46px;
   font-size: 16px;
-  font-family: 'Jeju Myeongjo', serif;
+  font-family: 'Noto Sans KR', sans-serif;
   box-sizing: border-box;
   text-indent: 16px;
   background: #fff url(https://static.nid.naver.com/images/join/pc/sel_arr_2x.gif) 100% 50% no-repeat;
@@ -69,7 +70,7 @@
 .signup button {
   width: 100%;
   height: 56px;
-  font-family: 'Jeju Myeongjo', serif;
+  font-family: 'Noto Sans KR', sans-serif;
   background: #5D6D7E ;
   font-size: 18px;
   color: #fff;
