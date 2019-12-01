@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Isgood from "./isgood";
 
-class Review extends Component {
+class ReviewWrite extends Component {
   render() {
     return (
       <div classname="Review">
@@ -17,4 +17,4 @@ class Review extends Component {
   }
 }
 
-export default Review;
+export default ReviewWrite;

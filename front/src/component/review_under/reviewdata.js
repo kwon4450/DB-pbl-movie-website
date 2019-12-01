@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Review from "./review.js";
+import Review from "./reviewwrite.js";
 
 class ReviewData extends Component {
   ReviewData = [
