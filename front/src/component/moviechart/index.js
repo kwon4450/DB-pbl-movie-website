@@ -7,9 +7,6 @@ class MovieChart extends Component{
     return(
       <div className='MovieChart'>
       <div class='num'>{this.props.num}</div>
-      {/* <div class="img"> */}
-      {/* <img src" className="logo" alt="poster"></img>
-        </div> */}
       <div class='title'>{this.props.title}</div>
       <div class='releasedate'>{this.props.releasedate} 개봉</div>
       <div class='rate'>{this.props.rate}%</div>

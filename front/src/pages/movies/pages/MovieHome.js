@@ -6,9 +6,10 @@ class MovieHome extends Component {
     {
       num: "No.1",
       img: {
-        src: "front/public/assets/images/movies/1.jpg",
+        src: "assets/images/movies/1.jpg",
         alt: "frozen poster"
       },
+      
       title: "Frozen2",
       rate: "93.2",
       releasedate: "2019.11.21"
@@ -16,7 +17,11 @@ class MovieHome extends Component {
 
     {
       num: "No.2",
-
+      img: {
+        src: "assets/images/movies/2.jpg",
+        alt: "find me poster"
+      },
+      
       title: "나를 찾아줘",
       rate: "9.2",
       releasedate: "2019.11.27"
