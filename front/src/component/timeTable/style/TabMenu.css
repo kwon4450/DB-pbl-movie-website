@@ -4,7 +4,7 @@
 .TabMenu {
   display: flex;
   justify-content: center;
-  
+
 }
 
 .TabMenu .Item {
@@ -42,8 +42,10 @@
   padding:auto;
 }
 
-
-.TabMenu .Item.deactive {
-  color: #CCD1D1;
+.TabMenu .Item > span:last-child {
+  font-size: 20px;
 }
 
+.TabMenu .Item.deactive {
+  color: darkgrey;
+}

@@ -10,7 +10,7 @@ class Ticketing extends Component {
         {pages.map((item, index) => {
           return (
             <Route
-              {...{ ...item, path: this.props.computedMatch.path + item.path }}
+              {...{ ...item, path: this.props.match.path + item.path }}
               key={index}
             />
           );

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Route } from "react-router-dom";
 import { instanceOf } from "prop-types";
 import { withCookies, Cookies } from "react-cookie";
 import { LoginRoute } from "routes";
@@ -28,25 +28,42 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        <Header></Header>
+        <Header />
         <main>
-          <Switch>
-            {pages.map((item, index) => {
-              if (item.isPublic) {
-                return (
-                  <LoginRoute
-                    isAuthenticated={this.state.isAuthenticated}
-                    {...item}
-                    key={index}
-                  />
-                );
-              } else {
-                return <Route {...item} key={index} />;
-              }
-            })}
-          </Switch>
+          {pages.map((item, index) => {
+            const {
+              isPublic,
+              component: RenderedComponent,
+              ...routeInfo
+            } = item;
+
+            if (!isPublic) {
+              return (
+                <LoginRoute
+                  {...routeInfo}
+                  component={RenderedComponent}
+                  isAuthenticated={this.state.isAuthenticated}
+                  handleAuth={this.handleAuth}
+                  key={index}
+                />
+              );
+            } else {
+              return (
+                <Route
+                  {...routeInfo}
+                  key={index}
+                  render={props => (
+                    <RenderedComponent
+                      {...props}
+                      handleAuth={this.handleAuth}
+                    />
+                  )}
+                />
+              );
+            }
+          })}
         </main>
-        <Footer></Footer>
+        <Footer />
       </BrowserRouter>
     );
   }
