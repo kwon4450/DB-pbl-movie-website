@@ -3,6 +3,29 @@
 }
 
 .MovieBox {
+  display: flexbox;
+  text-align: center;
+}
+
+.Info {
+  border: 2px #e59866 solid;
+}
+
+.screenInfo {
   display: flex;
-  justify-content: center;
+  border: 3px lightcoral solid;
+  float: left;
+}
+
+.Movie {
+  border: 3px none solid;
+  overflow: hidden;
+  width: 80%;
+  margin: 20px;
+  margin-left: 130px;
+}
+
+.item {
+  border: 3px none solid;
+  float: left;
 }
