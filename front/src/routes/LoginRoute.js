@@ -16,7 +16,6 @@ class LoginRoute extends Component {
 
   render() {
     const rest = { exact: this.props.exact, path: this.props.path };
-    console.log("in LoginRoute:\n", rest);
     if (!this.props.isAuthenticated) {
       return (
         <Route

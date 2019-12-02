@@ -14,9 +14,10 @@ let pages = [
   {
     exact: true,
     path: "/mypage/:userID",
-    isPublic: true,
+    isPublic: false,
     component: require("./MyPage").default
-  }
+  },
+  {}
 ];
 
 export default pages;

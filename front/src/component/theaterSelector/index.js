@@ -54,14 +54,15 @@ class TheaterSelector extends Component {
               <TabPanel className="theaters" key={index}>
                 <ul>
                   {theaterData[region].map((theater, jndex) => (
-                    <li>
-                    <div
-                      className="item"
-                      key={jndex}
-                      onClick={() => this.props.handleTheater(region, theater)}
-                    >
-                      {theater}
-                    </div>
+                    <li key={jndex}>
+                      <div
+                        className="item"
+                        onClick={() =>
+                          this.props.handleTheater(region, theater)
+                        }
+                      >
+                        {theater}
+                      </div>
                     </li>
                   ))}
                 </ul>

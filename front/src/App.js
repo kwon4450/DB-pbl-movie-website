@@ -14,27 +14,31 @@ class App extends Component {
   };
   constructor(props) {
     super(props);
+    console.log(this.props.cookies.get("connect.sid"));
     this.state = {
       isAuthenticated: this.props.cookies.get("connect.sid") ? true : false
     };
   }
 
-  handleAuth(value) {
+  handleAuth = value => {
     this.setState({
       isAuthenticated: value
     });
-  }
+  };
 
   render() {
     return (
       <BrowserRouter>
-        <Header />
+        <Header
+          isAuthenticated={this.state.isAuthenticated}
+          handleAuth={this.handleAuth}
+        />
         <main>
           <Switch>
             <PageRoutes
               isAuthenticated={this.state.isAuthenticated}
-              parentPath={""}
               handleAuth={this.handleAuth}
+              parentPath={""}
               pages={pages}
             />
           </Switch>

@@ -1,11 +1,48 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 import DropdownMenu from "component/common/menu/DropdownMemu";
 import Menu, { MenuItem } from "component/common/menu/Menu";
 import "./style/header.css";
 
 class Header extends Component {
+  renderUserMenu() {
+    if (this.props.isAuthenticated) {
+      return [
+        <Link to="/user/mypage/" key="myPage">
+          <MenuItem>마이 페이지</MenuItem>
+        </Link>,
+        <div
+          key="logout"
+          onClick={() => {
+            axios
+              .post("/api/user/logout")
+              .then(res => {
+                console.log("logout success!");
+                console.log(res);
+                this.props.handleAuth(false);
+              })
+              .catch(err => {
+                console.log(err);
+              });
+          }}
+        >
+          <MenuItem>로그아웃</MenuItem>
+        </div>
+      ];
+    } else {
+      return [
+        <Link to="/user/login" key="login">
+          <MenuItem>로그인</MenuItem>
+        </Link>,
+        <Link to="/user/join" key="join">
+          <MenuItem>회원가입</MenuItem>
+        </Link>
+      ];
+    }
+  }
+
   render() {
     return (
       <header>
@@ -16,14 +53,7 @@ class Header extends Component {
             </Link>
           </div>
 
-          <Menu className="user-menu">
-            <Link to="/user/login">
-              <MenuItem>로그인</MenuItem>
-            </Link>
-            <Link to="/user/join">
-              <MenuItem>회원가입</MenuItem>
-            </Link>
-          </Menu>
+          <Menu className="user-menu">{this.renderUserMenu()}</Menu>
         </nav>
 
         <nav className="site">

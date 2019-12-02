@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 import "./style/LogIn.css";
-import axios from "axios";
 
 class LogIn extends Component {
   constructor(props) {
@@ -27,16 +27,21 @@ class LogIn extends Component {
         { withCredentials: true }
       )
       .then(res => {
+        console.log("login success!");
         this.props.handleAuth(true);
         this.props.history.push("/");
       })
       .catch(err => {
         console.log(err);
-        // const res = err.response;
-        // switch (res.status) {
-        //   case 401:
-        //     alert(res.data.reason)
-        // }
+        const res = err.response;
+        switch (res.status) {
+          case 401:
+            alert(res.data.reason);
+            break;
+          default:
+            console.log(res.status);
+            break;
+        }
       });
   };
 

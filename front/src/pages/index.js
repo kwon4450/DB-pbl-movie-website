@@ -32,7 +32,7 @@ let pages = [
   {
     exact: false,
     path: "/test",
-    isPublic: false,
+    isPublic: true,
     component: require("./Test").default
   },
   {
