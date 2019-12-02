@@ -21,19 +21,26 @@
   padding: 15px;
   border-radius: 5px;
   width: 83.5%;
-  background: #333333;
-  color: #ffffff;
+  background:#34495E;
+  color: white;
+  font-weight: bold;
+
 }
 .flex-container {
   margin: 3px;
   padding: 15px;
-  border-radius: 5px;
+
   width: 8%;
   float: left;
-  background: #333333;
   flex-direction: column;
   justify-content: center;
-  color: #ffffff;
+  background:  #fafafa;
+  color: black;
+  font-weight: bold;
+  border-top:3px solid#34495E;
+  border-bottom: 3px solid #34495E;
+  border-left:3px solid #34495E;
+
   font-size: 17px;
 }
 
@@ -44,26 +51,48 @@
 .flex-container2 {
   margin: 3px;
   padding: 15px;
-  border-radius: 5px;
+  
   float: right;
   width: 73%;
-  background: #333333;
-  align-content: stretch;
-  color: #ffffff;
-  font-size: 15px;
+  background:#fafafa;
+  color: black;
+  font-weight: bold;
+  border-top:3px solid #34495E;
+  border-bottom:3px solid #34495E;
+  border-right:3px solid #34495E;
+  
 }
 
 .theaters {
   display: flex;
   flex-wrap: wrap;
 }
-.theaters .item {
+
+.theaters ul {
+  display: inline;
+  justify-content: center;
+}
+.theaters ul li {
+  float: left;
+  position: relative;
   padding: 5px 10px;
-  border-right: 1px solid black;
 }
 
-.theaters .item:last-child {
+.theaters ul li::after {
+  display: inline-block;
+  position: absolute;
+  content: '';
+  right: 0;
+  top: 7px;
+  width: 1px;
+  height: 16px;
+  background: #111;
+}
+.theaters ul li:last-child {
   border-right: none;
+}
+.theaters .item {
+  display: inline;
 }
 
 .favorite .item {

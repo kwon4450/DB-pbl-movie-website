@@ -52,15 +52,19 @@ class TheaterSelector extends Component {
           <div className="flex-container2">
             {Object.keys(theaterData).map((region, index) => (
               <TabPanel className="theaters" key={index}>
-                {theaterData[region].map((theater, jndex) => (
-                  <div
-                    className="item"
-                    key={jndex}
-                    onClick={() => this.props.handleTheater(region, theater)}
-                  >
-                    {theater}
-                  </div>
-                ))}
+                <ul>
+                  {theaterData[region].map((theater, jndex) => (
+                    <li>
+                    <div
+                      className="item"
+                      key={jndex}
+                      onClick={() => this.props.handleTheater(region, theater)}
+                    >
+                      {theater}
+                    </div>
+                    </li>
+                  ))}
+                </ul>
               </TabPanel>
             ))}
           </div>
