@@ -26,6 +26,7 @@ class TheaterSelector extends Component {
     return (
       <div className="TheaterSelector">
         <div className="favorite">
+          자주가는 영화관 :
           {favorateTheater.map((item, index) => (
             <div
               className="item"

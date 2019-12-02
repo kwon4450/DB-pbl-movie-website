@@ -245,14 +245,12 @@ class TimeTable extends Component{
     }
     this.tabList = data;
   }
-
   selectTab = (index) => {
     console.log("selected tab is ", index);
     this.setState({
       currentTabIndex: index
     });
   }
-
   render() {
 
     this.createTabList();
@@ -269,7 +267,7 @@ class TimeTable extends Component{
                 <span>{item.month}월</span>
                 <span>{item.date}일</span>
               </div>
-              <span>{item.day}</span>
+              <span class="day">  {item.day}</span>
             </div>
           );
         })}

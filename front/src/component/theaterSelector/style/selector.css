@@ -21,19 +21,26 @@
   padding: 15px;
   border-radius: 5px;
   width: 83.5%;
-  background: #333333;
-  color: #ffffff;
+  background: #E59866;
+  color: black;
+  font-weight: bold;
+
 }
 .flex-container {
   margin: 3px;
   padding: 15px;
-  border-radius: 5px;
+
   width: 8%;
   float: left;
-  background: #333333;
   flex-direction: column;
   justify-content: center;
-  color: #ffffff;
+  background:  #fafafa;
+  color: black;
+  font-weight: bold;
+  border-top:3px solid #E59866;
+  border-bottom: 3px solid #E59866;
+  border-left:3px solid #E59866;
+
   font-size: 17px;
 }
 
@@ -44,13 +51,16 @@
 .flex-container2 {
   margin: 3px;
   padding: 15px;
-  border-radius: 5px;
+  
   float: right;
   width: 73%;
-  background: #333333;
-  align-content: stretch;
-  color: #ffffff;
-  font-size: 15px;
+  background:#fafafa;
+  color: black;
+  font-weight: bold;
+  border-top:3px solid #E59866;
+  border-bottom:3px solid #E59866;
+  border-right:3px solid #E59866;
+  
 }
 
 .theaters {
@@ -60,6 +70,7 @@
 .theaters .item {
   padding: 5px 10px;
   border-right: 1px solid black;
+  height:80%;
 }
 
 .theaters .item:last-child {
