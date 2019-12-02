@@ -49,3 +49,6 @@
 .TabMenu .Item.deactive {
   color: darkgrey;
 }
+
+.Info > div {
+}
