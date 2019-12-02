@@ -4,10 +4,12 @@
 .Menu {
   display: flex;
   font-family: 'Noto Sans KR', sans-serif;
+  z-index:9999;
   
 }
 
 .Menu .MenuItem {
+
   flex: 0 0 auto;
   width: 160px;
   height: 50px;
