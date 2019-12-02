@@ -70,16 +70,16 @@ class MovieHome extends Component {
       <div className="MovieHome">
         <h1>무비차트</h1>
 
-        <div class="overall">
-          <div class="inner_overall">
+        <div className="overall">
+          <div className="inner_overall">
             {this.movieChartData.slice(0, 3).map((movieData, index) => {
               return <MovieChart {...movieData} key={index}></MovieChart>;
             })}
           </div>
         </div>
 
-        <div class="overall">
-          <div class="inner_overall">
+        <div className="overall">
+          <div className="inner_overall">
             {this.movieChartData.slice(3, 6).map((movieData, index) => {
               return <MovieChart {...movieData} key={index}></MovieChart>;
             })}

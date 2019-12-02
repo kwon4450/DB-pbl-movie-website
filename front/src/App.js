@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter, Switch } from "react-router-dom";
 import { instanceOf } from "prop-types";
 import { withCookies, Cookies } from "react-cookie";
-import { LoginRoute } from "routes";
+import { PageRoutes } from "routes";
 
 import Header from "component/common/header";
 import Footer from "component/common/footer";
@@ -30,38 +30,14 @@ class App extends Component {
       <BrowserRouter>
         <Header />
         <main>
-          {pages.map((item, index) => {
-            const {
-              isPublic,
-              component: RenderedComponent,
-              ...routeInfo
-            } = item;
-
-            if (!isPublic) {
-              return (
-                <LoginRoute
-                  {...routeInfo}
-                  component={RenderedComponent}
-                  isAuthenticated={this.state.isAuthenticated}
-                  handleAuth={this.handleAuth}
-                  key={index}
-                />
-              );
-            } else {
-              return (
-                <Route
-                  {...routeInfo}
-                  key={index}
-                  render={props => (
-                    <RenderedComponent
-                      {...props}
-                      handleAuth={this.handleAuth}
-                    />
-                  )}
-                />
-              );
-            }
-          })}
+          <Switch>
+            <PageRoutes
+              isAuthenticated={this.state.isAuthenticated}
+              parentPath={""}
+              handleAuth={this.handleAuth}
+              pages={pages}
+            />
+          </Switch>
         </main>
         <Footer />
       </BrowserRouter>
