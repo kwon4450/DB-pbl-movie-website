@@ -1,32 +1,35 @@
 create table person(
-  id            number         constraint person_PK primary key,
-  birthday      date           not null,
-  f_name        varchar2(20)   not null,
-  l_name        varchar2(20)   not null,
-  gender        varchar2(20)   not null,
-  job           varchar2(20)   not null,
-  info          varchar2(255)  not null
+  id            int,
+  birthday      date          not null,
+  f_name        varchar(20)   not null,
+  l_name        varchar(20)   not null,
+  gender        varchar(20)   not null,
+  job           varchar(20)   not null,
+  info          varchar(255)  not null,
+  PRIMARY KEY (id)
 );
 
 create table genretype(
-  genre         varchar2(20)   constraint genretype_PK primary key,
-  info          varchar2(255)  not null
+  genre         varchar(20),
+  info          text          not null,
+  PRIMARY KEY (genre)
 );
 
 create table grade(
-  name          varchar2(10)   constraint grade_PK primary key,
-  info          varchar2(255)  not null
+  name          varchar(10),
+  info          text          not null,
+  PRIMARY KEY (name)
 );
 
 create table movie(
-  id            number         constraint  movie_PK  primary key,
-  grade_name    varchar2(10)   not null,
-  movie_title   varchar2(20)   not null,
-  is_screening  char(1)        constraint  boolean_ckeck  check(is_screening in ('0', '1')),
+  id            int         constraint  movie_PK  primary key,
+  grade_name    varchar(10)   not null,
+  movie_title   varchar(20)   not null,
+  is_screening  varchar(1)        constraint  boolean_ckeck  check(is_screening in ('0', '1')),
   opening_date  date           not null,
-  runnung_time  number(10)     not null,
-  thumbnail     varchar2(255)  not null,
-  country       varchar2(20)   not null,
+  runnung_time  int(10)     not null,
+  thumbnail     varchar(255)  not null,
+  country       varchar(20)   not null,
   constraint movie_grade_FK foreign key (grade_name) references grade(name)
 );
 
