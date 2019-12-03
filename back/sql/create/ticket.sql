@@ -1,15 +1,17 @@
 create table reservation(
-  id                varchar2(40)  constraint reservation_PK primary key,
-  client_id         varchar2(20)  not null,
-  payment_type      varchar2(20)  not null,
-  price             number not null,
-  constraint reservation_client_FK foreign key(client_id) references client(id)
+  id                varchar(40),
+  client_id         varchar(20)  not null,
+  payment_type      varchar(20)  not null,
+  price             int          not null,
+  PRIMARY KEY (id),
+  FORIEGN KEY (client_id) REFERENCES client(id)
 );
 
 create table ticket(
-  id                number        constraint ticket_id primary key,
-  reservation_id    varchar2(40)  not null,
-  seat_id           number        not null,
-  constraint ticket_reservation_FK foreign key(reservation_id) references reservation(id),
-  constraint ticket_seat_FK foreign key(seat_id) references seat(id)
+  id                int,
+  reservation_id    varchar(40)   not null,
+  seat_id           int           not null,
+  PRIMARY KEY (id),
+  FORIEGN KEY (reservation_id) REFERENCES reservation(id),
+  FORIEGN KEY (seat_id) REFERENCES seat(id)
 );
