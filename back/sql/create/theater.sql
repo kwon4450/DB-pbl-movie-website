@@ -1,26 +1,29 @@
 create table theater(
-  id            number        constraint  theater_PK  primary key,
-  name          varchar2(20)  not null
+  id    int,
+  name  varchar(20) not null,
+  PRIMARY KEY (id)
 );
 
 create table favoritetheater(
-  id            number        constraint favoritetheater_PK  primary key,
-  client_id     varchar2(20)  not null,
-  theater_id    number        not null,
-  constraint favoritetheater_client_FK foreign key(client_id) references client(id),
-  constraint favoritetheater_theater_FK foreign key(theater_id) references theater(id)
+  id          int,
+  client_id   varchar(20) not null,
+  theater_id  int         not null,
+  PRIMARY KEY (id),
+  FORIEGN KEY (client_id) REFERENCES client(id),
+  FORIEGN KEY (theater_id) REFERENCES theater(id)
 );
 
 create table theateraddress(
-  theater_id    number        constraint theateraddress_PK primary key,
-  postal        number(5)     not null,
-  street        varchar2(100)  not null,
-  street_num    number(3)     not null,
-  detail        varchar(255)   not null,
-  state         varchar2(10)  not null,
-  city          varchar2(10)  not null,
-  district      varchar2(10)  not null,
-  constraint theateraddress_thater_FK foreign key(theater_id) references theater(id)
+  theater_id    int,
+  postal        int(5)     not null,
+  street        varchar(100)  not null,
+  street_num    int(3)     not null,
+  detail        text   not null,
+  state         varchar(10)  not null,
+  city          varchar(10)  not null,
+  district      varchar(10)  not null,
+  PRIMARY KEY (theater_id),
+  FORIEGN KEY (theater_id) REFERENCES theater(id)
 );
 
 create table screen(
