@@ -45,6 +45,7 @@ class App extends Component {
           <Header
             isAuthenticated={this.state.isAuthenticated}
             handleAuth={this.handleAuth}
+            userID={this.props.cookies.get("userID")}
           />
           <main>
             <Switch>

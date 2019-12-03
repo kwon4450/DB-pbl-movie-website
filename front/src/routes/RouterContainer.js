@@ -14,12 +14,10 @@ class RouterContainer extends Component {
         .catch(err => {
           console.log("session check fail", err);
         });
-      console.log(action, location.pathname);
+      // console.log(action, location.pathname);
     });
   }
   render() {
-    // console.log(this.props);
-
     return this.props.children;
   }
 }

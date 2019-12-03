@@ -131,7 +131,8 @@ class SignUp extends Component {
       axios
         .post("/api/user/signup", { user })
         .then(res => {
-          alert(res.info);
+          // alert(res.info);
+          alert("가입을 축하드립니다!");
           this.props.history.push("/user/login");
         })
         .catch(err => {
