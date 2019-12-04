@@ -1,13 +1,13 @@
 create table if not exists theater(
-  id          int,
-  citycode    varchar(10),
+  id          int               auto_increment,
+  citycode    varchar(10)       not null,
   name        varchar(20)       not null,
   PRIMARY KEY (id)
 );
 
 create table if not exists favoritetheater(
   id          int,
-  user_id   varchar(20)       not null,
+  user_id     varchar(20)       not null,
   theater_id  int               not null,
   PRIMARY KEY (id),
   FOREIGN KEY (user_id) REFERENCES user(user_id),
