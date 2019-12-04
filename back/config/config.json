@@ -1,12 +1,16 @@
 {
   "development": {
-    "user"          : "theater",
-    "password"      : "1234",
-    "connectString" : "localhost/XE"
+    "host": null,
+    "user": null,
+    "password": null,
+    "database": null,
+    "connectionLimit": null
   },
   "test": {
-    "user"          : "BS",
-    "password"      : "1234",
-    "connectString" : "localhost/XE"
+    "host": "localhost",
+    "user": "bs",
+    "password": "1234",
+    "database": "theater_schema",
+    "connectionLimit": 10
   }
 }
