@@ -2,6 +2,7 @@ create table if not exists theater(
   id          int               auto_increment,
   citycode    varchar(10)       not null,
   name        varchar(20)       not null,
+  address     text              not null,
   PRIMARY KEY (id)
 );
 
@@ -11,19 +12,6 @@ create table if not exists favoritetheater(
   theater_id  int               not null,
   PRIMARY KEY (id),
   FOREIGN KEY (user_id) REFERENCES user(user_id),
-  FOREIGN KEY (theater_id) REFERENCES theater(id)
-);
-
-create table if not exists theateraddress(
-  theater_id    int,
-  postal        int(5)          not null,
-  street        varchar(100)    not null,
-  street_num    int(3)          not null,
-  detail        text            not null,
-  state         varchar(10)     not null,
-  city          varchar(10)     not null,
-  district      varchar(10)     not null,
-  PRIMARY KEY (theater_id),
   FOREIGN KEY (theater_id) REFERENCES theater(id)
 );
 
