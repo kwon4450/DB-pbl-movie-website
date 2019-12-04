@@ -7,27 +7,41 @@ import Menu, { MenuItem } from "component/common/menu/Menu";
 import "./style/header.css";
 
 class Header extends Component {
+  state = {
+    userID: "마이 페이지"
+  };
+
+  componentDidMount() {
+    axios
+      .get("/api/user/userinfo")
+      .then(res => {
+        console.log("get userinfo success\n");
+        this.setState({ userID: res.data.id });
+      })
+      .catch(err => {
+        console.log("get userinfo err\n", err);
+      });
+  }
+
   renderUserMenu() {
     if (this.props.isAuthenticated) {
+      let logout = () => {
+        axios
+          .post("/api/user/logout")
+          .then(res => {
+            console.log("logout success!\n");
+            this.props.handleAuth(false);
+          })
+          .catch(err => {
+            console.log("logout fail!\n", err);
+          });
+      };
+
       return [
-        <Link to="/user/mypage/" key="myPage">
-          <MenuItem>마이 페이지</MenuItem>
+        <Link to={`/user/mypage/${this.state.userID}`} key="myPage">
+          <MenuItem>{this.state.userID}</MenuItem>
         </Link>,
-        <div
-          key="logout"
-          onClick={() => {
-            axios
-              .post("/api/user/logout")
-              .then(res => {
-                console.log("logout success!");
-                console.log(res);
-                this.props.handleAuth(false);
-              })
-              .catch(err => {
-                console.log(err);
-              });
-          }}
-        >
+        <div key="logout" onClick={logout}>
           <MenuItem>로그아웃</MenuItem>
         </div>
       ];
