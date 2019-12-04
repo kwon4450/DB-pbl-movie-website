@@ -131,6 +131,7 @@ class SignUp extends Component {
       axios
         .post("/api/user/signup", { user })
         .then(res => {
+          console.log(res);
           alert(res.info);
           this.props.history.push("/user/login");
         })

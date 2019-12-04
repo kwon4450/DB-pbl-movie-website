@@ -5,13 +5,13 @@ class ReviewWrite extends Component {
   render() {
     console.log(this.props);
     return (
-      <div classname="Review">
-        <div classname="nickname">{this.props.nickname}</div>
-        <div classname="reviews">{this.props.reviews}</div>
+      <div className="Review">
+        <div className="nickname">{this.props.nickname}</div>
+        <div className="reviews">{this.props.reviews}</div>
         <br></br>
         <br></br>
-        <div classname="grade">{this.props.grade}</div>
-        <div classname="date">{this.props.date}</div>
+        <div className="grade">{this.props.grade}</div>
+        <div className="date">{this.props.date}</div>
         <Isgood></Isgood>
       </div>
     );
