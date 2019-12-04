@@ -3,6 +3,7 @@ import Isgood from "./isgood";
 
 class ReviewWrite extends Component {
   render() {
+    console.log(this.props);
     return (
       <div classname="Review">
         <div classname="nickname">{this.props.nickname}</div>

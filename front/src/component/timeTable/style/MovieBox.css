@@ -13,7 +13,7 @@
 
 .screenInfo {
   display: flex;
-  border: 3px lightcoral solid;
+  border: 2px lightcoral solid;
   float: left;
 }
 
