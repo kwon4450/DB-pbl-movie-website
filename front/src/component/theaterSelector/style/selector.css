@@ -21,10 +21,9 @@
   padding: 15px;
   border-radius: 5px;
   width: 83.5%;
-  background:#34495E;
+  background: #34495e;
   color: white;
   font-weight: bold;
-
 }
 .flex-container {
   margin: 3px;
@@ -34,12 +33,12 @@
   float: left;
   flex-direction: column;
   justify-content: center;
-  background:  #fafafa;
+  background: #fafafa;
   color: black;
   font-weight: bold;
-  border-top:3px solid#34495E;
-  border-bottom: 3px solid #34495E;
-  border-left:3px solid #34495E;
+  border-top: 3px solid#34495E;
+  border-bottom: 3px solid #34495e;
+  border-left: 3px solid #34495e;
 
   font-size: 17px;
 }
@@ -51,16 +50,15 @@
 .flex-container2 {
   margin: 3px;
   padding: 15px;
-  
+
   float: right;
   width: 73%;
-  background:#fafafa;
+  background: #fafafa;
   color: black;
   font-weight: bold;
-  border-top:3px solid #34495E;
-  border-bottom:3px solid #34495E;
-  border-right:3px solid #34495E;
-  
+  border-top: 3px solid #34495e;
+  border-bottom: 3px solid #34495e;
+  border-right: 3px solid #34495e;
 }
 
 .theaters {
@@ -81,7 +79,7 @@
 .theaters ul li::after {
   display: inline-block;
   position: absolute;
-  content: '';
+  content: "";
   right: 0;
   top: 7px;
   width: 1px;

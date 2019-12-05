@@ -1,45 +1,45 @@
 @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
 
-
 .TabMenu {
   display: flex;
   justify-content: center;
-
 }
 
 .TabMenu .Item {
-
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  background:  #fafafa;
+  background: #fafafa;
   /* border-top: 2px solid black; */
-  border-top:2px solid  #34495E;
-  border-bottom:2px solid #34495E;
-  border-right: 1px solid #34495E;
-  border-left:1px solid #34495E;
-  margin:0px;
+  border-top: 2px solid #34495e;
+  border-bottom: 2px solid #34495e;
+  border-right: 2px solid #34495e;
+  border-left: 2px solid #34495e;
+  margin: 0px;
   width: 100px;
   height: 60px;
   text-align: center;
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.TabMenu .Item :first-child {
 }
 
 .TabMenu .Item > div {
   display: flex;
   flex-direction: column;
-  margin:auto;
-  padding:auto;
+  margin: auto;
+  padding: auto;
   font-weight: bold;
 }
 
 .TabMenu .Item > span:last-child {
   font-size: 16px;
-  font-weight:bold;
+  font-weight: bold;
   display: flex;
   flex-direction: column;
-  margin:auto;
-  padding:auto;
+  margin: auto;
+  padding: auto;
 }
 
 .TabMenu .Item > span:last-child {
