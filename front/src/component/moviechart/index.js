@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-//import "./style/moviechart.css";
+import "./style/moviechart.css";
 
 class MovieChart extends Component {
   render() {
