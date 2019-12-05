@@ -4,7 +4,7 @@ const express = require("express");
 const bcrypt = require("bcrypt");
 const passport = require("passport");
 
-const { select, change } = require("../../oracle");
+const { select, change } = require('../../db');
 
 const router = express.Router();
 
@@ -22,19 +22,18 @@ router.get("/loginCheck", (req, res) => {
 
 router.get("/idCheck", isNotLoggedIn, async (req, res) => {
   const { id } = req.query;
-  const sql = `select * from client where id = '${id}'`;
-  const exUser = await select(sql);
-  console.log("exUser:  ", exUser);
-  if (exUser)
-    return res.json({ info: "이미 등록된 아이디입니다.", possible: false });
+  const sql = "select * from user where user_id = ?";
+  const exUser = await select(sql, [id]);
+  console.log("exUser:  ",exUser);
+  if (exUser) return res.json({ info: "이미 등록된 아이디입니다.", possible: false });
   return res.json({ info: "사용가능한 아이디입니다.", possible: true });
 });
 
 router.get("/mailCheck", isNotLoggedIn, async (req, res) => {
   const { mail } = req.query;
-  const sql = `select * from client where mail = '${mail}'`;
-  const exUser = await select(sql);
-  console.log("exUser:  ", exUser);
+  const sql = "select * from user where mail = ?";
+  const exUser = await select(sql, [mail]);
+  console.log("exUser:  ",exUser);
   if (exUser) return res.json({ info: "이미 등록된 메일입니다." });
   return res.json({ info: "" });
 });
@@ -42,9 +41,9 @@ router.get("/mailCheck", isNotLoggedIn, async (req, res) => {
 router.get("/phoneCheck", isNotLoggedIn, async (req, res) => {
   const { phone } = req.query;
   console.log(phone);
-  const sql = `select * from phone where phone_num = '${phone}'`;
-  const exUser = await select(sql);
-  console.log("exUser:  ", exUser);
+  const sql = "select * from phone where phone_num = ?";
+  const exUser = await select(sql, [phone]);
+  console.log("exUser:  ",exUser);
   if (exUser) return res.json({ info: "이미 등록된 휴대전화 번호입니다." });
   return res.json({ info: "" });
 });
@@ -53,8 +52,8 @@ router.post("/signup", isNotLoggedIn, async (req, res, next) => {
   console.log("signupAPI");
   console.log(req.body);
   const { id, password, gender, mail, f_name, l_name, phone } = req.body.user;
-  console.log(id, password, gender, mail, f_name, l_name, phone);
-  var sql = `select * from client where id = '${id}'`;
+  console.log (id, password, gender, mail, f_name, l_name, phone);
+  var sql = `select * from user where user_id = '${id}'`;
   const exUser = await select(sql);
   console.log("exUser:  ", exUser);
   if (exUser)
@@ -62,11 +61,16 @@ router.post("/signup", isNotLoggedIn, async (req, res, next) => {
   console.log("회원가입중");
   const hashedPW = await bcrypt.hash(password, 10);
   try {
-    sql = `insert into client(id, password, mail, gender, class, f_name, l_name) \
-                  values('${id}', '${hashedPW}', '${mail}', '${gender}', '일반', '${f_name}', '${l_name}')`;
-    await change(sql);
-    sql = `insert into phone(phone_num, client_id) values('${phone}', '${id}')`;
-    await change(sql);
+    querys = []
+    querys[0] = {
+      sql: "insert into user(user_id, user_pw, mail, gender, class, f_name, l_name) values(?, ?, ?, ?, ?, ?, ?)",
+      args: [id, hashedPW, mail, gender, '일반', f_name, l_name]
+    }
+    querys[1] = {
+      sql: "insert into phone(phone_num, user_id) values(?, ?)",
+      args: [phone, id]
+    }
+    await change(querys);
     return res.json({ info: "회원가입이 완료되었습니다." });
   } catch (e) {
     console.error(e);

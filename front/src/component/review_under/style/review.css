@@ -1,0 +1,12 @@
+.Reviews {
+  display: flex;
+  overflow: auto;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.Reviews > * {
+  width: 450px;
+  padding-left: 1px !important;
+  border: 1px solid grey;
+}

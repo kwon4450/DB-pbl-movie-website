@@ -1,0 +1,732 @@
+[
+  {
+    "areacode": "01",
+    "areaname": "서울",
+    "theaters": [
+      {
+        "theatercode": "0056",
+        "theatername": "DBV강남"
+      },
+      {
+        "theatercode": "0001",
+        "theatername": "DBV강변"
+      },
+      {
+        "theatercode": "0229",
+        "theatername": "DBV건대입구"
+      },
+      {
+        "theatercode": "0010",
+        "theatername": "DBV구로"
+      },
+      {
+        "theatercode": "0063",
+        "theatername": "DBV대학로"
+      },
+      {
+        "theatercode": "0252",
+        "theatername": "DBV동대문"
+      },
+      {
+        "theatercode": "0230",
+        "theatername": "DBV등촌"
+      },
+      {
+        "theatercode": "0009",
+        "theatername": "DBV명동 X 이진혁"
+      },
+      {
+        "theatercode": "0105",
+        "theatername": "DBV명동역 씨네라이브러리"
+      },
+      {
+        "theatercode": "0011",
+        "theatername": "DBV목동"
+      },
+      {
+        "theatercode": "0057",
+        "theatername": "DBV미아"
+      },
+      {
+        "theatercode": "0030",
+        "theatername": "DBV불광"
+      },
+      {
+        "theatercode": "0046",
+        "theatername": "DBV상봉"
+      },
+      {
+        "theatercode": "0300",
+        "theatername": "DBV성신여대입구"
+      },
+      {
+        "theatercode": "0088",
+        "theatername": "DBV송파"
+      },
+      {
+        "theatercode": "0276",
+        "theatername": "DBV수유"
+      },
+      {
+        "theatercode": "0150",
+        "theatername": "DBV신촌아트레온"
+      },
+      {
+        "theatercode": "0040",
+        "theatername": "DBV압구정"
+      },
+      {
+        "theatercode": "0112",
+        "theatername": "DBV여의도"
+      },
+      {
+        "theatercode": "0059",
+        "theatername": "DBV영등포"
+      },
+      {
+        "theatercode": "0074",
+        "theatername": "DBV왕십리"
+      },
+      {
+        "theatercode": "0013",
+        "theatername": "DBV용산아이파크몰"
+      },
+      {
+        "theatercode": "0131",
+        "theatername": "DBV중계"
+      },
+      {
+        "theatercode": "0199",
+        "theatername": "DBV천호"
+      },
+      {
+        "theatercode": "0107",
+        "theatername": "DBV청담씨네시티"
+      },
+      {
+        "theatercode": "0223",
+        "theatername": "DBV피카디리1958"
+      },
+      {
+        "theatercode": "0164",
+        "theatername": "DBV하계"
+      },
+      {
+        "theatercode": "0191",
+        "theatername": "DBV홍대"
+      },
+      {
+        "theatercode": "P001",
+        "theatername": "CINE de CHEF 압구정"
+      },
+      {
+        "theatercode": "P013",
+        "theatername": "CINE de CHEF 용산아이파크몰"
+      }
+    ]
+  },
+  {
+    "areacode": "02",
+    "areaname": "경기",
+    "theaters": [
+      {
+        "theatercode": "0260",
+        "theatername": "DBV경기광주"
+      },
+      {
+        "theatercode": "0266",
+        "theatername": "DBV광교상현"
+      },
+      {
+        "theatercode": "0182",
+        "theatername": "DBV광명철산"
+      },
+      {
+        "theatercode": "0232",
+        "theatername": "DBV구리"
+      },
+      {
+        "theatercode": "0177",
+        "theatername": "DBV김포"
+      },
+      {
+        "theatercode": "0188",
+        "theatername": "DBV김포운양"
+      },
+      {
+        "theatercode": "0126",
+        "theatername": "DBV김포풍무"
+      },
+      {
+        "theatercode": "0298",
+        "theatername": "DBV김포한강"
+      },
+      {
+        "theatercode": "0124",
+        "theatername": "DBV동백"
+      },
+      {
+        "theatercode": "0041",
+        "theatername": "DBV동수원"
+      },
+      {
+        "theatercode": "0106",
+        "theatername": "DBV동탄"
+      },
+      {
+        "theatercode": "0265",
+        "theatername": "DBV동탄역"
+      },
+      {
+        "theatercode": "0226",
+        "theatername": "DBV배곧"
+      },
+      {
+        "theatercode": "0155",
+        "theatername": "DBV범계"
+      },
+      {
+        "theatercode": "0015",
+        "theatername": "DBV부천"
+      },
+      {
+        "theatercode": "0194",
+        "theatername": "DBV부천역"
+      },
+      {
+        "theatercode": "0049",
+        "theatername": "DBV북수원"
+      },
+      {
+        "theatercode": "0242",
+        "theatername": "DBV산본"
+      },
+      {
+        "theatercode": "0196",
+        "theatername": "DBV서현"
+      },
+      {
+        "theatercode": "0143",
+        "theatername": "DBV소풍"
+      },
+      {
+        "theatercode": "0012",
+        "theatername": "DBV수원"
+      },
+      {
+        "theatercode": "0274",
+        "theatername": "DBV스타필드시티위례"
+      },
+      {
+        "theatercode": "0073",
+        "theatername": "DBV시흥"
+      },
+      {
+        "theatercode": "0211",
+        "theatername": "DBV안산"
+      },
+      {
+        "theatercode": "0279",
+        "theatername": "DBV안성"
+      },
+      {
+        "theatercode": "0003",
+        "theatername": "DBV야탑"
+      },
+      {
+        "theatercode": "0029",
+        "theatername": "DBV역곡"
+      },
+      {
+        "theatercode": "0004",
+        "theatername": "DBV오리"
+      },
+      {
+        "theatercode": "0307",
+        "theatername": "DBV오산중앙"
+      },
+      {
+        "theatercode": "0271",
+        "theatername": "DBV용인"
+      },
+      {
+        "theatercode": "0113",
+        "theatername": "DBV의정부"
+      },
+      {
+        "theatercode": "0187",
+        "theatername": "DBV의정부태흥"
+      },
+      {
+        "theatercode": "0205",
+        "theatername": "DBV이천"
+      },
+      {
+        "theatercode": "0054",
+        "theatername": "DBV일산"
+      },
+      {
+        "theatercode": "0055",
+        "theatername": "DBV죽전"
+      },
+      {
+        "theatercode": "0148",
+        "theatername": "DBV파주문산"
+      },
+      {
+        "theatercode": "0181",
+        "theatername": "DBV판교"
+      },
+      {
+        "theatercode": "0195",
+        "theatername": "DBV평촌"
+      },
+      {
+        "theatercode": "0052",
+        "theatername": "DBV평택"
+      },
+      {
+        "theatercode": "0214",
+        "theatername": "DBV평택소사"
+      },
+      {
+        "theatercode": "0301",
+        "theatername": "DBV화성봉담"
+      },
+      {
+        "theatercode": "0145",
+        "theatername": "DBV화정"
+      }
+    ]
+  },
+  {
+    "areacode": "202",
+    "areaname": "인천",
+    "theaters": [
+      {
+        "theatercode": "0043",
+        "theatername": "DBV계양"
+      },
+      {
+        "theatercode": "0198",
+        "theatername": "DBV남주안"
+      },
+      {
+        "theatercode": "0021",
+        "theatername": "DBV부평"
+      },
+      {
+        "theatercode": "0247",
+        "theatername": "DBV연수역"
+      },
+      {
+        "theatercode": "0002",
+        "theatername": "DBV인천"
+      },
+      {
+        "theatercode": "0118",
+        "theatername": "DBV인천공항"
+      },
+      {
+        "theatercode": "0254",
+        "theatername": "DBV인천논현"
+      },
+      {
+        "theatercode": "0258",
+        "theatername": "DBV인천연수"
+      },
+      {
+        "theatercode": "0027",
+        "theatername": "DBV주안역"
+      },
+      {
+        "theatercode": "0235",
+        "theatername": "DBV청라"
+      }
+    ]
+  },
+  {
+    "areacode": "12",
+    "areaname": "강원",
+    "theaters": [
+      {
+        "theatercode": "0139",
+        "theatername": "DBV강릉"
+      },
+      {
+        "theatercode": "0144",
+        "theatername": "DBV원주"
+      },
+      {
+        "theatercode": "0281",
+        "theatername": "DBV인제"
+      },
+      {
+        "theatercode": "0070",
+        "theatername": "DBV춘천"
+      },
+      {
+        "theatercode": "0189",
+        "theatername": "DBV춘천명동"
+      }
+    ]
+  },
+  {
+    "areacode": "03,205",
+    "areaname": "대전/충청",
+    "theaters": [
+      {
+        "theatercode": "0207",
+        "theatername": "DBV당진"
+      },
+      {
+        "theatercode": "0007",
+        "theatername": "DBV대전"
+      },
+      {
+        "theatercode": "0286",
+        "theatername": "DBV대전가수원"
+      },
+      {
+        "theatercode": "0154",
+        "theatername": "DBV대전가오"
+      },
+      {
+        "theatercode": "0202",
+        "theatername": "DBV대전탄방"
+      },
+      {
+        "theatercode": "0127",
+        "theatername": "DBV대전터미널"
+      },
+      {
+        "theatercode": "0275",
+        "theatername": "DBV보령"
+      },
+      {
+        "theatercode": "0091",
+        "theatername": "DBV서산"
+      },
+      {
+        "theatercode": "0219",
+        "theatername": "DBV세종"
+      },
+      {
+        "theatercode": "0206",
+        "theatername": "DBV유성노은"
+      },
+      {
+        "theatercode": "0209",
+        "theatername": "DBV유성온천"
+      },
+      {
+        "theatercode": "0044",
+        "theatername": "DBV천안"
+      },
+      {
+        "theatercode": "0293",
+        "theatername": "DBV천안터미널"
+      },
+      {
+        "theatercode": "0110",
+        "theatername": "DBV천안펜타포트"
+      },
+      {
+        "theatercode": "0228",
+        "theatername": "DBV청주(서문)"
+      },
+      {
+        "theatercode": "0297",
+        "theatername": "DBV청주성안길"
+      },
+      {
+        "theatercode": "0282",
+        "theatername": "DBV청주율량"
+      },
+      {
+        "theatercode": "0142",
+        "theatername": "DBV청주지웰시티"
+      },
+      {
+        "theatercode": "0294",
+        "theatername": "DBV청주터미널"
+      },
+      {
+        "theatercode": "0284",
+        "theatername": "DBV충북혁신"
+      },
+      {
+        "theatercode": "0217",
+        "theatername": "DBV홍성"
+      }
+    ]
+  },
+  {
+    "areacode": "11",
+    "areaname": "대구",
+    "theaters": [
+      {
+        "theatercode": "0058",
+        "theatername": "DBV대구"
+      },
+      {
+        "theatercode": "0157",
+        "theatername": "DBV대구수성"
+      },
+      {
+        "theatercode": "0108",
+        "theatername": "DBV대구스타디움"
+      },
+      {
+        "theatercode": "0185",
+        "theatername": "DBV대구아카데미"
+      },
+      {
+        "theatercode": "0216",
+        "theatername": "DBV대구월성"
+      },
+      {
+        "theatercode": "0117",
+        "theatername": "DBV대구이시아"
+      },
+      {
+        "theatercode": "0071",
+        "theatername": "DBV대구칠곡"
+      },
+      {
+        "theatercode": "0147",
+        "theatername": "DBV대구한일"
+      },
+      {
+        "theatercode": "0109",
+        "theatername": "DBV대구현대"
+      }
+    ]
+  },
+  {
+    "areacode": "05,207",
+    "areaname": "부산/울산",
+    "theaters": [
+      {
+        "theatercode": "0065",
+        "theatername": "DBV남포"
+      },
+      {
+        "theatercode": "0061",
+        "theatername": "DBV대연"
+      },
+      {
+        "theatercode": "0151",
+        "theatername": "DBV대한"
+      },
+      {
+        "theatercode": "0042",
+        "theatername": "DBV동래"
+      },
+      {
+        "theatercode": "0005",
+        "theatername": "DBV서면"
+      },
+      {
+        "theatercode": "0285",
+        "theatername": "DBV서면삼정타워"
+      },
+      {
+        "theatercode": "0089",
+        "theatername": "DBV센텀시티"
+      },
+      {
+        "theatercode": "0160",
+        "theatername": "DBV아시아드"
+      },
+      {
+        "theatercode": "0128",
+        "theatername": "DBV울산삼산"
+      },
+      {
+        "theatercode": "0264",
+        "theatername": "DBV울산신천"
+      },
+      {
+        "theatercode": "0246",
+        "theatername": "DBV울산진장"
+      },
+      {
+        "theatercode": "0306",
+        "theatername": "DBV정관"
+      },
+      {
+        "theatercode": "0245",
+        "theatername": "DBV하단아트몰링"
+      },
+      {
+        "theatercode": "0253",
+        "theatername": "DBV해운대"
+      },
+      {
+        "theatercode": "0159",
+        "theatername": "DBV화명"
+      },
+      {
+        "theatercode": "P004",
+        "theatername": "CINE de CHEF 센텀"
+      }
+    ]
+  },
+  {
+    "areacode": "204",
+    "areaname": "경상",
+    "theaters": [
+      {
+        "theatercode": "0263",
+        "theatername": "DBV거제"
+      },
+      {
+        "theatercode": "0053",
+        "theatername": "DBV구미"
+      },
+      {
+        "theatercode": "0240",
+        "theatername": "DBV김천율곡"
+      },
+      {
+        "theatercode": "0028",
+        "theatername": "DBV김해"
+      },
+      {
+        "theatercode": "0239",
+        "theatername": "DBV김해장유"
+      },
+      {
+        "theatercode": "0033",
+        "theatername": "DBV마산"
+      },
+      {
+        "theatercode": "0097",
+        "theatername": "DBV북포항"
+      },
+      {
+        "theatercode": "0272",
+        "theatername": "DBV안동"
+      },
+      {
+        "theatercode": "0222",
+        "theatername": "DBV양산물금"
+      },
+      {
+        "theatercode": "0023",
+        "theatername": "DBV창원"
+      },
+      {
+        "theatercode": "0079",
+        "theatername": "DBV창원더시티"
+      },
+      {
+        "theatercode": "0156",
+        "theatername": "DBV통영"
+      },
+      {
+        "theatercode": "0045",
+        "theatername": "DBV포항"
+      }
+    ]
+  },
+  {
+    "areacode": "206,04,06",
+    "areaname": "광주/전라/제주",
+    "theaters": [
+      {
+        "theatercode": "0220",
+        "theatername": "DBV광양"
+      },
+      {
+        "theatercode": "0221",
+        "theatername": "DBV광양 엘에프스퀘어"
+      },
+      {
+        "theatercode": "0295",
+        "theatername": "DBV광주금남로"
+      },
+      {
+        "theatercode": "0193",
+        "theatername": "DBV광주상무"
+      },
+      {
+        "theatercode": "0210",
+        "theatername": "DBV광주용봉"
+      },
+      {
+        "theatercode": "0218",
+        "theatername": "DBV광주첨단"
+      },
+      {
+        "theatercode": "0244",
+        "theatername": "DBV광주충장로"
+      },
+      {
+        "theatercode": "0090",
+        "theatername": "DBV광주터미널"
+      },
+      {
+        "theatercode": "0215",
+        "theatername": "DBV광주하남"
+      },
+      {
+        "theatercode": "0277",
+        "theatername": "DBV군산"
+      },
+      {
+        "theatercode": "0237",
+        "theatername": "DBV나주"
+      },
+      {
+        "theatercode": "0289",
+        "theatername": "DBV목포"
+      },
+      {
+        "theatercode": "0280",
+        "theatername": "DBV목포평화광장"
+      },
+      {
+        "theatercode": "0225",
+        "theatername": "DBV서전주"
+      },
+      {
+        "theatercode": "0114",
+        "theatername": "DBV순천"
+      },
+      {
+        "theatercode": "0268",
+        "theatername": "DBV순천신대"
+      },
+      {
+        "theatercode": "0208",
+        "theatername": "DBV여수웅천"
+      },
+      {
+        "theatercode": "0020",
+        "theatername": "DBV익산"
+      },
+      {
+        "theatercode": "0213",
+        "theatername": "DBV전주고사"
+      },
+      {
+        "theatercode": "0179",
+        "theatername": "DBV전주효자"
+      },
+      {
+        "theatercode": "0186",
+        "theatername": "DBV정읍"
+      },
+      {
+        "theatercode": "0121",
+        "theatername": "DBV제주"
+      },
+      {
+        "theatercode": "0259",
+        "theatername": "DBV제주노형"
+      }
+    ]
+  }
+]

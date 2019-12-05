@@ -1,5 +1,5 @@
 const express = require('express');
-const { select, change } = require('../../oracle');
+const { select, change } = require('../../db');
 
 const router = express.Router();
 

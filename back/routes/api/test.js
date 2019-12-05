@@ -1,7 +1,7 @@
 const express = require('express');
 const bcrypt = require('bcrypt');
 const passport = require('passport');
-const { select, change } = require('../../oracle');
+const { select, change } = require('../../db');
 
 const router = express.Router();
 
@@ -79,6 +79,11 @@ router.get('/idCheck', async (req, res) => {
   console.log("exUser:  ",exUser);
   if (exUser) return res.json({ info: "이미 등록된 아이디입니다.", possible: false });
   return res.json({ info: "사용가능한 아이디입니다.", possible: true });
+})
+
+router.get('/test', async (req, res) => {
+  const rows = await select("select * from test", []);
+  return res.json(rows);
 })
 
 module.exports = router;

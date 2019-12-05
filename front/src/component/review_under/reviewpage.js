@@ -3,11 +3,7 @@ import Review from "./reviewwrite.js";
 
 class ReviewPage extends Component {
   render() {
-    return (
-      <div className="ReviewPage">
-        <div class="wrap"></div>
-      </div>
-    );
+    return <div className="ReviewPage"></div>;
   }
 }
 
