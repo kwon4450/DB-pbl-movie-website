@@ -5,10 +5,10 @@ import Moviedetail from "./moviedetail";
 class MovieDetailPage extends Component {
   Detail = [
     {
-      title: "겨울왕국",
+      title2: "겨울왕국",
       screening: "4DX 2D",
       releasedate: "2019.11.18",
-      rate: "81.2%",
+      rating: "81.2",
       pd: "이정인",
       actor: "권범수",
       genre: "Animation"
