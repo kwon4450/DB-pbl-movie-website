@@ -1,3 +1,10 @@
-.Screen{
-  
+.Screen .screenInfo {
+  display: flex;
+  border: 3px lightcoral solid;
+  float: left;
+}
+
+.Screen .item {
+  border: 3px none solid;
+  float: left;
 }

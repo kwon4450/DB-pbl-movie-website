@@ -1,3 +1,6 @@
+.ScreenMap {
+  flex: 0 0 auto;
+}
 table.SeatMap {
   border-spacing: 10px;
 }
@@ -5,21 +8,23 @@ table.SeatMap {
   margin-bottom: 10px;
 }
 
-.Seat, .rowName{
-  width: 30px;
-  height: 30px;
-  
+.Seat,
+.rowName {
+  padding: 0px;
+  width: 40px;
+  height: 40px;
+
   text-align: center;
 }
 
-.Seat{
+.Seat {
   border: 1px solid black;
 }
 
-.Seat.full{
+.Seat.full {
   background-color: grey;
 }
 
-.Seat.dummy{
+.Seat.dummy {
   visibility: hidden;
 }

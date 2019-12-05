@@ -1,0 +1,11 @@
+.SelectSeat .mainWrap {
+  display: flex;
+}
+
+.SelectSeat .reserveInfo {
+  flex: 0 0 auto;
+}
+
+.SelectSeat .numOfPeople {
+  display: flex;
+}

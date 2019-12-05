@@ -5,7 +5,7 @@ import "./style/Screen.css";
 class Screen extends Component {
   render() {
     return (
-      <div className="screen">
+      <div className="Screen">
         <div className="screenInfo">
           <div className="type">{this.props.type} </div>
           <div className="location">

@@ -31,6 +31,12 @@ let pages = [
   },
   {
     exact: false,
+    path: "/admin",
+    isPublic: true,
+    component: require("./admin").default
+  },
+  {
+    exact: false,
     path: "/test",
     isPublic: true,
     component: require("./Test").default

@@ -16,6 +16,12 @@ let pages = [
     path: "/reserve",
     isPublic: true,
     component: require("./Reserve").default
+  },
+  {
+    exact: true,
+    path: "/",
+    isPublic: true,
+    component: require("./Test").default
   }
 ];
 

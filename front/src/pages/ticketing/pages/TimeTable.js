@@ -1,16 +1,16 @@
 import React, { Component } from "react";
 import TheaterSelector from "component/theaterSelector";
-import ShowTime from "component/timeTable";
+import TimeTable from "component/timeTable";
 
-class TimeTable extends Component {
+class TimeTablePage extends Component {
   render() {
     return (
-      <div className="TimeTable">
+      <div className="TimeTablePage">
         <TheaterSelector></TheaterSelector>
-        <ShowTime></ShowTime>
+        <TimeTable></TimeTable>
       </div>
     );
   }
 }
 
-export default TimeTable;
+export default TimeTablePage;
