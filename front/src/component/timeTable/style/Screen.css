@@ -1,6 +1,6 @@
 .Screen .screenInfo {
   display: flex;
-  border: 3px lightcoral solid;
+  border: 3px #34495e solid;
   float: left;
 }
 
