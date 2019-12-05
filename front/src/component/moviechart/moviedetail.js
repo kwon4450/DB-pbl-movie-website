@@ -1,11 +1,12 @@
 import React, { Component } from "react";
-//import "./style/moviechart.css";
+// import "./style/moviechart.css";
 
-class MovieChart extends Component {
+class Moviedetail extends Component {
   render() {
     return (
       <div className="MovieChart">
-        <div className="num">No.{this.props.num}</div>
+        <div className="title">{this.props.title}</div>
+        <div className="screening">{this.props.screening}</div>
         <div className="img">
           <img
             className="logo"
@@ -13,16 +14,18 @@ class MovieChart extends Component {
             alt={this.props.title + " poster"}
             title={this.props.title}
             width="280px"
-            height="350px"
+            height="300px"
           ></img>
         </div>
-        <div className="title">{this.props.title}</div>
         <div className="releasedate">{this.props.releasedate} 개봉</div>
-        <div className="rate">{this.props.rate}%</div>
+        <div className="rate">예매율{this.props.rate}%</div>
+        <div className="pd">감독: {this.props.pd}</div>
+        <div className="actor">배우: {this.props.actor}</div>
+        <div className="genre">장르: {this.props.genre}</div>
         <div className="ticket">예매</div>
       </div>
     );
   }
 }
 
-export default MovieChart;
+export default Moviedetail;

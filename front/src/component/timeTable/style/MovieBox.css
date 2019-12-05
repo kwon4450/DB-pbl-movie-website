@@ -7,6 +7,16 @@
   text-align: center;
 }
 
+.Info {
+  border: 2px #34495e solid;
+}
+
+.screenInfo {
+  display: flex;
+  border: 2px #34495e solid;
+  float: left;
+}
+
 .Movie {
   border: 3px none solid;
   overflow: hidden;
