@@ -22,6 +22,9 @@
   font-family: "Noto Sans KR", sans-serif;
 }
 
+.TabMenu .Item :first-child {
+}
+
 .TabMenu .Item > div {
   display: flex;
   flex-direction: column;
