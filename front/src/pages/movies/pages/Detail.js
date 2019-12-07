@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-
 import Moviedetail from "component/movieDetail";
 
 class Detail extends Component {
@@ -7,11 +6,12 @@ class Detail extends Component {
     {
       title2: "겨울왕국2",
       img2: {
-        src: "assets/images/movies/1.jpg"
+        src: "/assets/images/movies/1.jpg"
       },
       screening: "4DX 2D",
       releasedate: "2019.11.18",
       rating: "81.2",
+      grade:"[국내] 전체관람가",
       pd: "이정인",
       actor: "권범수",
       genre: "Animation"
