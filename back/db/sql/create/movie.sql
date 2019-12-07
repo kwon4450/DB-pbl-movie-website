@@ -1,14 +1,15 @@
 create table if not exists movie(
   id            int           auto_increment,
-  grade_name    varchar(10)   not null,
   movie_title   varchar(20)   not null,
   is_screening  TINYINT (1)   not null,
   opening_date  date          not null,
   runnung_time  int(10)       not null,
-  thumbnail     varchar(255)  not null,
   country       varchar(20)   not null,
+  director      varchar(40)   not null,
+  actor         varchar(40)   not null,
+  grade         varchar(20)   not null,
+  genre         varchar(20)   not null,
   PRIMARY KEY (id),
-  FOREIGN KEY (grade_name) REFERENCES grade(name)
 );
 
 create table if not exists review(
