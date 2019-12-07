@@ -17,9 +17,20 @@ class SelectSeat extends Component {
 
   addSeat = seatInfo => {
     if (!seatInfo.full) {
-      this.setState(({ selectedSeat }) => ({
-        selectedSeat: selectedSeat.concat(seatInfo)
-      }));
+      let seatIndex = this.state.selectedSeat.indexOf(seatInfo);
+      if (seatIndex === -1) {
+        console.log("select");
+        this.setState(({ selectedSeat }) => ({
+          selectedSeat: selectedSeat.concat(seatInfo)
+        }));
+      } else {
+        console.log("toggle");
+        this.setState(({ selectedSeat }) => ({
+          selectedSeat: selectedSeat.filter(
+            (seat, index) => index !== seatIndex
+          )
+        }));
+      }
     } else {
       alert("빈 좌석을 선택해주세요");
     }
@@ -29,12 +40,23 @@ class SelectSeat extends Component {
       <div className="SelectSeat">
         <header>인원/좌석</header>
         <div className="mainWrap">
-          <ScreenMap addSeat={this.addSeat}></ScreenMap>
+          <ScreenMap
+            selectedSeat={this.state.selectedSeat}
+            addSeat={this.addSeat}
+          ></ScreenMap>
           <div className="reserveInfo">
             <div className="movieInfo">{this.props.movieInfo}</div>
             <div className="screenInfo">{this.props.screenInfo}</div>
+            <button
+              className="reset"
+              onClick={() => this.setState({ selectedSeat: [] })}
+            >
+              reset
+            </button>
             <div className="numOfPeople">
-              {this.state.selectedSeat.length}
+              <div className="totalLength">
+                {this.state.selectedSeat.length}
+              </div>
               <div className="seatInfo">
                 {this.state.selectedSeat.map((item, index) => (
                   <div className="item" key={index}>

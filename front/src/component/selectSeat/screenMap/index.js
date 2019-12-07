@@ -33,6 +33,7 @@ class ScreenMap extends Component {
       tmp.push(
         <SeatSection
           addSeat={this.props.addSeat}
+          selectedSeat={this.props.selectedSeat}
           data={section}
           key={section.row_i + "-" + section.col_i}
         ></SeatSection>
