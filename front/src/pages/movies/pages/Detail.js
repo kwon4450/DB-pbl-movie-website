@@ -5,7 +5,10 @@ import Moviedetail from "component/movieDetail";
 class Detail extends Component {
   movieInfo = [
     {
-      title2: "겨울왕국",
+      title2: "겨울왕국2",
+      img2: {
+        src: "assets/images/movies/1.jpg"
+      },
       screening: "4DX 2D",
       releasedate: "2019.11.18",
       rating: "81.2",
@@ -15,6 +18,7 @@ class Detail extends Component {
     }
   ];
   render() {
+    console.log(this.movieInfo[0]);
     return (
       <div>
         <Moviedetail data={this.movieInfo[0]}></Moviedetail>
