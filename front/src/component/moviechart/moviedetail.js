@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./style/moviedetail.css";
 
 class Moviedetail extends Component {
   render() {
