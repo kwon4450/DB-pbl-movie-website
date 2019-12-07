@@ -1,4 +1,2 @@
-insert into theater(citycode,name,address,tle) values('0211','안산','~','1');
-
-insert into screen(theater_id,name) values((select id from theater where name='안산'), '1관');
+insert into theater(citycode,name,address,tle,t_screens,t_seats) values('0211','안산','~','1',20,);
 
