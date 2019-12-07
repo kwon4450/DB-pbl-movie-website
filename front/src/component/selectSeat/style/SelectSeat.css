@@ -6,6 +6,6 @@
   flex: 0 0 auto;
 }
 
-.SelectSeat .numOfPeople {
+.SelectSeat .numOfPeople .seatInfo {
   display: flex;
 }

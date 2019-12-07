@@ -18,7 +18,7 @@ class Moviedetail extends Component {
           ></img>
         </div>
         <div className="releasedate">{this.props.releasedate} 개봉</div>
-        <div className="rating">예매율   {this.props.rate} %</div>
+        <div className="rating">예매율 {this.props.rate} %</div>
         <div className="pd">감독: {this.props.pd}</div>
         <div className="actor">배우: {this.props.actor}</div>
         <div className="genre">장르: {this.props.genre}</div>

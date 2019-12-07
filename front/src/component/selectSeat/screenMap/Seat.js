@@ -10,7 +10,9 @@ class Seat extends Component {
     }
     return (
       <td
-        className={"Seat" + (this.props.seatInfo.full ? " full" : "")}
+        className={`Seat${this.props.seatInfo.full ? " full" : ""}${
+          this.props.isSelected ? " selected" : ""
+        }`}
         onClick={() => this.props.addSeat(this.props.seatInfo)}
       >
         {this.props.seatInfo.col}

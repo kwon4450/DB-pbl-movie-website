@@ -24,6 +24,9 @@ table.SeatMap {
 .Seat.full {
   background-color: grey;
 }
+.Seat.selected {
+  background-color: red;
+}
 
 .Seat.dummy {
   visibility: hidden;

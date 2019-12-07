@@ -18,10 +18,8 @@ class SeatSection extends Component {
 
     if (this.props.data.start_col === 1) {
       tableHead.push(
-        <tr>
-          <td className="rowName" key={0}>
-            {String.fromCharCode(bSeat.row + 64)}
-          </td>
+        <tr key={String.fromCharCode(bSeat.row + 64)}>
+          <td className="rowName">{String.fromCharCode(bSeat.row + 64)}</td>
         </tr>
       );
     }
@@ -36,10 +34,8 @@ class SeatSection extends Component {
         tmp = [];
         if (this.props.data.start_col === 1) {
           tableHead.push(
-            <tr>
-              <td className="rowName" key={bSeat.row}>
-                {String.fromCharCode(bSeat.row + 65)}
-              </td>
+            <tr key={String.fromCharCode(bSeat.row + 65)}>
+              <td className="rowName">{String.fromCharCode(bSeat.row + 65)}</td>
             </tr>
           );
         }
@@ -49,9 +45,20 @@ class SeatSection extends Component {
           tmp.push(<Seat isDummy={true} key={i}></Seat>);
         }
       }
+      let isSelected = false;
+      // console.log(
+      //   this.props.selectedSeat,
+      //   seat,
+      //   this.props.selectedSeat.indexOf(seat)
+      // );
+      if (this.props.selectedSeat.indexOf(seat) !== -1) {
+        isSelected = true;
+      }
+
       tmp.push(
         <Seat
           addSeat={this.props.addSeat}
+          isSelected={isSelected}
           seatInfo={seat}
           key={seat.col}
         ></Seat>
