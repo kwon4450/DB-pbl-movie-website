@@ -5,6 +5,23 @@
 .MovieBox {
   display: flexbox;
   text-align: center;
+  margin-left: 100px;
+}
+
+.Info {
+  border: 2px #34495e solid;
+}
+
+.screenInfo {
+  display: flex;
+  border: 2px #34495e solid;
+  float: left;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.screenInfo > * {
+  margin: 3px;
 }
 
 .Movie {
@@ -16,5 +33,5 @@
 }
 
 .Movie .Info {
-  border: 2px #e59866 solid;
+  border: 2px #34495e solid;
 }

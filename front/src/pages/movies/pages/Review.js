@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import ReviewWrite from "component/review_under/reviewwrite";
-import ReviewData from "component/review_under/reviewdata";
 import Slideshow2 from "practice/Slide2";
 import "component/review_under/style/review.css";
 
