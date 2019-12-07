@@ -1,5 +1,5 @@
-insert into movie(movie_title,is_screening,opening_date,runnung_time,director,actor,grade,genre) values('겨울왕국2', 1, '2019-11-21', 103,'크리스 벅,제니퍼 리', '크리스틴 벨,이디나 멘젤','전체','애니메이션');
-insert into movie(movie_title,is_screening,opening_date,runnung_time,director,actor,grade,genre) values('포드 V 페라리', 1, '2019-12-04', 152, '제임스 맨골드', '맷 데이먼,크리스찬 베일', '12세', '액션,드라마);
+insert into movie(movie_title,is_screening,opening_date,runnung_time,director,actor,grade,genre) values('겨울왕국2', 1, '2019-11-21', 103, '크리스 벅,제니퍼 리', '크리스틴 벨,이디나 멘젤','전체','애니메이션');
+insert into movie(movie_title,is_screening,opening_date,runnung_time,director,actor,grade,genre) values('포드 V 페라리', 1, '2019-12-04', 152, '제임스 맨골드', '맷 데이먼,크리스찬 베일', '12세', '액션,드라마');
 insert into movie(movie_title,is_screening,opening_date,runnung_time,director,actor,grade,genre) values('나이브스 아웃', 1, '2019-12-04', 130, '라이언 존슨', '다니엘 크레이그,크리스 에반스', '12세', '미스터리,스릴러');
 insert into movie(movie_title,is_screening,opening_date,runnung_time,director,actor,grade,genre) values('라스트 크리스마스', 1, '2019-12-05', 103, '폴 페이그', '에밀리아 클라크,헨리 골딩', '12세', '로맨스,코미디,멜로');
 insert into movie(movie_title,is_screening,opening_date,runnung_time,director,actor,grade,genre) values('감쪽같은 그녀', 1, '2019-12-04', 104, '허인무', '나문희,김수안', '전체', '드라마');
@@ -12,9 +12,9 @@ insert into movie(movie_title,is_screening,opening_date,runnung_time,director,ac
 insert into movie(movie_title,is_screening,opening_date,runnung_time,director,actor,grade,genre) values('쥬만지-넥스트 레벨', 0, '2019-12-11', 122, '제이크 캐스단', '드웨인 존슨,잭 블랙', '미정', '액션,어드벤처');
 insert into movie(movie_title,is_screening,opening_date,runnung_time,director,actor,grade,genre) values('무뢰한', 0, '2019-12-11', 118, '오승욱', '전도연,김남길', '청불', '로맨스,멜로');
 insert into movie(movie_title,is_screening,opening_date,runnung_time,director,actor,grade,genre) values('블랙 스완', 1, '2019-12-05', 108, '대런 아로노프스키', '나탈리 포트만,뱅상 카셀', '청불', '드라마,스릴러');
-insert into movie(movie_title,is_screening,opening_date,runnung_time,director,actor,grade,genre) values('윤희에게', 1, '2019-11-14', 105, '임대형', '김희애,김소혜', '12새', '드라마,로맨스,멜로');
+insert into movie(movie_title,is_screening,opening_date,runnung_time,director,actor,grade,genre) values('윤희에게', 1, '2019-11-14', 105, '임대형', '김희애,김소혜', '12세', '드라마,로맨스,멜로');
 insert into movie(movie_title,is_screening,opening_date,runnung_time,director,actor,grade,genre) values('아내를 죽였다', 0, '2019-12-11', 97, '김하라', '이시언,안내상', '15세', '액션,스릴러');
 insert into movie(movie_title,is_screening,opening_date,runnung_time,director,actor,grade,genre) values('터미네이터-다크 페이트', 1, '2019-10-30', 128, '팀 밀러', '맥켄지 데이비스,아놀드 슈왈제네거', '15세', '액션,SF,어드벤처');
 insert into movie(movie_title,is_screening,opening_date,runnung_time,director,actor,grade,genre) values('밀양', 0, '2019-12-11', 141, '이창동', '전도연,송강호', '15세', '드라마');
-insert into movie(movie_title,is_screening,opening_date,runnung_time,director,actor,grade,genre) values('날씨의 아이', 1, '2019-10-30', '신카이 마코토', '모리 나나,다이고 코라토', '15세', '애니메이션');
+insert into movie(movie_title,is_screening,opening_date,runnung_time,director,actor,grade,genre) values('날씨의 아이', 1, '2019-10-30', 112, '신카이 마코토', '모리 나나,다이고 코라토', '15세', '애니메이션');
 insert into movie(movie_title,is_screening,opening_date,runnung_time,director,actor,grade,genre) values('극장판 타오르지마 버스터-블랙어썰트의 귀환', 1, '2019-12-05', 73, '조영광', '홍범기,안효민', '전체', '애니메이션');
