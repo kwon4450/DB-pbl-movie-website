@@ -16,7 +16,7 @@ class TimeTableUpload extends Component {
       this.setState({
         theaterData: testData,
         region: region,
-        theater: testData[region]
+        theater: testData[region][0]
       });
     }, 2000);
   }
@@ -26,6 +26,7 @@ class TimeTableUpload extends Component {
       region: event.target.value
     });
   };
+
   checkFile = async event => {
     const file = event.target.files[0];
     if (!file) return;
