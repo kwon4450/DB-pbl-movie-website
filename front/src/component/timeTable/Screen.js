@@ -40,6 +40,9 @@ class Screen extends Component {
             );
           })}
         </div>
+        <br></br>
+        <br></br>
+        <br></br>
       </div>
     );
   }
