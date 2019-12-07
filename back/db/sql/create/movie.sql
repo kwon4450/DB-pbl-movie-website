@@ -4,7 +4,6 @@ create table if not exists movie(
   is_screening  TINYINT (1)   not null,
   opening_date  date          not null,
   runnung_time  int(10)       not null,
-  country       varchar(20)   not null,
   director      varchar(40)   not null,
   actor         varchar(40)   not null,
   grade         varchar(20)   not null,
