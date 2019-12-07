@@ -18,6 +18,7 @@
   margin: 0px;
   width: 100px;
   height: 60px;
+  color: darkgrey;
   text-align: center;
   font-family: "Noto Sans KR", sans-serif;
 }
@@ -46,9 +47,6 @@
   font-size: 20px;
 }
 
-.TabMenu .Item.deactive {
-  color: darkgrey;
-}
-
-.Info > div {
+.TabMenu .Item.active {
+  color: black;
 }

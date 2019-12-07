@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import Moviedetail from ".component/moviedetail";
+import Moviedetail from "component/movieDetail";
 
 class Detail extends Component {
   movieInfo = [
@@ -17,7 +17,7 @@ class Detail extends Component {
   render() {
     return (
       <div>
-        <Moviedetail {...movieInfo}></Moviedetail>
+        <Moviedetail data={this.movieInfo[0]}></Moviedetail>
       </div>
     );
   }

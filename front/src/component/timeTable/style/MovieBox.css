@@ -3,7 +3,7 @@
 }
 
 .MovieBox {
-  display: flexbox;
+  /* display: flexbox; */
   text-align: center;
   margin-left: 100px;
 }
