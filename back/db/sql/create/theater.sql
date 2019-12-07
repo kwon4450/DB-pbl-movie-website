@@ -3,7 +3,6 @@ create table if not exists theater(
   citycode    varchar(10)       not null,
   name        varchar(20)       not null,
   address     text              not null,
-  tle         varchar(20)       not null,
   t_screens   int               not null,
   t_seats     int               not null,
   PRIMARY KEY (id)

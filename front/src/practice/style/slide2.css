@@ -1,17 +1,13 @@
-
-.slide-container{
-    width:1000px;
-    height:600px;
-    padding: auto;
-    margin: auto;
+.slide-container {
+  width: 1000px;
+  height: 400px;
+  padding: auto;
+  margin: auto;
 }
 
 img {
-    margin-top:10px;
-    margin-left:10px;
-    margin-right:10px;
-    margin-bottom:10px;
-    
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
 }
-
-

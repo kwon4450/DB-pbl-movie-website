@@ -1,0 +1,2403 @@
+[
+  [
+    {
+      "name": "겨울왕국 2",
+      "grade": "전체",
+      "genre": "애니메이션",
+      "runningtime": "103분",
+      "releasedate": "2019.11.21",
+      "screens": [
+        {
+          "name": "씨네앤포레",
+          "type": "2D(자막)",
+          "total": "48",
+          "timetables": [
+            {
+              "starttime": "0910",
+              "endtime": "1103"
+            }
+          ]
+        },
+        {
+          "name": "4DX",
+          "type": "4DX 2D(자막)",
+          "total": "108",
+          "timetables": [
+            {
+              "starttime": "1000",
+              "endtime": "1153"
+            }
+          ]
+        },
+        {
+          "name": "6관",
+          "type": "2D(더빙)",
+          "total": "151",
+          "timetables": [
+            {
+              "starttime": "1005",
+              "endtime": "1158"
+            }
+          ]
+        },
+        {
+          "name": "10관",
+          "type": "2D(자막)",
+          "total": "184",
+          "timetables": [
+            {
+              "starttime": "0830",
+              "endtime": "1023"
+            }
+          ]
+        },
+        {
+          "name": "2관",
+          "type": "2D(자막)",
+          "total": "218",
+          "timetables": [
+            {
+              "starttime": "0935",
+              "endtime": "1128"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "러브 앳",
+      "grade": "12세 이상",
+      "genre": "로맨스, 코미디, 멜로",
+      "runningtime": "118분",
+      "releasedate": "2019.11.27",
+      "screens": [
+        {
+          "name": "7관",
+          "type": "2D",
+          "total": "141",
+          "timetables": [
+            {
+              "starttime": "1330",
+              "endtime": "1538"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "나를 찾아줘",
+      "grade": "15세 이상",
+      "genre": "스릴러",
+      "runningtime": "107분",
+      "releasedate": "2019.11.27",
+      "screens": [
+        {
+          "name": "8관[COMFORT SEAT]",
+          "type": "2D",
+          "total": "80",
+          "timetables": [
+            {
+              "starttime": "0900",
+              "endtime": "1057"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "블랙머니",
+      "grade": "12세 이상",
+      "genre": "범죄, 드라마",
+      "runningtime": "113분",
+      "releasedate": "2019.11.13",
+      "screens": [
+        {
+          "name": "5관[COMFORT SEAT]",
+          "type": "2D",
+          "total": "80",
+          "timetables": [
+            {
+              "starttime": "0850",
+              "endtime": "1053"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "윤희에게",
+      "grade": "12세 이상",
+      "genre": "드라마, 로맨스, 멜로",
+      "runningtime": "105분",
+      "releasedate": "2019.11.14",
+      "screens": [
+        {
+          "name": "4관[CGV아트하우스]",
+          "type": "2D",
+          "total": "76",
+          "timetables": [
+            {
+              "starttime": "0930",
+              "endtime": "1125"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "감쪽같은 그녀",
+      "grade": "전체",
+      "genre": "드라마",
+      "runningtime": "104분",
+      "releasedate": "2019.12.04",
+      "screens": [
+        {
+          "name": "7관",
+          "type": "2D",
+          "total": "141",
+          "timetables": [
+            {
+              "starttime": "0830",
+              "endtime": "1024"
+            }
+          ]
+        },
+        {
+          "name": "9관",
+          "type": "2D",
+          "total": "162",
+          "timetables": [
+            {
+              "starttime": "1055",
+              "endtime": "1249"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "포드 V 페라리",
+      "grade": "12세 이상",
+      "genre": "액션, 드라마",
+      "runningtime": "152분",
+      "releasedate": "2019.12.04",
+      "screens": [
+        {
+          "name": "4DX",
+          "type": "4DX 2D",
+          "total": "108",
+          "timetables": [
+            {
+              "starttime": "1210",
+              "endtime": "1452"
+            }
+          ]
+        },
+        {
+          "name": "3관",
+          "type": "2D",
+          "total": "218",
+          "timetables": [
+            {
+              "starttime": "0840",
+              "endtime": "1122"
+            }
+          ]
+        },
+        {
+          "name": "6관",
+          "type": "2D",
+          "total": "151",
+          "timetables": [
+            {
+              "starttime": "1945",
+              "endtime": "2227"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "나이브스 아웃",
+      "grade": "12세 이상",
+      "genre": "미스터리, 스릴러",
+      "runningtime": "130분",
+      "releasedate": "2019.12.04",
+      "screens": [
+        {
+          "name": "6관",
+          "type": "2D",
+          "total": "151",
+          "timetables": [
+            {
+              "starttime": "1215",
+              "endtime": "1435"
+            }
+          ]
+        },
+        {
+          "name": "7관",
+          "type": "2D",
+          "total": "141",
+          "timetables": [
+            {
+              "starttime": "1030",
+              "endtime": "1250"
+            }
+          ]
+        },
+        {
+          "name": "9관",
+          "type": "2D",
+          "total": "162",
+          "timetables": [
+            {
+              "starttime": "0830",
+              "endtime": "1050"
+            }
+          ]
+        },
+        {
+          "name": "7관",
+          "type": "2D(라이브톡)",
+          "total": "141",
+          "timetables": [
+            {
+              "starttime": "1905",
+              "endtime": "2125"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "집 이야기",
+      "grade": "12세 이상",
+      "genre": "드라마",
+      "runningtime": "092분",
+      "releasedate": "2019.11.28",
+      "screens": [
+        {
+          "name": "4관[CGV아트하우스]",
+          "type": "2D",
+          "total": "76",
+          "timetables": [
+            {
+              "starttime": "1145",
+              "endtime": "1327"
+            }
+          ]
+        },
+        {
+          "name": "2관",
+          "type": "2D",
+          "total": "218",
+          "timetables": [
+            {
+              "starttime": "1400",
+              "endtime": "1542"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "카센타",
+      "grade": "15세 이상",
+      "genre": "범죄, 코미디",
+      "runningtime": "097분",
+      "releasedate": "2019.11.27",
+      "screens": [
+        {
+          "name": "4관[CGV아트하우스]",
+          "type": "2D",
+          "total": "76",
+          "timetables": [
+            {
+              "starttime": "1605",
+              "endtime": "1752"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "행동하는 양심 김대중",
+      "grade": "12세 이상",
+      "genre": "다큐멘터리",
+      "runningtime": "072분",
+      "releasedate": "2019.11.28",
+      "screens": [
+        {
+          "name": "5관[COMFORT SEAT]",
+          "type": "2D",
+          "total": "80",
+          "timetables": [
+            {
+              "starttime": "1110",
+              "endtime": "1232"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  [
+    {
+      "name": "겨울왕국 2",
+      "grade": "전체",
+      "genre": "애니메이션",
+      "runningtime": "103분",
+      "releasedate": "2019.11.21",
+      "screens": [
+        {
+          "name": "씨네앤포레",
+          "type": "2D(자막)",
+          "total": "48",
+          "timetables": [
+            {
+              "starttime": "0910",
+              "endtime": "1103"
+            }
+          ]
+        },
+        {
+          "name": "4DX",
+          "type": "4DX 2D(자막)",
+          "total": "108",
+          "timetables": [
+            {
+              "starttime": "1000",
+              "endtime": "1153"
+            }
+          ]
+        },
+        {
+          "name": "6관",
+          "type": "2D(더빙)",
+          "total": "151",
+          "timetables": [
+            {
+              "starttime": "1005",
+              "endtime": "1158"
+            }
+          ]
+        },
+        {
+          "name": "10관",
+          "type": "2D(자막)",
+          "total": "184",
+          "timetables": [
+            {
+              "starttime": "0830",
+              "endtime": "1023"
+            }
+          ]
+        },
+        {
+          "name": "2관",
+          "type": "2D(자막)",
+          "total": "218",
+          "timetables": [
+            {
+              "starttime": "0935",
+              "endtime": "1128"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "러브 앳",
+      "grade": "12세 이상",
+      "genre": "로맨스, 코미디, 멜로",
+      "runningtime": "118분",
+      "releasedate": "2019.11.27",
+      "screens": [
+        {
+          "name": "7관",
+          "type": "2D",
+          "total": "141",
+          "timetables": [
+            {
+              "starttime": "1330",
+              "endtime": "1538"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "나를 찾아줘",
+      "grade": "15세 이상",
+      "genre": "스릴러",
+      "runningtime": "107분",
+      "releasedate": "2019.11.27",
+      "screens": [
+        {
+          "name": "8관[COMFORT SEAT]",
+          "type": "2D",
+          "total": "80",
+          "timetables": [
+            {
+              "starttime": "0900",
+              "endtime": "1057"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "블랙머니",
+      "grade": "12세 이상",
+      "genre": "범죄, 드라마",
+      "runningtime": "113분",
+      "releasedate": "2019.11.13",
+      "screens": [
+        {
+          "name": "5관[COMFORT SEAT]",
+          "type": "2D",
+          "total": "80",
+          "timetables": [
+            {
+              "starttime": "0850",
+              "endtime": "1053"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "윤희에게",
+      "grade": "12세 이상",
+      "genre": "드라마, 로맨스, 멜로",
+      "runningtime": "105분",
+      "releasedate": "2019.11.14",
+      "screens": [
+        {
+          "name": "4관[CGV아트하우스]",
+          "type": "2D",
+          "total": "76",
+          "timetables": [
+            {
+              "starttime": "0930",
+              "endtime": "1125"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "감쪽같은 그녀",
+      "grade": "전체",
+      "genre": "드라마",
+      "runningtime": "104분",
+      "releasedate": "2019.12.04",
+      "screens": [
+        {
+          "name": "7관",
+          "type": "2D",
+          "total": "141",
+          "timetables": [
+            {
+              "starttime": "0830",
+              "endtime": "1024"
+            }
+          ]
+        },
+        {
+          "name": "9관",
+          "type": "2D",
+          "total": "162",
+          "timetables": [
+            {
+              "starttime": "1055",
+              "endtime": "1249"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "포드 V 페라리",
+      "grade": "12세 이상",
+      "genre": "액션, 드라마",
+      "runningtime": "152분",
+      "releasedate": "2019.12.04",
+      "screens": [
+        {
+          "name": "4DX",
+          "type": "4DX 2D",
+          "total": "108",
+          "timetables": [
+            {
+              "starttime": "1210",
+              "endtime": "1452"
+            }
+          ]
+        },
+        {
+          "name": "3관",
+          "type": "2D",
+          "total": "218",
+          "timetables": [
+            {
+              "starttime": "0840",
+              "endtime": "1122"
+            }
+          ]
+        },
+        {
+          "name": "6관",
+          "type": "2D",
+          "total": "151",
+          "timetables": [
+            {
+              "starttime": "1945",
+              "endtime": "2227"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "나이브스 아웃",
+      "grade": "12세 이상",
+      "genre": "미스터리, 스릴러",
+      "runningtime": "130분",
+      "releasedate": "2019.12.04",
+      "screens": [
+        {
+          "name": "6관",
+          "type": "2D",
+          "total": "151",
+          "timetables": [
+            {
+              "starttime": "1215",
+              "endtime": "1435"
+            }
+          ]
+        },
+        {
+          "name": "7관",
+          "type": "2D",
+          "total": "141",
+          "timetables": [
+            {
+              "starttime": "1030",
+              "endtime": "1250"
+            }
+          ]
+        },
+        {
+          "name": "9관",
+          "type": "2D",
+          "total": "162",
+          "timetables": [
+            {
+              "starttime": "0830",
+              "endtime": "1050"
+            }
+          ]
+        },
+        {
+          "name": "7관",
+          "type": "2D(라이브톡)",
+          "total": "141",
+          "timetables": [
+            {
+              "starttime": "1905",
+              "endtime": "2125"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "집 이야기",
+      "grade": "12세 이상",
+      "genre": "드라마",
+      "runningtime": "092분",
+      "releasedate": "2019.11.28",
+      "screens": [
+        {
+          "name": "4관[CGV아트하우스]",
+          "type": "2D",
+          "total": "76",
+          "timetables": [
+            {
+              "starttime": "1145",
+              "endtime": "1327"
+            }
+          ]
+        },
+        {
+          "name": "2관",
+          "type": "2D",
+          "total": "218",
+          "timetables": [
+            {
+              "starttime": "1400",
+              "endtime": "1542"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "카센타",
+      "grade": "15세 이상",
+      "genre": "범죄, 코미디",
+      "runningtime": "097분",
+      "releasedate": "2019.11.27",
+      "screens": [
+        {
+          "name": "4관[CGV아트하우스]",
+          "type": "2D",
+          "total": "76",
+          "timetables": [
+            {
+              "starttime": "1605",
+              "endtime": "1752"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "행동하는 양심 김대중",
+      "grade": "12세 이상",
+      "genre": "다큐멘터리",
+      "runningtime": "072분",
+      "releasedate": "2019.11.28",
+      "screens": [
+        {
+          "name": "5관[COMFORT SEAT]",
+          "type": "2D",
+          "total": "80",
+          "timetables": [
+            {
+              "starttime": "1110",
+              "endtime": "1232"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  [
+    {
+      "name": "겨울왕국 2",
+      "grade": "전체",
+      "genre": "애니메이션",
+      "runningtime": "103분",
+      "releasedate": "2019.11.21",
+      "screens": [
+        {
+          "name": "씨네앤포레",
+          "type": "2D(자막)",
+          "total": "48",
+          "timetables": [
+            {
+              "starttime": "0910",
+              "endtime": "1103"
+            }
+          ]
+        },
+        {
+          "name": "4DX",
+          "type": "4DX 2D(자막)",
+          "total": "108",
+          "timetables": [
+            {
+              "starttime": "1000",
+              "endtime": "1153"
+            }
+          ]
+        },
+        {
+          "name": "6관",
+          "type": "2D(더빙)",
+          "total": "151",
+          "timetables": [
+            {
+              "starttime": "1005",
+              "endtime": "1158"
+            }
+          ]
+        },
+        {
+          "name": "10관",
+          "type": "2D(자막)",
+          "total": "184",
+          "timetables": [
+            {
+              "starttime": "0830",
+              "endtime": "1023"
+            }
+          ]
+        },
+        {
+          "name": "2관",
+          "type": "2D(자막)",
+          "total": "218",
+          "timetables": [
+            {
+              "starttime": "0935",
+              "endtime": "1128"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "러브 앳",
+      "grade": "12세 이상",
+      "genre": "로맨스, 코미디, 멜로",
+      "runningtime": "118분",
+      "releasedate": "2019.11.27",
+      "screens": [
+        {
+          "name": "7관",
+          "type": "2D",
+          "total": "141",
+          "timetables": [
+            {
+              "starttime": "1330",
+              "endtime": "1538"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "나를 찾아줘",
+      "grade": "15세 이상",
+      "genre": "스릴러",
+      "runningtime": "107분",
+      "releasedate": "2019.11.27",
+      "screens": [
+        {
+          "name": "8관[COMFORT SEAT]",
+          "type": "2D",
+          "total": "80",
+          "timetables": [
+            {
+              "starttime": "0900",
+              "endtime": "1057"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "블랙머니",
+      "grade": "12세 이상",
+      "genre": "범죄, 드라마",
+      "runningtime": "113분",
+      "releasedate": "2019.11.13",
+      "screens": [
+        {
+          "name": "5관[COMFORT SEAT]",
+          "type": "2D",
+          "total": "80",
+          "timetables": [
+            {
+              "starttime": "0850",
+              "endtime": "1053"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "윤희에게",
+      "grade": "12세 이상",
+      "genre": "드라마, 로맨스, 멜로",
+      "runningtime": "105분",
+      "releasedate": "2019.11.14",
+      "screens": [
+        {
+          "name": "4관[CGV아트하우스]",
+          "type": "2D",
+          "total": "76",
+          "timetables": [
+            {
+              "starttime": "0930",
+              "endtime": "1125"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "감쪽같은 그녀",
+      "grade": "전체",
+      "genre": "드라마",
+      "runningtime": "104분",
+      "releasedate": "2019.12.04",
+      "screens": [
+        {
+          "name": "7관",
+          "type": "2D",
+          "total": "141",
+          "timetables": [
+            {
+              "starttime": "0830",
+              "endtime": "1024"
+            }
+          ]
+        },
+        {
+          "name": "9관",
+          "type": "2D",
+          "total": "162",
+          "timetables": [
+            {
+              "starttime": "1055",
+              "endtime": "1249"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "포드 V 페라리",
+      "grade": "12세 이상",
+      "genre": "액션, 드라마",
+      "runningtime": "152분",
+      "releasedate": "2019.12.04",
+      "screens": [
+        {
+          "name": "4DX",
+          "type": "4DX 2D",
+          "total": "108",
+          "timetables": [
+            {
+              "starttime": "1210",
+              "endtime": "1452"
+            }
+          ]
+        },
+        {
+          "name": "3관",
+          "type": "2D",
+          "total": "218",
+          "timetables": [
+            {
+              "starttime": "0840",
+              "endtime": "1122"
+            }
+          ]
+        },
+        {
+          "name": "6관",
+          "type": "2D",
+          "total": "151",
+          "timetables": [
+            {
+              "starttime": "1945",
+              "endtime": "2227"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "나이브스 아웃",
+      "grade": "12세 이상",
+      "genre": "미스터리, 스릴러",
+      "runningtime": "130분",
+      "releasedate": "2019.12.04",
+      "screens": [
+        {
+          "name": "6관",
+          "type": "2D",
+          "total": "151",
+          "timetables": [
+            {
+              "starttime": "1215",
+              "endtime": "1435"
+            }
+          ]
+        },
+        {
+          "name": "7관",
+          "type": "2D",
+          "total": "141",
+          "timetables": [
+            {
+              "starttime": "1030",
+              "endtime": "1250"
+            }
+          ]
+        },
+        {
+          "name": "9관",
+          "type": "2D",
+          "total": "162",
+          "timetables": [
+            {
+              "starttime": "0830",
+              "endtime": "1050"
+            }
+          ]
+        },
+        {
+          "name": "7관",
+          "type": "2D(라이브톡)",
+          "total": "141",
+          "timetables": [
+            {
+              "starttime": "1905",
+              "endtime": "2125"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "집 이야기",
+      "grade": "12세 이상",
+      "genre": "드라마",
+      "runningtime": "092분",
+      "releasedate": "2019.11.28",
+      "screens": [
+        {
+          "name": "4관[CGV아트하우스]",
+          "type": "2D",
+          "total": "76",
+          "timetables": [
+            {
+              "starttime": "1145",
+              "endtime": "1327"
+            }
+          ]
+        },
+        {
+          "name": "2관",
+          "type": "2D",
+          "total": "218",
+          "timetables": [
+            {
+              "starttime": "1400",
+              "endtime": "1542"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "카센타",
+      "grade": "15세 이상",
+      "genre": "범죄, 코미디",
+      "runningtime": "097분",
+      "releasedate": "2019.11.27",
+      "screens": [
+        {
+          "name": "4관[CGV아트하우스]",
+          "type": "2D",
+          "total": "76",
+          "timetables": [
+            {
+              "starttime": "1605",
+              "endtime": "1752"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "행동하는 양심 김대중",
+      "grade": "12세 이상",
+      "genre": "다큐멘터리",
+      "runningtime": "072분",
+      "releasedate": "2019.11.28",
+      "screens": [
+        {
+          "name": "5관[COMFORT SEAT]",
+          "type": "2D",
+          "total": "80",
+          "timetables": [
+            {
+              "starttime": "1110",
+              "endtime": "1232"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  [
+    {
+      "name": "겨울왕국 2",
+      "grade": "전체",
+      "genre": "애니메이션",
+      "runningtime": "103분",
+      "releasedate": "2019.11.21",
+      "screens": [
+        {
+          "name": "씨네앤포레",
+          "type": "2D(자막)",
+          "total": "48",
+          "timetables": [
+            {
+              "starttime": "0910",
+              "endtime": "1103"
+            }
+          ]
+        },
+        {
+          "name": "4DX",
+          "type": "4DX 2D(자막)",
+          "total": "108",
+          "timetables": [
+            {
+              "starttime": "1000",
+              "endtime": "1153"
+            }
+          ]
+        },
+        {
+          "name": "6관",
+          "type": "2D(더빙)",
+          "total": "151",
+          "timetables": [
+            {
+              "starttime": "1005",
+              "endtime": "1158"
+            }
+          ]
+        },
+        {
+          "name": "10관",
+          "type": "2D(자막)",
+          "total": "184",
+          "timetables": [
+            {
+              "starttime": "0830",
+              "endtime": "1023"
+            }
+          ]
+        },
+        {
+          "name": "2관",
+          "type": "2D(자막)",
+          "total": "218",
+          "timetables": [
+            {
+              "starttime": "0935",
+              "endtime": "1128"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "러브 앳",
+      "grade": "12세 이상",
+      "genre": "로맨스, 코미디, 멜로",
+      "runningtime": "118분",
+      "releasedate": "2019.11.27",
+      "screens": [
+        {
+          "name": "7관",
+          "type": "2D",
+          "total": "141",
+          "timetables": [
+            {
+              "starttime": "1330",
+              "endtime": "1538"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "나를 찾아줘",
+      "grade": "15세 이상",
+      "genre": "스릴러",
+      "runningtime": "107분",
+      "releasedate": "2019.11.27",
+      "screens": [
+        {
+          "name": "8관[COMFORT SEAT]",
+          "type": "2D",
+          "total": "80",
+          "timetables": [
+            {
+              "starttime": "0900",
+              "endtime": "1057"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "블랙머니",
+      "grade": "12세 이상",
+      "genre": "범죄, 드라마",
+      "runningtime": "113분",
+      "releasedate": "2019.11.13",
+      "screens": [
+        {
+          "name": "5관[COMFORT SEAT]",
+          "type": "2D",
+          "total": "80",
+          "timetables": [
+            {
+              "starttime": "0850",
+              "endtime": "1053"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "윤희에게",
+      "grade": "12세 이상",
+      "genre": "드라마, 로맨스, 멜로",
+      "runningtime": "105분",
+      "releasedate": "2019.11.14",
+      "screens": [
+        {
+          "name": "4관[CGV아트하우스]",
+          "type": "2D",
+          "total": "76",
+          "timetables": [
+            {
+              "starttime": "0930",
+              "endtime": "1125"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "감쪽같은 그녀",
+      "grade": "전체",
+      "genre": "드라마",
+      "runningtime": "104분",
+      "releasedate": "2019.12.04",
+      "screens": [
+        {
+          "name": "7관",
+          "type": "2D",
+          "total": "141",
+          "timetables": [
+            {
+              "starttime": "0830",
+              "endtime": "1024"
+            }
+          ]
+        },
+        {
+          "name": "9관",
+          "type": "2D",
+          "total": "162",
+          "timetables": [
+            {
+              "starttime": "1055",
+              "endtime": "1249"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "포드 V 페라리",
+      "grade": "12세 이상",
+      "genre": "액션, 드라마",
+      "runningtime": "152분",
+      "releasedate": "2019.12.04",
+      "screens": [
+        {
+          "name": "4DX",
+          "type": "4DX 2D",
+          "total": "108",
+          "timetables": [
+            {
+              "starttime": "1210",
+              "endtime": "1452"
+            }
+          ]
+        },
+        {
+          "name": "3관",
+          "type": "2D",
+          "total": "218",
+          "timetables": [
+            {
+              "starttime": "0840",
+              "endtime": "1122"
+            }
+          ]
+        },
+        {
+          "name": "6관",
+          "type": "2D",
+          "total": "151",
+          "timetables": [
+            {
+              "starttime": "1945",
+              "endtime": "2227"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "나이브스 아웃",
+      "grade": "12세 이상",
+      "genre": "미스터리, 스릴러",
+      "runningtime": "130분",
+      "releasedate": "2019.12.04",
+      "screens": [
+        {
+          "name": "6관",
+          "type": "2D",
+          "total": "151",
+          "timetables": [
+            {
+              "starttime": "1215",
+              "endtime": "1435"
+            }
+          ]
+        },
+        {
+          "name": "7관",
+          "type": "2D",
+          "total": "141",
+          "timetables": [
+            {
+              "starttime": "1030",
+              "endtime": "1250"
+            }
+          ]
+        },
+        {
+          "name": "9관",
+          "type": "2D",
+          "total": "162",
+          "timetables": [
+            {
+              "starttime": "0830",
+              "endtime": "1050"
+            }
+          ]
+        },
+        {
+          "name": "7관",
+          "type": "2D(라이브톡)",
+          "total": "141",
+          "timetables": [
+            {
+              "starttime": "1905",
+              "endtime": "2125"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "집 이야기",
+      "grade": "12세 이상",
+      "genre": "드라마",
+      "runningtime": "092분",
+      "releasedate": "2019.11.28",
+      "screens": [
+        {
+          "name": "4관[CGV아트하우스]",
+          "type": "2D",
+          "total": "76",
+          "timetables": [
+            {
+              "starttime": "1145",
+              "endtime": "1327"
+            }
+          ]
+        },
+        {
+          "name": "2관",
+          "type": "2D",
+          "total": "218",
+          "timetables": [
+            {
+              "starttime": "1400",
+              "endtime": "1542"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "카센타",
+      "grade": "15세 이상",
+      "genre": "범죄, 코미디",
+      "runningtime": "097분",
+      "releasedate": "2019.11.27",
+      "screens": [
+        {
+          "name": "4관[CGV아트하우스]",
+          "type": "2D",
+          "total": "76",
+          "timetables": [
+            {
+              "starttime": "1605",
+              "endtime": "1752"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "행동하는 양심 김대중",
+      "grade": "12세 이상",
+      "genre": "다큐멘터리",
+      "runningtime": "072분",
+      "releasedate": "2019.11.28",
+      "screens": [
+        {
+          "name": "5관[COMFORT SEAT]",
+          "type": "2D",
+          "total": "80",
+          "timetables": [
+            {
+              "starttime": "1110",
+              "endtime": "1232"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  [
+    {
+      "name": "겨울왕국 2",
+      "grade": "전체",
+      "genre": "애니메이션",
+      "runningtime": "103분",
+      "releasedate": "2019.11.21",
+      "screens": [
+        {
+          "name": "씨네앤포레",
+          "type": "2D(자막)",
+          "total": "48",
+          "timetables": [
+            {
+              "starttime": "0910",
+              "endtime": "1103"
+            }
+          ]
+        },
+        {
+          "name": "4DX",
+          "type": "4DX 2D(자막)",
+          "total": "108",
+          "timetables": [
+            {
+              "starttime": "1000",
+              "endtime": "1153"
+            }
+          ]
+        },
+        {
+          "name": "6관",
+          "type": "2D(더빙)",
+          "total": "151",
+          "timetables": [
+            {
+              "starttime": "1005",
+              "endtime": "1158"
+            }
+          ]
+        },
+        {
+          "name": "10관",
+          "type": "2D(자막)",
+          "total": "184",
+          "timetables": [
+            {
+              "starttime": "0830",
+              "endtime": "1023"
+            }
+          ]
+        },
+        {
+          "name": "2관",
+          "type": "2D(자막)",
+          "total": "218",
+          "timetables": [
+            {
+              "starttime": "0935",
+              "endtime": "1128"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "러브 앳",
+      "grade": "12세 이상",
+      "genre": "로맨스, 코미디, 멜로",
+      "runningtime": "118분",
+      "releasedate": "2019.11.27",
+      "screens": [
+        {
+          "name": "7관",
+          "type": "2D",
+          "total": "141",
+          "timetables": [
+            {
+              "starttime": "1330",
+              "endtime": "1538"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "나를 찾아줘",
+      "grade": "15세 이상",
+      "genre": "스릴러",
+      "runningtime": "107분",
+      "releasedate": "2019.11.27",
+      "screens": [
+        {
+          "name": "8관[COMFORT SEAT]",
+          "type": "2D",
+          "total": "80",
+          "timetables": [
+            {
+              "starttime": "0900",
+              "endtime": "1057"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "블랙머니",
+      "grade": "12세 이상",
+      "genre": "범죄, 드라마",
+      "runningtime": "113분",
+      "releasedate": "2019.11.13",
+      "screens": [
+        {
+          "name": "5관[COMFORT SEAT]",
+          "type": "2D",
+          "total": "80",
+          "timetables": [
+            {
+              "starttime": "0850",
+              "endtime": "1053"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "윤희에게",
+      "grade": "12세 이상",
+      "genre": "드라마, 로맨스, 멜로",
+      "runningtime": "105분",
+      "releasedate": "2019.11.14",
+      "screens": [
+        {
+          "name": "4관[CGV아트하우스]",
+          "type": "2D",
+          "total": "76",
+          "timetables": [
+            {
+              "starttime": "0930",
+              "endtime": "1125"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "감쪽같은 그녀",
+      "grade": "전체",
+      "genre": "드라마",
+      "runningtime": "104분",
+      "releasedate": "2019.12.04",
+      "screens": [
+        {
+          "name": "7관",
+          "type": "2D",
+          "total": "141",
+          "timetables": [
+            {
+              "starttime": "0830",
+              "endtime": "1024"
+            }
+          ]
+        },
+        {
+          "name": "9관",
+          "type": "2D",
+          "total": "162",
+          "timetables": [
+            {
+              "starttime": "1055",
+              "endtime": "1249"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "포드 V 페라리",
+      "grade": "12세 이상",
+      "genre": "액션, 드라마",
+      "runningtime": "152분",
+      "releasedate": "2019.12.04",
+      "screens": [
+        {
+          "name": "4DX",
+          "type": "4DX 2D",
+          "total": "108",
+          "timetables": [
+            {
+              "starttime": "1210",
+              "endtime": "1452"
+            }
+          ]
+        },
+        {
+          "name": "3관",
+          "type": "2D",
+          "total": "218",
+          "timetables": [
+            {
+              "starttime": "0840",
+              "endtime": "1122"
+            }
+          ]
+        },
+        {
+          "name": "6관",
+          "type": "2D",
+          "total": "151",
+          "timetables": [
+            {
+              "starttime": "1945",
+              "endtime": "2227"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "나이브스 아웃",
+      "grade": "12세 이상",
+      "genre": "미스터리, 스릴러",
+      "runningtime": "130분",
+      "releasedate": "2019.12.04",
+      "screens": [
+        {
+          "name": "6관",
+          "type": "2D",
+          "total": "151",
+          "timetables": [
+            {
+              "starttime": "1215",
+              "endtime": "1435"
+            }
+          ]
+        },
+        {
+          "name": "7관",
+          "type": "2D",
+          "total": "141",
+          "timetables": [
+            {
+              "starttime": "1030",
+              "endtime": "1250"
+            }
+          ]
+        },
+        {
+          "name": "9관",
+          "type": "2D",
+          "total": "162",
+          "timetables": [
+            {
+              "starttime": "0830",
+              "endtime": "1050"
+            }
+          ]
+        },
+        {
+          "name": "7관",
+          "type": "2D(라이브톡)",
+          "total": "141",
+          "timetables": [
+            {
+              "starttime": "1905",
+              "endtime": "2125"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "집 이야기",
+      "grade": "12세 이상",
+      "genre": "드라마",
+      "runningtime": "092분",
+      "releasedate": "2019.11.28",
+      "screens": [
+        {
+          "name": "4관[CGV아트하우스]",
+          "type": "2D",
+          "total": "76",
+          "timetables": [
+            {
+              "starttime": "1145",
+              "endtime": "1327"
+            }
+          ]
+        },
+        {
+          "name": "2관",
+          "type": "2D",
+          "total": "218",
+          "timetables": [
+            {
+              "starttime": "1400",
+              "endtime": "1542"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "카센타",
+      "grade": "15세 이상",
+      "genre": "범죄, 코미디",
+      "runningtime": "097분",
+      "releasedate": "2019.11.27",
+      "screens": [
+        {
+          "name": "4관[CGV아트하우스]",
+          "type": "2D",
+          "total": "76",
+          "timetables": [
+            {
+              "starttime": "1605",
+              "endtime": "1752"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "행동하는 양심 김대중",
+      "grade": "12세 이상",
+      "genre": "다큐멘터리",
+      "runningtime": "072분",
+      "releasedate": "2019.11.28",
+      "screens": [
+        {
+          "name": "5관[COMFORT SEAT]",
+          "type": "2D",
+          "total": "80",
+          "timetables": [
+            {
+              "starttime": "1110",
+              "endtime": "1232"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  [
+    {
+      "name": "겨울왕국 2",
+      "grade": "전체",
+      "genre": "애니메이션",
+      "runningtime": "103분",
+      "releasedate": "2019.11.21",
+      "screens": [
+        {
+          "name": "씨네앤포레",
+          "type": "2D(자막)",
+          "total": "48",
+          "timetables": [
+            {
+              "starttime": "0910",
+              "endtime": "1103"
+            }
+          ]
+        },
+        {
+          "name": "4DX",
+          "type": "4DX 2D(자막)",
+          "total": "108",
+          "timetables": [
+            {
+              "starttime": "1000",
+              "endtime": "1153"
+            }
+          ]
+        },
+        {
+          "name": "6관",
+          "type": "2D(더빙)",
+          "total": "151",
+          "timetables": [
+            {
+              "starttime": "1005",
+              "endtime": "1158"
+            }
+          ]
+        },
+        {
+          "name": "10관",
+          "type": "2D(자막)",
+          "total": "184",
+          "timetables": [
+            {
+              "starttime": "0830",
+              "endtime": "1023"
+            }
+          ]
+        },
+        {
+          "name": "2관",
+          "type": "2D(자막)",
+          "total": "218",
+          "timetables": [
+            {
+              "starttime": "0935",
+              "endtime": "1128"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "러브 앳",
+      "grade": "12세 이상",
+      "genre": "로맨스, 코미디, 멜로",
+      "runningtime": "118분",
+      "releasedate": "2019.11.27",
+      "screens": [
+        {
+          "name": "7관",
+          "type": "2D",
+          "total": "141",
+          "timetables": [
+            {
+              "starttime": "1330",
+              "endtime": "1538"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "나를 찾아줘",
+      "grade": "15세 이상",
+      "genre": "스릴러",
+      "runningtime": "107분",
+      "releasedate": "2019.11.27",
+      "screens": [
+        {
+          "name": "8관[COMFORT SEAT]",
+          "type": "2D",
+          "total": "80",
+          "timetables": [
+            {
+              "starttime": "0900",
+              "endtime": "1057"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "블랙머니",
+      "grade": "12세 이상",
+      "genre": "범죄, 드라마",
+      "runningtime": "113분",
+      "releasedate": "2019.11.13",
+      "screens": [
+        {
+          "name": "5관[COMFORT SEAT]",
+          "type": "2D",
+          "total": "80",
+          "timetables": [
+            {
+              "starttime": "0850",
+              "endtime": "1053"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "윤희에게",
+      "grade": "12세 이상",
+      "genre": "드라마, 로맨스, 멜로",
+      "runningtime": "105분",
+      "releasedate": "2019.11.14",
+      "screens": [
+        {
+          "name": "4관[CGV아트하우스]",
+          "type": "2D",
+          "total": "76",
+          "timetables": [
+            {
+              "starttime": "0930",
+              "endtime": "1125"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "감쪽같은 그녀",
+      "grade": "전체",
+      "genre": "드라마",
+      "runningtime": "104분",
+      "releasedate": "2019.12.04",
+      "screens": [
+        {
+          "name": "7관",
+          "type": "2D",
+          "total": "141",
+          "timetables": [
+            {
+              "starttime": "0830",
+              "endtime": "1024"
+            }
+          ]
+        },
+        {
+          "name": "9관",
+          "type": "2D",
+          "total": "162",
+          "timetables": [
+            {
+              "starttime": "1055",
+              "endtime": "1249"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "포드 V 페라리",
+      "grade": "12세 이상",
+      "genre": "액션, 드라마",
+      "runningtime": "152분",
+      "releasedate": "2019.12.04",
+      "screens": [
+        {
+          "name": "4DX",
+          "type": "4DX 2D",
+          "total": "108",
+          "timetables": [
+            {
+              "starttime": "1210",
+              "endtime": "1452"
+            }
+          ]
+        },
+        {
+          "name": "3관",
+          "type": "2D",
+          "total": "218",
+          "timetables": [
+            {
+              "starttime": "0840",
+              "endtime": "1122"
+            }
+          ]
+        },
+        {
+          "name": "6관",
+          "type": "2D",
+          "total": "151",
+          "timetables": [
+            {
+              "starttime": "1945",
+              "endtime": "2227"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "나이브스 아웃",
+      "grade": "12세 이상",
+      "genre": "미스터리, 스릴러",
+      "runningtime": "130분",
+      "releasedate": "2019.12.04",
+      "screens": [
+        {
+          "name": "6관",
+          "type": "2D",
+          "total": "151",
+          "timetables": [
+            {
+              "starttime": "1215",
+              "endtime": "1435"
+            }
+          ]
+        },
+        {
+          "name": "7관",
+          "type": "2D",
+          "total": "141",
+          "timetables": [
+            {
+              "starttime": "1030",
+              "endtime": "1250"
+            }
+          ]
+        },
+        {
+          "name": "9관",
+          "type": "2D",
+          "total": "162",
+          "timetables": [
+            {
+              "starttime": "0830",
+              "endtime": "1050"
+            }
+          ]
+        },
+        {
+          "name": "7관",
+          "type": "2D(라이브톡)",
+          "total": "141",
+          "timetables": [
+            {
+              "starttime": "1905",
+              "endtime": "2125"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "집 이야기",
+      "grade": "12세 이상",
+      "genre": "드라마",
+      "runningtime": "092분",
+      "releasedate": "2019.11.28",
+      "screens": [
+        {
+          "name": "4관[CGV아트하우스]",
+          "type": "2D",
+          "total": "76",
+          "timetables": [
+            {
+              "starttime": "1145",
+              "endtime": "1327"
+            }
+          ]
+        },
+        {
+          "name": "2관",
+          "type": "2D",
+          "total": "218",
+          "timetables": [
+            {
+              "starttime": "1400",
+              "endtime": "1542"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "카센타",
+      "grade": "15세 이상",
+      "genre": "범죄, 코미디",
+      "runningtime": "097분",
+      "releasedate": "2019.11.27",
+      "screens": [
+        {
+          "name": "4관[CGV아트하우스]",
+          "type": "2D",
+          "total": "76",
+          "timetables": [
+            {
+              "starttime": "1605",
+              "endtime": "1752"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "행동하는 양심 김대중",
+      "grade": "12세 이상",
+      "genre": "다큐멘터리",
+      "runningtime": "072분",
+      "releasedate": "2019.11.28",
+      "screens": [
+        {
+          "name": "5관[COMFORT SEAT]",
+          "type": "2D",
+          "total": "80",
+          "timetables": [
+            {
+              "starttime": "1110",
+              "endtime": "1232"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  [
+    {
+      "name": "겨울왕국 2",
+      "grade": "전체",
+      "genre": "애니메이션",
+      "runningtime": "103분",
+      "releasedate": "2019.11.21",
+      "screens": [
+        {
+          "name": "씨네앤포레",
+          "type": "2D(자막)",
+          "total": "48",
+          "timetables": [
+            {
+              "starttime": "0910",
+              "endtime": "1103"
+            }
+          ]
+        },
+        {
+          "name": "4DX",
+          "type": "4DX 2D(자막)",
+          "total": "108",
+          "timetables": [
+            {
+              "starttime": "1000",
+              "endtime": "1153"
+            }
+          ]
+        },
+        {
+          "name": "6관",
+          "type": "2D(더빙)",
+          "total": "151",
+          "timetables": [
+            {
+              "starttime": "1005",
+              "endtime": "1158"
+            }
+          ]
+        },
+        {
+          "name": "10관",
+          "type": "2D(자막)",
+          "total": "184",
+          "timetables": [
+            {
+              "starttime": "0830",
+              "endtime": "1023"
+            }
+          ]
+        },
+        {
+          "name": "2관",
+          "type": "2D(자막)",
+          "total": "218",
+          "timetables": [
+            {
+              "starttime": "0935",
+              "endtime": "1128"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "러브 앳",
+      "grade": "12세 이상",
+      "genre": "로맨스, 코미디, 멜로",
+      "runningtime": "118분",
+      "releasedate": "2019.11.27",
+      "screens": [
+        {
+          "name": "7관",
+          "type": "2D",
+          "total": "141",
+          "timetables": [
+            {
+              "starttime": "1330",
+              "endtime": "1538"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "나를 찾아줘",
+      "grade": "15세 이상",
+      "genre": "스릴러",
+      "runningtime": "107분",
+      "releasedate": "2019.11.27",
+      "screens": [
+        {
+          "name": "8관[COMFORT SEAT]",
+          "type": "2D",
+          "total": "80",
+          "timetables": [
+            {
+              "starttime": "0900",
+              "endtime": "1057"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "블랙머니",
+      "grade": "12세 이상",
+      "genre": "범죄, 드라마",
+      "runningtime": "113분",
+      "releasedate": "2019.11.13",
+      "screens": [
+        {
+          "name": "5관[COMFORT SEAT]",
+          "type": "2D",
+          "total": "80",
+          "timetables": [
+            {
+              "starttime": "0850",
+              "endtime": "1053"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "윤희에게",
+      "grade": "12세 이상",
+      "genre": "드라마, 로맨스, 멜로",
+      "runningtime": "105분",
+      "releasedate": "2019.11.14",
+      "screens": [
+        {
+          "name": "4관[CGV아트하우스]",
+          "type": "2D",
+          "total": "76",
+          "timetables": [
+            {
+              "starttime": "0930",
+              "endtime": "1125"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "감쪽같은 그녀",
+      "grade": "전체",
+      "genre": "드라마",
+      "runningtime": "104분",
+      "releasedate": "2019.12.04",
+      "screens": [
+        {
+          "name": "7관",
+          "type": "2D",
+          "total": "141",
+          "timetables": [
+            {
+              "starttime": "0830",
+              "endtime": "1024"
+            }
+          ]
+        },
+        {
+          "name": "9관",
+          "type": "2D",
+          "total": "162",
+          "timetables": [
+            {
+              "starttime": "1055",
+              "endtime": "1249"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "포드 V 페라리",
+      "grade": "12세 이상",
+      "genre": "액션, 드라마",
+      "runningtime": "152분",
+      "releasedate": "2019.12.04",
+      "screens": [
+        {
+          "name": "4DX",
+          "type": "4DX 2D",
+          "total": "108",
+          "timetables": [
+            {
+              "starttime": "1210",
+              "endtime": "1452"
+            }
+          ]
+        },
+        {
+          "name": "3관",
+          "type": "2D",
+          "total": "218",
+          "timetables": [
+            {
+              "starttime": "0840",
+              "endtime": "1122"
+            }
+          ]
+        },
+        {
+          "name": "6관",
+          "type": "2D",
+          "total": "151",
+          "timetables": [
+            {
+              "starttime": "1945",
+              "endtime": "2227"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "나이브스 아웃",
+      "grade": "12세 이상",
+      "genre": "미스터리, 스릴러",
+      "runningtime": "130분",
+      "releasedate": "2019.12.04",
+      "screens": [
+        {
+          "name": "6관",
+          "type": "2D",
+          "total": "151",
+          "timetables": [
+            {
+              "starttime": "1215",
+              "endtime": "1435"
+            }
+          ]
+        },
+        {
+          "name": "7관",
+          "type": "2D",
+          "total": "141",
+          "timetables": [
+            {
+              "starttime": "1030",
+              "endtime": "1250"
+            }
+          ]
+        },
+        {
+          "name": "9관",
+          "type": "2D",
+          "total": "162",
+          "timetables": [
+            {
+              "starttime": "0830",
+              "endtime": "1050"
+            }
+          ]
+        },
+        {
+          "name": "7관",
+          "type": "2D(라이브톡)",
+          "total": "141",
+          "timetables": [
+            {
+              "starttime": "1905",
+              "endtime": "2125"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "집 이야기",
+      "grade": "12세 이상",
+      "genre": "드라마",
+      "runningtime": "092분",
+      "releasedate": "2019.11.28",
+      "screens": [
+        {
+          "name": "4관[CGV아트하우스]",
+          "type": "2D",
+          "total": "76",
+          "timetables": [
+            {
+              "starttime": "1145",
+              "endtime": "1327"
+            }
+          ]
+        },
+        {
+          "name": "2관",
+          "type": "2D",
+          "total": "218",
+          "timetables": [
+            {
+              "starttime": "1400",
+              "endtime": "1542"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "카센타",
+      "grade": "15세 이상",
+      "genre": "범죄, 코미디",
+      "runningtime": "097분",
+      "releasedate": "2019.11.27",
+      "screens": [
+        {
+          "name": "4관[CGV아트하우스]",
+          "type": "2D",
+          "total": "76",
+          "timetables": [
+            {
+              "starttime": "1605",
+              "endtime": "1752"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "행동하는 양심 김대중",
+      "grade": "12세 이상",
+      "genre": "다큐멘터리",
+      "runningtime": "072분",
+      "releasedate": "2019.11.28",
+      "screens": [
+        {
+          "name": "5관[COMFORT SEAT]",
+          "type": "2D",
+          "total": "80",
+          "timetables": [
+            {
+              "starttime": "1110",
+              "endtime": "1232"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+]

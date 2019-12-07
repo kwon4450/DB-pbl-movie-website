@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import Moviedetail from "./component/movieDetail";
+import Moviedetail from "component/movieDetail";
 
 class Detail extends Component {
   movieInfo = [

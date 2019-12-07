@@ -13,6 +13,12 @@ let pages = [
   },
   {
     exact: false,
+    path: "/movie/:moviename",
+    isPublic: true,
+    component: require("./Detail").default
+  },
+  {
+    exact: false,
     path: "/review",
     isPublic: true,
     component: require("./Review").default

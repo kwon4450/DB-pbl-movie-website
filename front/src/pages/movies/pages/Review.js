@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import ReviewWrite from "component/review_under/reviewwrite";
 import Slideshow2 from "practice/Slide2";
 import "component/review_under/style/review.css";
+import InputReview from "../../../component/review_under/inputreview";
 
 class Review extends Component {
   ReviewData = [
@@ -70,6 +71,9 @@ class Review extends Component {
     return (
       <div>
         <Slideshow2></Slideshow2>
+        <InputReview></InputReview>
+        <br></br>
+        <br></br>
         <div className="Reviews">
           {this.ReviewData.slice(0, 10).map((ReviewData, index) => {
             return <ReviewWrite {...ReviewData} key={index}></ReviewWrite>;

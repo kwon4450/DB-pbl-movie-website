@@ -1,20 +1,36 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-import Screen from './Screen';
+import Screen from "./Screen";
 
-class Movie extends Component{
+class Movie extends Component {
+  checkIsOn = () => {
+    let releaseDate = new Date(this.props.movie.releasedate);
+    let currentDate = new Date();
+    return releaseDate <= currentDate;
+  };
+
   render() {
-    return(
-      <div className='Movie'>
-        <div className='Info'>
-          <h3>{this.props.name}</h3>
-          <div className='isOn'>{this.props.isOn?"상영중":"예매중"}</div>
-          <div className='genre'>{this.props.genre}</div>
-          <div className='runningTime'>{this.props.runningTime}분</div>
-          <div className='releaseDate'>{this.props.releaseDate}개봉</div>
+    return (
+      <div className="Movie">
+        <div className="Info">
+          <h3>{this.props.movie.name}</h3>
+          <div className="isOn">{this.checkIsOn() ? "상영중" : "예매중"}</div>
+          <div className="grade">{this.props.movie.grade}</div>
+          <div className="genre">{this.props.movie.genre}</div>
+          <div className="runningtime">{this.props.movie.runningtime}</div>
+          <div className="releasedate">{this.props.movie.releasedate} 개봉</div>
         </div>
-        <div className='ScreenBox'>
-          {this.props.screenInfo.map((info, index) => <Screen {...info} key={index}></Screen>)}
+        <div className="ScreenBox">
+          {this.props.movie.screens.map((item, index) => (
+            <Screen
+              screen={item}
+              reserveData={{
+                ...this.props.reserveData,
+                movie: this.props.movie
+              }}
+              key={index}
+            ></Screen>
+          ))}
         </div>
       </div>
     );
