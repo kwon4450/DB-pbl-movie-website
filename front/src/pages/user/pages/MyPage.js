@@ -1,13 +1,10 @@
 import React, { Component } from "react";
+import Mypage from "component/mypage/mypage";
 
 class MyPage extends Component {
   render() {
     console.log(this.props);
-    return (
-      <div>
-        <span>{this.props.match.params.userID}</span>'s MyPage
-      </div>
-    );
+    return <Mypage></Mypage>;
   }
 }
 
