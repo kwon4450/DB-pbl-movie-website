@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import Slideshow from "../practice/Slide";
+import Slideshow from "../component/slideshow/Slide";
+
 
 
 class Home extends Component {
@@ -7,6 +8,7 @@ class Home extends Component {
     return (
       <div className="Home">
         <Slideshow></Slideshow>
+        
       </div>
     );
   }

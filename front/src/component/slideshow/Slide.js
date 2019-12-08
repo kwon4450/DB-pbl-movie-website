@@ -1,7 +1,6 @@
 import React from "react";
 import { Fade } from "react-slideshow-image";
-
-import "./style/slide2.css";
+import "./style/slide.css";
 
 const testData = [
   {
@@ -145,13 +144,59 @@ const testData = [
     title: "감쪽같은영희에게",
     rate: "0.9",
     releasedate: "2019.10.23"}
+  ,
+  {
+    num: 16,
+    img: {  
+      src: "/assets/images/movies/17.jpg"
+    },
+    title: "감쪽같은영희에게",
+    rate: "0.9",
+    releasedate: "2019.10.23"
+  },
+  {
+    num: 17,
+    img: {  
+      src: "/assets/images/movies/18.jpg"
+    },
+    title: "감쪽같은영희에게",
+    rate: "0.9",
+    releasedate: "2019.10.23"
+  },
+  {
+    num: 18,
+    img: {  
+      src: "/assets/images/movies/19.jpg"
+    },
+    title: "감쪽같은영희에게",
+    rate: "0.9",
+    releasedate: "2019.10.23"
+  },
+  {
+    num: 19,
+    img: {  
+      src: "/assets/images/movies/20.jpg"
+    },
+    title: "감쪽같은영희에게",
+    rate: "0.9",
+    releasedate: "2019.10.23",
+  },
 
+  {
+    num: 20,
+    img: {  
+      src: "/assets/images/movies/21.jpg"
+    },
+    title: "감쪽같은영희에게",
+    rate: "0.9",
+    releasedate: "2019.10.23"
+  }
 ];
 
 const fadeProperties = {
   duration: 5000,
-  transitionDuration: 1000,
-  infinite: false,
+  transitionDuration: 2000,
+  infinite: true,
   indicators: true,
   onChange: (oldIndex, newIndex) => {
     console.log(`fade transition from ${oldIndex} to ${newIndex}`);
@@ -160,14 +205,14 @@ const fadeProperties = {
 
 let renderFadeChild = () => {
   let jsx = [];
-  for (let i = 0; i < testData.length; i += 5) {
-    let tmp = testData.slice(i, i + 5).map((item, index) => <img key={index} src={ item.img.src } style={ { width: "180px", height: "280px" } }/>);
+  for (let i = 0; i < testData.length; i += 10) {
+    let tmp = testData.slice(i, i + 8).map((item, index) => <img key={index} src={ item.img.src } style={ { width: "180px", height: "200px" } }/>);
     jsx.push(tmp);
   }
   return jsx;
 };
 
-const Slideshow2 = () => {
+const Slideshow = () => {
   return (
     <div className="slide-container">
       <Fade {...fadeProperties}>{renderFadeChild()}</Fade>
@@ -175,4 +220,4 @@ const Slideshow2 = () => {
   );
 };
 
-export default Slideshow2;
+export default Slideshow;

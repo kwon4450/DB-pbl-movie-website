@@ -14,7 +14,8 @@ class Detail extends Component {
       grade:"[국내] 전체관람가",
       pd: "이정인",
       actor: "권범수,강민우,윤병서,김재훈",
-      genre: "Animation (미국)"
+      genre: "Animation (미국)",
+      story: "평화로운 아렌델 왕국을 위협한다. 범수 엘사는 민우 훈련병 덕분에 구조된다."
     }
   ];
   render() {

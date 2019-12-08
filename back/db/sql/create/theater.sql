@@ -1,11 +1,18 @@
+create table if not exists area(
+  areacode    varchar(10),
+  areaname    varchar(20),
+  PRIMARY KEY(areacode)
+);
+
 create table if not exists theater(
   id          int               auto_increment,
-  citycode    varchar(10)       not null,
+  areacode    varchar(10)       not null,
   name        varchar(20)       not null,
   address     text              not null,
-  t_screens   int               not null,
-  t_seats     int               not null,
-  PRIMARY KEY (id)
+  totalscreens   int               not null,
+  totalseats     int               not null,
+  PRIMARY KEY (id),
+  FOREIGN KEY (areacode) REFERENCES area(areacode)
 );
 
 create table if not exists favoritetheater(
@@ -21,6 +28,7 @@ create table if not exists screen(
   id            int             auto_increment,
   theater_id    int             not null,
   name          varchar(20)     not null,
+  totalseats    int             not null,
   PRIMARY KEY (id),
   FOREIGN KEY (theater_id) REFERENCES theater(id)
 );
@@ -41,7 +49,7 @@ create table if not exists timetable(
   movie_id      int             not null,
   screen_id     int             not null,
   start_date    date            not null,
-  start_time    vavrchar(20)    not null,
+  start_time    varchar(20)    not null,
   PRIMARY KEY (id),
   FOREIGN KEY (movie_id) REFERENCES movie(id),
   FOREIGN KEY (screen_id) REFERENCES screen(id)

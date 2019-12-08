@@ -1,6 +1,6 @@
 create table if not exists movie(
   id            int           auto_increment,
-  movie_title   varchar(20)   not null,
+  movie_title   varchar(40)   not null,
   is_screening  TINYINT (1)   not null,
   opening_date  date          not null,
   runnung_time  int(10)       not null,
