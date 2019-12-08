@@ -24,6 +24,11 @@ h2{
     color: #34495e;
     font-size:30px;
 }
+h4{
+    color: #34495e;
+    font-size:20px;
+
+}
 .img2{
   width:28%;
   float:left;
@@ -38,14 +43,14 @@ h2{
     margin-left:40px;
 }
 
-ul{
+.data{
     list-style:none;
 }
 .title2{
     font-size:35px;  
 }
 
-li{
+.part{
     display:inline-block;
     margin:0px;
     padding:0px;
@@ -58,6 +63,6 @@ li{
     font-size:20px;
 }
 
- 
+
 
 
