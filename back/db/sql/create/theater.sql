@@ -40,7 +40,8 @@ create table if not exists timetable(
   id            int             auto_increment,
   movie_id      int             not null,
   screen_id     int             not null,
-  start_time    date            not null,
+  start_date    date            not null,
+  start_time    vavrchar(20)    not null,
   PRIMARY KEY (id),
   FOREIGN KEY (movie_id) REFERENCES movie(id),
   FOREIGN KEY (screen_id) REFERENCES screen(id)

@@ -8,7 +8,8 @@ create table if not exists movie(
   actor         varchar(40)   not null,
   grade         varchar(20)   not null,
   genre         varchar(20)   not null,
-  PRIMARY KEY (id),
+  plot          text          not null,
+  PRIMARY KEY (id)
 );
 
 create table if not exists review(

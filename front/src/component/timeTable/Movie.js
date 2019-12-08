@@ -26,7 +26,7 @@ class Movie extends Component {
               screen={item}
               reserveData={{
                 ...this.props.reserveData,
-                movie: this.props.movie
+                movie: { ...this.props.movie, screens: undefined }
               }}
               key={index}
             ></Screen>
