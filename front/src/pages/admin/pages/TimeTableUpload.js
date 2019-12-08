@@ -1,56 +1,45 @@
 import React, { Component } from "react";
 import axios from "axios";
-import testData from "assets/testData/TheaterName.json";
+
+import allTheaterList from "assets/testData/theaterList.json";
 
 class TimeTableUpload extends Component {
-  state = {
-    theaterData: null,
-    region: null
-  };
-
   constructor(props) {
     super(props);
-    // todo: axios로 서버에서 영화관 정보 땡겨오기
-    setTimeout(() => {
-      let region = Object.keys(testData)[0];
-      this.setState({
-        theaterData: testData,
-        region: region,
-        theater: testData[region][0]
+
+    this.state = {
+      allTheaterList: allTheaterList,
+      area: allTheaterList[0].areacode,
+      theater: allTheaterList[0].theaterList[0].theatercode
+    };
+
+    axios
+      .get("/api/theaters")
+      .then(res => {
+        let allTheaterList = res.data;
+        this.setState({
+          allTheaterList: allTheaterList,
+          area: allTheaterList[0].areacode,
+          theater: allTheaterList[0].theaterList[0].theatercode
+        });
+      })
+      .catch(err => {
+        console.log(err);
       });
-    }, 2000);
   }
 
-  selectRegion = event => {
+  selectArea = event => {
+    console.log("area : ", event.target.value);
     this.setState({
-      region: event.target.value
+      area: event.target.value
     });
   };
 
-  checkFile = async event => {
-    const file = event.target.files[0];
-    if (!file) return;
-    const data = await new Response(file).text();
-    console.log(data);
-    // let files = event.target.files;
-
-    // let output = null;
-    // let reader = new FileReader();
-
-    // // Closure to capture the file information.
-    // reader.onload = e => {
-    //   try {
-    //     let data = JSON.parse(e.target.result);
-    //     console.log("data:\n", data);
-    //     output = data;
-    //   } catch (ex) {
-    //     alert("정상적인 json 파일이 아닙니다!");
-    //     console.log(ex);
-    //   }
-    // };
-    // reader.readAsText(files[0]);
-
-    // console.log("output is: ", output);
+  selectTheater = event => {
+    console.log("theater : ", event.target.value);
+    this.setState({
+      theater: event.target.value
+    });
   };
 
   submitAction = async event => {
@@ -61,7 +50,7 @@ class TimeTableUpload extends Component {
     const uploadedData = await new Response(file).text();
 
     let data = {
-      region: this.state.region,
+      area: this.state.area,
       theater: this.state.theater,
       json: uploadedData
     };
@@ -77,37 +66,40 @@ class TimeTableUpload extends Component {
   };
 
   renderForm = () => {
-    if (this.state.theaterData === null) {
+    if (this.state.allTheaterList === null) {
       return "영화관 정보를 로딩중입니다.";
     } else {
       return (
         <form onSubmit={this.submitAction}>
-          <select name="region" onChange={this.selectRegion}>
+          <select name="area" onChange={this.selectArea}>
             <option value="default" disabled>
               지역
             </option>
-            {Object.keys(this.state.theaterData).map((item, index) => (
-              <option value={item} key={index}>
-                {item}
+            {this.state.allTheaterList.map(area => (
+              <option value={area.areacode} key={area.areacode}>
+                {area.areaname}
               </option>
             ))}
           </select>
-          <select name="region">
+          <select name="theater" onChange={this.selectTheater}>
             <option value="default" disabled>
               영화관
             </option>
-            {this.state.theaterData[this.state.region].map((item, index) => (
-              <option value={item} key={index}>
-                {item}
-              </option>
-            ))}
+            {this.state.allTheaterList
+              .filter(area => area.areacode === this.state.area)[0]
+              .theaterList.map(theater => {
+                return (
+                  <option value={theater.theatercode} key={theater.theatercode}>
+                    {theater.theatername}
+                  </option>
+                );
+              })}
           </select>
           <input
             type="file"
             id="timeTableFile"
             name="timeTableFile"
             accept=".json"
-            onChange={this.checkFile}
             required
           ></input>
           <button type="submit" className="submitBtn">

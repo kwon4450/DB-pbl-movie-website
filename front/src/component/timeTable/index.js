@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import axios from "axios";
 
 import MovieBox from "./MovieBox";
-import timeTableData from "assets/testData/timeTable.json";
+// import timeTableData from "assets/testData/timeTable.json";
 import "./style/TimeTable.css";
 import "./style/TabMenu.css";
 
@@ -62,7 +63,7 @@ class TimeTable extends Component {
             );
           })}
         </TabList>
-        {timeTableData.map((item, index) => {
+        {this.props.timeTableList.map((item, index) => {
           return (
             <TabPanel key={index}>
               <MovieBox
