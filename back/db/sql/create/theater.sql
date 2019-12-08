@@ -1,11 +1,18 @@
+create table if not exists area(
+  areacode    varchar(10),
+  areaname    varchar(20),
+  PRIMARY KEY(areacode)
+);
+
 create table if not exists theater(
   id          int               auto_increment,
-  citycode    varchar(10)       not null,
+  areacode    varchar(10)       not null,
   name        varchar(20)       not null,
   address     text              not null,
   t_screens   int               not null,
   t_seats     int               not null,
-  PRIMARY KEY (id)
+  PRIMARY KEY (id),
+  FOREIGN KEY (areacode) REFERENCES area(areacode)
 );
 
 create table if not exists favoritetheater(
