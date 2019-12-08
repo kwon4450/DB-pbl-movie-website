@@ -9,8 +9,8 @@ create table if not exists theater(
   areacode    varchar(10)       not null,
   name        varchar(20)       not null,
   address     text              not null,
-  t_screens   int               not null,
-  t_seats     int               not null,
+  totalscreens   int               not null,
+  totalseats     int               not null,
   PRIMARY KEY (id),
   FOREIGN KEY (areacode) REFERENCES area(areacode)
 );
@@ -28,6 +28,7 @@ create table if not exists screen(
   id            int             auto_increment,
   theater_id    int             not null,
   name          varchar(20)     not null,
+  totalseats    int             not null,
   PRIMARY KEY (id),
   FOREIGN KEY (theater_id) REFERENCES theater(id)
 );
