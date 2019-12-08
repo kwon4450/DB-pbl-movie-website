@@ -1,5 +1,5 @@
 create table if not exists reservation(
-  id                varchar(40)  auto_increment,
+  id                int          auto_increment,
   user_id           varchar(20)  not null,
   payment_type      varchar(20)  not null,
   price             int          not null,
