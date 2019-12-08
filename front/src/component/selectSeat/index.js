@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Redirect } from "react-router-dom";
 
 import ScreenMap from "./screenMap";
 import "./style/SelectSeat.css";
@@ -34,7 +35,13 @@ class SelectSeat extends Component {
     }
   };
   render() {
+    console.log(this.props);
     let reserveData = this.props.location.state;
+    if (!reserveData || Object.keys(reserveData).length === 0) {
+      alert("잘못된 접근입니다!");
+
+      return <Redirect to="/"></Redirect>;
+    }
     return (
       <div className="SelectSeat">
         <header>인원/좌석</header>

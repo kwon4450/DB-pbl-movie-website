@@ -3,7 +3,7 @@ import SelectSeat from "component/selectSeat";
 
 class Test extends Component {
   render() {
-    return <SelectSeat></SelectSeat>;
+    return <SelectSeat {...this.props}></SelectSeat>;
   }
 }
 
