@@ -6,7 +6,6 @@
   text-align: center;
   padding-left: 300px;
   padding-right: 300px;
-  margin-left: 10px;
 }
 
 .MovieBox .Movie .Info {
@@ -31,7 +30,6 @@
 .Movie {
   border: 3px none solid;
   overflow: hidden;
-  width: 80%;
+  width: 100%;
   margin: 20px;
-  margin-left: 130px;
 }
