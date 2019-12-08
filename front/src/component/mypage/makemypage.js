@@ -13,14 +13,14 @@ class MakeMypage extends Component {
         moviename: "겨울왕국 2",
         screen: "CGV 수원",
         date: "2019.11.29",
-        paymentInfo: "Credit card"
+        paymentInfo: "카카오페이"
       }
     }
   ];
   render() {
     return (
       <div className="MyPageComp">
-        {this.Mypagedata.slice(0, 2).map((Mypagedata, index) => {
+        {this.Mypagedata.slice(0, 1).map((Mypagedata, index) => {
           return <Mypage {...Mypagedata} key={index}></Mypage>;
         })}
       </div>
