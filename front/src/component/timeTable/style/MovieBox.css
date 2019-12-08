@@ -9,12 +9,14 @@
   margin-left: 10px;
 }
 
-.Info {
+.MovieBox .Movie .Info {
   border: 2px #34495e solid;
   margin-bottom: 50px;
+  background-color: #fafafa;
+  padding-bottom: 20px;
 }
 
-.screenInfo {
+.MovieBox .Movie .screenInfo {
   display: flex;
   border: 2px #34495e solid;
   float: left;
@@ -22,7 +24,7 @@
   margin-right: 30px;
 }
 
-.screenInfo > * {
+.MovieBox .Movie .screenInfo > * {
   margin: 3px;
 }
 
@@ -32,10 +34,4 @@
   width: 80%;
   margin: 20px;
   margin-left: 130px;
-}
-
-.Movie .Info {
-  border: 2px #34495e solid;
-  background-color: #fafafa;
-  padding-bottom: 20px;
 }
