@@ -1,3 +1,6 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+
 .MovieBox.deactive {
   display: none;
 }
@@ -5,12 +8,14 @@
 .MovieBox {
   text-align: center;
   margin-left: 75px;
+  font-family: "Noto Sans KR", sans-serif;
 }
 
 .MovieBox .Movie .Info {
   padding-bottom: 20px;
   display: flex;
   align-items: center;
+  border-radius: 10px;
 }
 
 .MovieBox .Movie .Info > * {
@@ -21,8 +26,12 @@
   display: flex;
   border: 2px #34495e solid;
   float: left;
+  color:white;
+  background-color: #34495e;
   margin-left: 30px;
   margin-right: 30px;
+  border-radius: 5px;
+  font-size:14px;
 }
 
 .MovieBox .Movie .screenInfo > * {
