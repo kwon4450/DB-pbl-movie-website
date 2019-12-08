@@ -4,15 +4,17 @@
 
 .MovieBox {
   text-align: center;
-  padding-left: 300px;
-  padding-right: 300px;
+  margin-left: 75px;
 }
 
 .MovieBox .Movie .Info {
-  border: 2px #34495e solid;
-  margin-bottom: 50px;
-  background-color: #fafafa;
   padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.MovieBox .Movie .Info > * {
+  padding-right: 10px;
 }
 
 .MovieBox .Movie .screenInfo {
