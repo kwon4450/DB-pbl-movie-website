@@ -10,7 +10,7 @@ class ReviewWrite extends Component {
         <div className="reviews">{this.props.reviews}</div>
         <br></br>
         <br></br>
-        <div className="grade">{this.props.grade}</div>
+        <div className="usergrade">{this.props.usergrade}</div>
         <div className="date">{this.props.date}</div>
         <Isgood></Isgood>
       </div>
