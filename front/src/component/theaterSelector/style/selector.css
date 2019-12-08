@@ -16,11 +16,11 @@
   display: flex;
   justify-content: center;
   position: relative;
-  left: 6.5%;
+  left: 7%;
   margin: 10px;
   padding: 15px;
   border-radius: 5px;
-  width: 83.5%;
+  width: 83.3%;
   background: #34495e;
   color: white;
   font-weight: bold;
@@ -28,7 +28,6 @@
 .flex-container {
   margin: 3px;
   padding: 15px;
-
   width: 8%;
   float: left;
   flex-direction: column;
@@ -39,7 +38,6 @@
   border-top: 3px solid#34495E;
   border-bottom: 3px solid #34495e;
   border-left: 3px solid #34495e;
-
   font-size: 17px;
 }
 
@@ -50,7 +48,6 @@
 .flex-container2 {
   margin: 3px;
   padding: 15px;
-
   float: right;
   width: 73%;
   background: #fafafa;
