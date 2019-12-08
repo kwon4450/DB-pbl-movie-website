@@ -13,8 +13,8 @@ class Detail extends Component {
       rating: "81.2",
       grade:"[국내] 전체관람가",
       pd: "이정인",
-      actor: "권범수",
-      genre: "Animation"
+      actor: "권범수,강민우,윤병서,김재훈",
+      genre: "Animation (미국)"
     }
   ];
   render() {

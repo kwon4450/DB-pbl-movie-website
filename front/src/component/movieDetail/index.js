@@ -18,16 +18,34 @@ class Moviedetail extends Component {
           ></img>
         </div>
         <div class="detail">
-        <div className="title2">{this.props.data.title2}</div>
           <ul>
-          <div className="releasedate">{this.props.data.releasedate} 개봉</div>
-        <div className="rating">예매율 {this.props.data.rating} %</div>
-        <div className="screening">타입: {this.props.data.screening}</div>
-        </ul>
-        <div className="pd">감독: {this.props.data.pd}</div>
-        <div className="grade">등급: {this.props.data.grade}</div>
-        <div className="actor">배우: {this.props.data.actor}</div>
-        <div className="genre">장르: {this.props.data.genre}</div>
+          <div className="title2">{this.props.data.title2}</div>
+            </ul>
+          <ul>
+            <li>
+              <div className="releasedate"><span class="detailed">개봉 일자:</span> {this.props.data.releasedate}</div>
+            </li>
+            <li>
+              <div className="rating"><span class="detailed">예매율: </span> {this.props.data.rating} %</div>
+            </li>   
+          </ul>
+          <ul>
+            <li>
+              <div className="grade"><span class="detailed">등급: </span> {this.props.data.grade}</div>
+            </li>
+            <li>
+              <div className="screening"><span  class="detailed">타입: </span> {this.props.data.screening}</div>
+            </li>
+          </ul>
+        
+          <ul>
+            <li>
+             <div className="pd"><span  class="detailed">감독: </span>{this.props.data.pd}</div>
+            </li>
+            <li>
+              <div className="actor"><span  class="detailed">배우: </span>{this.props.data.actor}</div>
+            </li>
+          </ul>
         <div className="ticket2"></div>
         </div>
       </div>
