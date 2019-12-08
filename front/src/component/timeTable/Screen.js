@@ -26,7 +26,7 @@ class Screen extends Component {
                   pathname: "/ticketing/reserve",
                   state: {
                     ...this.props.reserveData,
-                    screen: this.props.screen,
+                    screen: { ...this.props.screen, timetables: undefined },
                     time: item
                   }
                 }}

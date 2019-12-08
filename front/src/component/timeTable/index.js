@@ -34,15 +34,12 @@ class TimeTable extends Component {
   };
 
   selectTab = index => {
-    console.log("selected tab is ", index);
     this.setState({
       currentTabIndex: index
     });
   };
 
   render() {
-    console.log("render TimeTablePage");
-
     return (
       <Tabs className="TimeTable">
         <TabList className="TabMenu">

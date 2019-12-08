@@ -1,12 +1,10 @@
 import React, { Component } from "react";
 
-import MovieChart from "component/moviechart";
 import ScreenMap from "./screenMap";
 import "./style/SelectSeat.css";
 
 class SelectSeat extends Component {
   // todo: selectedSeat 전달하기
-
   static defaultProps = {
     movieInfo: "겨울왕국",
     screenInfo: "DBV강남"
@@ -16,26 +14,27 @@ class SelectSeat extends Component {
   };
 
   addSeat = seatInfo => {
-    if (!seatInfo.full) {
+    if (this.state.selectedSeat.length >= 10) {
+      alert("최대 선택");
+    } else if (seatInfo.full) {
+      alert("빈 좌석을 선택해주세요");
+    } else {
       let seatIndex = this.state.selectedSeat.indexOf(seatInfo);
       if (seatIndex === -1) {
-        console.log("select");
         this.setState(({ selectedSeat }) => ({
           selectedSeat: selectedSeat.concat(seatInfo)
         }));
       } else {
-        console.log("toggle");
         this.setState(({ selectedSeat }) => ({
           selectedSeat: selectedSeat.filter(
             (seat, index) => index !== seatIndex
           )
         }));
       }
-    } else {
-      alert("빈 좌석을 선택해주세요");
     }
   };
   render() {
+    let reserveData = this.props.location.state;
     return (
       <div className="SelectSeat">
         <header>인원/좌석</header>
@@ -45,8 +44,20 @@ class SelectSeat extends Component {
             addSeat={this.addSeat}
           ></ScreenMap>
           <div className="reserveInfo">
-            <div className="movieInfo">{this.props.movieInfo}</div>
-            <div className="screenInfo">{this.props.screenInfo}</div>
+            <div className="movieInfo">{reserveData.movie.name}</div>
+            <div className="screenInfo">{reserveData.screen.name}</div>
+            <div className="timeInfo">
+              {`${reserveData.time.starttime.slice(
+                0,
+                2
+              )}:${reserveData.time.starttime.slice(
+                0,
+                2
+              )} ~ ${reserveData.time.endtime.slice(
+                0,
+                2
+              )}:${reserveData.time.endtime.slice(0, 2)}`}
+            </div>
             <button
               className="reset"
               onClick={() => this.setState({ selectedSeat: [] })}
