@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Slideshow from "../practice/Slide";
 
+
 class Home extends Component {
   render() {
     return (

@@ -3,13 +3,15 @@
 }
 
 .MovieBox {
-  /* display: flexbox; */
   text-align: center;
-  margin-left: 100px;
+  padding-left: 300px;
+  padding-right: 300px;
+  margin-left: 10px;
 }
 
 .Info {
   border: 2px #34495e solid;
+  margin-bottom: 50px;
 }
 
 .screenInfo {
@@ -34,4 +36,6 @@
 
 .Movie .Info {
   border: 2px #34495e solid;
+  background-color: #fafafa;
+  padding-bottom: 20px;
 }
