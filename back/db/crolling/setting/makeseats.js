@@ -38,16 +38,16 @@ const makeseats = async () => {
     }
     else if (n > 29) {
       if (n%2) {
-        for (let i = 0; i < n; i++) {
-          seatquerys.push({sql: "insert into seat(screen_id, row_index, col_index, row_num, col_num)\
-                                values(?, ?, ?, ?, ?)", args: [screen.id, 1, 1, parseInt(i/6)+1, i%6+1]});
-        }
-      }
-      else {
         const ratio = parseInt(Math.sqrt(n));
         for (let i = 0; i < n; i++) {
           seatquerys.push({sql: "insert into seat(screen_id, row_index, col_index, row_num, col_num)\
-                                values(?, ?, ?, ?, ?)", args: [screen.id, 1, i%6 > 2 ? 2 : 1, 1, parseInt(i/ratio)+1, i%ratio+1]});
+                                values(?, ?, ?, ?, ?)", args: [screen.id, 1, 1, parseInt(i/ratio)+1, i%ratio+1]});
+        }
+      }
+      else {
+        for (let i = 0; i < n; i++) {
+          seatquerys.push({sql: "insert into seat(screen_id, row_index, col_index, row_num, col_num)\
+                                values(?, ?, ?, ?, ?)", args: [screen.id, 1, i%6 > 2 ? 2 : 1, parseInt(i/6)+1, i%6+1]});
         }
       }
     }

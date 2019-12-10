@@ -12,7 +12,9 @@ module.exports = () => {
   }, async (id, password, done) => {
     try {
       const sql = `select * from user where user_id = ? limit 1`;
-      const user = await select(sql, id);
+      let user = await select(sql, [id]);
+      user = user[0];
+      console.log(user);
       if (!user) {
         return done(null, false, { reason: '존재하지 않은 아이디이거나 비밀번호가 일치하지 않습니다.' });
       }
