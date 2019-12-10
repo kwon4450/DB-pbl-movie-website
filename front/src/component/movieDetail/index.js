@@ -47,8 +47,8 @@ class Moviedetail extends Component {
             </li>
           </ul>
           <br></br>
-          <div className="ticket2"></div>
           <ul class="data">
+          <div className="ticket2">예매</div>
           <div className="story"><h4>시놉시스</h4>
             {this.props.data.story}
           </div>

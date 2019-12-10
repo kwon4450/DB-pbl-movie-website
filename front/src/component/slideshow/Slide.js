@@ -1,6 +1,7 @@
 import React from "react";
 import { Fade } from "react-slideshow-image";
 import "./style/slide.css";
+import { Link } from "react-router-dom";
 
 const testData = [
   {
@@ -206,7 +207,7 @@ const fadeProperties = {
 let renderFadeChild = () => {
   let jsx = [];
   for (let i = 0; i < testData.length; i += 10) {
-    let tmp = testData.slice(i, i + 8).map((item, index) => <img key={index} src={ item.img.src } style={ { width: "180px", height: "200px" } }/>);
+    let tmp = testData.slice(i, i + 8).map((item, index) =><Link to=""><img key={index} src={ item.img.src } style={ { width: "180px", height: "200px" } }/></Link>);
     jsx.push(tmp);
   }
   return jsx;
