@@ -1,7 +1,7 @@
-const passport = require('passport');
-const local = require('./local');
+const passport = require("passport");
+const local = require("./local");
 
-const { select } = require('../db');
+const { select } = require("../db");
 
 module.exports = () => {
   passport.serializeUser((user, done) => {
@@ -10,10 +10,10 @@ module.exports = () => {
   });
 
   passport.deserializeUser(async (id, done) => {
-    try{
+    try {
       console.log("deserialize");
       const sql = `select * from user where user_id = ? limit 1`;
-      const user = await select(sql,[id]);
+      const user = await select(sql, [id]);
       return done(null, user);
     } catch (e) {
       console.error(e);
@@ -22,4 +22,4 @@ module.exports = () => {
   });
 
   local();
-}
+};

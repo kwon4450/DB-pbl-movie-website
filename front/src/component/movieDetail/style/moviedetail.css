@@ -1,12 +1,11 @@
 @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
 
-
-.Moviedetail{
+.Moviedetail {
   font-family: "Noto Sans KR", sans-serif;
   margin-left: 220px;
   margin-right: 50px;
   padding-left: 50px;
-  padding-right:20px;
+  padding-right: 20px;
   padding-bottom: 30px;
   width: 70%;
   float: left;
@@ -17,52 +16,47 @@
   border-top: 3px solid#34495E;
   border-bottom: 3px solid #34495e;
   border-left: 3px solid #34495e;
-  border-right:3px solid #34495e;
+  border-right: 3px solid #34495e;
 }
 
-h2{
-    color: #34495e;
-    font-size:30px;
+.detpage {
+  color: #34495e;
+  font-size: 30px;
 }
-h4{
-    color: #34495e;
-    font-size:20px;
-
+h4 {
+  color: #34495e;
+  font-size: 20px;
 }
-.img2{
-  width:28%;
-  float:left;
+.img2 {
+  width: 28%;
+  float: left;
   background-color: #34495e;
   border-top: 3px solid#34495E;
   border-bottom: 3px solid #34495e;
   border-left: 3px solid #34495e;
-  border-right:3px solid #34495e;
+  border-right: 3px solid #34495e;
 }
-.detail{
-    float:left;
-    margin-left:40px;
-}
-
-.data{
-    list-style:none;
-}
-.title2{
-    font-size:35px;  
+.detail {
+  float: left;
+  margin-left: 40px;
 }
 
-.part{
-    display:inline-block;
-    margin:0px;
-    padding:0px;
-    padding-right:30px;
+.data {
+  list-style: none;
+}
+.title2 {
+  font-size: 35px;
 }
 
-.detailed{
-    color: #34495e;
-    font-weight:bold;
-    font-size:20px;
+.part {
+  display: inline-block;
+  margin: 0px;
+  padding: 0px;
+  padding-right: 30px;
 }
 
-
-
-
+.detailed {
+  color: #34495e;
+  font-weight: bold;
+  font-size: 20px;
+}

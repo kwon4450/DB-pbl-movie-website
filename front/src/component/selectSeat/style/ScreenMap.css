@@ -8,6 +8,10 @@ table.SeatMap {
   margin-bottom: 10px;
 }
 
+.SeatSection {
+  vertical-align: baseline;
+}
+
 .Seat,
 .rowName {
   padding: 0px;

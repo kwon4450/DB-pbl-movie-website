@@ -13,7 +13,7 @@ class Movie extends Component {
     return (
       <div className="Movie">
         <div className="Info">
-          <h3>{this.props.movie.name}</h3>
+          <h3>{this.props.movie.movietitle}</h3>
           <div className="isOn">{this.checkIsOn() ? "상영중" : "예매중"}</div>
           <div className="grade">{this.props.movie.grade}</div>
           <div className="genre">{this.props.movie.genre}</div>
@@ -21,12 +21,12 @@ class Movie extends Component {
           <div className="releasedate">{this.props.movie.releasedate} 개봉</div>
         </div>
         <div className="ScreenBox">
-          {this.props.movie.screens.map((item, index) => (
+          {this.props.movie.screenList.map((item, index) => (
             <Screen
               screen={item}
               reserveData={{
                 ...this.props.reserveData,
-                movie: { ...this.props.movie, screens: undefined }
+                movie: { ...this.props.movie, screensList: undefined }
               }}
               key={index}
             ></Screen>

@@ -75,9 +75,6 @@ class Header extends Component {
               <Link to="/ticketing/fast">
                 <MenuItem>빠른 예매</MenuItem>
               </Link>
-              <Link exact="true" to="/ticketing">
-                <MenuItem>test</MenuItem>
-              </Link>
             </DropdownMenu>
 
             <Link to="/theater">
