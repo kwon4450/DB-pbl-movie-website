@@ -18,7 +18,6 @@ class TimeTablePage extends Component {
       .get("/api/theaters")
       .then(res => {
         if (typeof res.data === "object") {
-          console.log(res.data, "get theaterList success");
           this.setState({
             allTheaterList: res.data.allTheaterList,
             favTheaterList: res.data.favTheaterList
@@ -40,7 +39,6 @@ class TimeTablePage extends Component {
   }
 
   selectTheater = theater => {
-    console.log("setting selectTheater to", theater);
     this.setState({
       selectedTheater: theater
     });

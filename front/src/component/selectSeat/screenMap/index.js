@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 
-import sampleData from "assets/testData/test.json";
 import SeatSection from "./SeatSection";
 import "../style/ScreenMap.css";
 
@@ -9,10 +8,10 @@ class ScreenMap extends Component {
     let jsx = [];
     let tmp = [];
     let bSection = {
-      row_i: sampleData[0].row_i,
+      row_i: this.props.seatList[0].row_i,
       col_i: 0
     };
-    for (const section of sampleData) {
+    for (const section of this.props.seatList) {
       if (bSection.row_i < section.row_i) {
         jsx.push(
           <tr className="SeatSectionRow" key={bSection.row_i}>
@@ -51,6 +50,7 @@ class ScreenMap extends Component {
   };
 
   render() {
+    console.log(this.props.seatList);
     return (
       <div className="ScreenMap">
         <div className="screen">screen</div>

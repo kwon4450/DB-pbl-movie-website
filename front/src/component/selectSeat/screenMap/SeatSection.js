@@ -81,7 +81,6 @@ class SeatSection extends Component {
       retVal.push(<td className="SeatSection dummy"></td>);
     } else {
       let jsx = this.renderSeat();
-
       if (this.props.data.col_i === 1) {
         retVal.push(
           <td className="RowAlphabet" key="RowAlphabet">
