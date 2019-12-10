@@ -10,8 +10,7 @@ h1 {
   background-image: url(http://img.cgv.co.kr/Theater/Theater/2015/0420/wang.jpg);
   height: 420px;
   width: 980px;
-  margin-left: 23%;
-  margin-right: 23%;
+  margin: 0 auto;
 }
 
 .TheaterLocation {

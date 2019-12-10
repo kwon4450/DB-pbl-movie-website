@@ -19,14 +19,14 @@ class Screen extends Component {
           <div className="totalSeat">{this.props.screen.total}석</div>
         </div>
         <div className="times">
-          {this.props.screen.timetables.map((item, index) => {
+          {this.props.screen.timetableList.map((item, index) => {
             return (
               <Link
                 to={{
                   pathname: "/ticketing/reserve",
                   state: {
                     ...this.props.reserveData,
-                    screen: { ...this.props.screen, timetables: undefined },
+                    screen: { ...this.props.screen, timetableList: undefined },
                     time: item
                   }
                 }}
@@ -34,7 +34,7 @@ class Screen extends Component {
               >
                 <div className="item">
                   <div className="time">{this.getTime(item)}</div>
-                  <div className="seatLeft">{item.seat}좌석</div>
+                  <div className="seatLeft">{item.seatList.length}좌석</div>
                 </div>
               </Link>
             );

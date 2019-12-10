@@ -21,12 +21,12 @@ class Movie extends Component {
           <div className="releasedate">{this.props.movie.releasedate} 개봉</div>
         </div>
         <div className="ScreenBox">
-          {this.props.movie.screens.map((item, index) => (
+          {this.props.movie.screenList.map((item, index) => (
             <Screen
               screen={item}
               reserveData={{
                 ...this.props.reserveData,
-                movie: { ...this.props.movie, screens: undefined }
+                movie: { ...this.props.movie, screensList: undefined }
               }}
               key={index}
             ></Screen>

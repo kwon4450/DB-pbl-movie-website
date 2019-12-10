@@ -4,18 +4,15 @@ import axios from "axios";
 import TheaterSelector from "component/theaterSelector";
 import TheaterInfo from "component/TheaterInfo";
 import TimeTable from "component/timeTable";
-import allTheaterList from "assets/testData/theaterList.json";
-// let allTheaterList;
 
 class Theater extends Component {
   constructor() {
     super();
 
     this.state = {
-      allTheaterList: allTheaterList,
+      allTheaterList: null,
       favTheaterList: [],
-      selectedTheater: null,
-      timeTableList: null
+      selectedTheater: null
     };
 
     axios
@@ -45,29 +42,8 @@ class Theater extends Component {
 
   selectTheater = theater => {
     this.setState({
-      selectedTheater: theater,
-      timeTableList: null
+      selectedTheater: theater
     });
-    if (typeof theater === "object") {
-      axios
-        .get(`/theaters/timetable?theatercode=${theater.theatercode}`)
-        .then(res => {
-          console.log(res.data, "get timeTable data success");
-          this.setState({
-            timeTableList: res.data
-          });
-        })
-        .catch(err => {
-          this.setState({
-            timeTableList: undefined
-          });
-          console.log(err, "get timeTable data err");
-        });
-    } else {
-      this.setState({
-        timeTableList: undefined
-      });
-    }
   };
 
   renderTheaterSelector() {
@@ -76,38 +52,16 @@ class Theater extends Component {
       jsx = <h2>Loading...</h2>;
     } else if (typeof this.state.allTheaterList === "object") {
       jsx = (
-        <TheaterSelector
-          allTheaterList={this.state.allTheaterList}
-          favTheaterList={this.state.favTheaterList}
-          selectTheater={this.selectTheater}
-        ></TheaterSelector>
+        <>
+          <TheaterSelector
+            allTheaterList={this.state.allTheaterList}
+            favTheaterList={this.state.favTheaterList}
+            selectTheater={this.selectTheater}
+          ></TheaterSelector>
+
+          <TheaterInfo {...this.state.selectedTheater}></TheaterInfo>
+        </>
       );
-    } else {
-      jsx = <h2>Fail to loading theaters :(</h2>;
-    }
-    return jsx;
-  }
-
-  renderTheaterInfo() {
-    let jsx;
-
-    if (this.state.selectedTheater === null) {
-      jsx = <h2>Loading...</h2>;
-    } else if (typeof this.state.selectedTheater === "object") {
-      jsx = <TheaterInfo {...this.state.selectedTheater}></TheaterInfo>;
-    } else {
-      jsx = <h2>Fail to loading theater information :(</h2>;
-    }
-    return jsx;
-  }
-
-  renderTimeTable() {
-    let jsx;
-    console.log(this.state.timeTableList, "current timeTableList");
-    if (this.state.timeTableList === null) {
-      jsx = <h2>Loading...</h2>;
-    } else if (typeof this.state.timeTableList === "object") {
-      jsx = <TimeTable timeTableList={this.state.timeTableList}></TimeTable>;
     } else {
       jsx = <h2>Fail to loading theaters :(</h2>;
     }
@@ -118,8 +72,7 @@ class Theater extends Component {
     return (
       <div className="Theater">
         {this.renderTheaterSelector()}
-        {this.renderTheaterInfo()}
-        {this.renderTimeTable()}
+        <TimeTable selectedTheater={this.state.selectedTheater}></TimeTable>
       </div>
     );
   }

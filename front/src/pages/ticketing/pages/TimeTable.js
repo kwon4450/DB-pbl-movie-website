@@ -2,26 +2,23 @@ import React, { Component } from "react";
 import axios from "axios";
 
 import TheaterSelector from "component/theaterSelector";
-import TheaterInfo from "component/TheaterInfo";
 import TimeTable from "component/timeTable";
-import allTheaterList from "assets/testData/theaterList.json";
-// let allTheaterList;
 
 class TimeTablePage extends Component {
   constructor() {
     super();
 
     this.state = {
-      allTheaterList: allTheaterList,
+      allTheaterList: null,
       favTheaterList: [],
-      selectedTheater: null,
-      timeTableList: null
+      selectedTheater: null
     };
 
     axios
       .get("/api/theaters")
       .then(res => {
         if (typeof res.data === "object") {
+          console.log(res.data, "get theaterList success");
           this.setState({
             allTheaterList: res.data.allTheaterList,
             favTheaterList: res.data.favTheaterList
@@ -32,7 +29,6 @@ class TimeTablePage extends Component {
           } else {
             this.selectTheater(res.data.favTheaterList[0].theaterList[0]);
           }
-          console.log(res.data, "get theaterList success");
         } else {
           this.selectTheater();
           console.log(res.data, "get theaterList err");
@@ -44,30 +40,10 @@ class TimeTablePage extends Component {
   }
 
   selectTheater = theater => {
+    console.log("setting selectTheater to", theater);
     this.setState({
-      selectedTheater: theater,
-      timeTableList: null
+      selectedTheater: theater
     });
-    if (typeof theater === "object") {
-      axios
-        .get(`/theaters/timetable?theatercode=${theater.theatercode}`)
-        .then(res => {
-          console.log(res.data, "get timeTable data success");
-          this.setState({
-            timeTableList: res.data
-          });
-        })
-        .catch(err => {
-          this.setState({
-            timeTableList: undefined
-          });
-          console.log(err, "get timeTable data err");
-        });
-    } else {
-      this.setState({
-        timeTableList: undefined
-      });
-    }
   };
 
   renderTheaterSelector() {
@@ -88,24 +64,11 @@ class TimeTablePage extends Component {
     return jsx;
   }
 
-  renderTimeTable() {
-    let jsx;
-    console.log(this.state.timeTableList, "current timeTableList");
-    if (this.state.timeTableList === null) {
-      jsx = <h2>Loading...</h2>;
-    } else if (typeof this.state.timeTableList === "object") {
-      jsx = <TimeTable timeTableList={this.state.timeTableList}></TimeTable>;
-    } else {
-      jsx = <h2>Fail to loading theaters :(</h2>;
-    }
-    return jsx;
-  }
-
   render() {
     return (
       <div className="TimeTablePage">
         {this.renderTheaterSelector()}
-        {this.renderTimeTable()}
+        <TimeTable selectedTheater={this.state.selectedTheater}></TimeTable>;
       </div>
     );
   }
