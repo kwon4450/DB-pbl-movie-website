@@ -29,6 +29,14 @@ let pages = [
     isPublic: true,
     component: require("./Theater").default
   },
+<<<<<<< HEAD
+  // {
+  //   exact: false,
+  //   path: "/test",
+  //   isPublic: true,
+  //   component: require("./Test").default
+  // },
+=======
   {
     exact: false,
     path: "/admin",
@@ -41,6 +49,7 @@ let pages = [
     isPublic: true,
     component: require("./Test").default
   },
+>>>>>>> 9f85c6233fbc13dc96a68684c2e67248f2923838
   {
     isPublic: true,
     component: require("./NoMatch").default

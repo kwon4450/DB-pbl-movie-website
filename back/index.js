@@ -42,13 +42,13 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.use("/api/user", userAPIRouter);
-app.use("/api/theaters", theatersAPIRouter);
-app.use("/api/test", testAPIRouter);
-// app.use('/', (req, res) => {
-//   res.send('api 서버');
-// });
-app.use("/", express.static(path.join(__dirname, "../front/build")));
+app.use('/api/user', userAPIRouter);
+app.use('/api/theaters', theatersAPIRouter);
+app.use('/api/test', testAPIRouter);
+app.use('/', (req, res) => {
+    res.send('api 서버');
+  });
+// app.use('/', express.static(path.join(__dirname, '../front/build')));
 
 app.listen(app.get("port"), () => {
   console.log("server start at: ", app.get("port"));

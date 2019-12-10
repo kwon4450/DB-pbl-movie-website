@@ -16,20 +16,6 @@ create table if not exists phone(
   FOREIGN KEY (user_id) REFERENCES user (user_id)
 );
 
-create table if not exists class(
-  name              varchar(20),
-  discount_rate     int          not null,
-  PRIMARY KEY (name)
-);
-
-create table if not exists userclass(
-  user_id           varchar(20),
-  class_name        varchar(20)    not null,
-  PRIMARY KEY (user_id),
-  FOREIGN KEY (user_id)  REFERENCES  user(user_id),
-  FOREIGN KEY (class_name) REFERENCES  class(name)
-);
-
 create table if not exists cardinfo(
   id            int,
   user_id     varchar(20) not null,

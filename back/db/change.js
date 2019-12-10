@@ -7,6 +7,7 @@ const change = async (rows) => {
     try {
       await connection.beginTransaction();
       rows.forEach(async (row) => {
+        console.log(connection.format(row.sql, row.args));
         await connection.query(row.sql, row.args);
       });
       await connection.commit();
