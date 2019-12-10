@@ -1,0 +1,62 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+.Moviedetail {
+  font-family: "Noto Sans KR", sans-serif;
+  margin-left: 220px;
+  margin-right: 50px;
+  padding-left: 50px;
+  padding-right: 20px;
+  padding-bottom: 30px;
+  width: 70%;
+  float: left;
+  flex-direction: column;
+  justify-content: center;
+  background: #fafafa;
+  font-weight: bold;
+  border-top: 3px solid#34495E;
+  border-bottom: 3px solid #34495e;
+  border-left: 3px solid #34495e;
+  border-right: 3px solid #34495e;
+}
+
+.detpage {
+  color: #34495e;
+  font-size: 30px;
+}
+h4 {
+  color: #34495e;
+  font-size: 20px;
+}
+.img2 {
+  width: 28%;
+  float: left;
+  background-color: #34495e;
+  border-top: 3px solid#34495E;
+  border-bottom: 3px solid #34495e;
+  border-left: 3px solid #34495e;
+  border-right: 3px solid #34495e;
+}
+.detail {
+  float: left;
+  margin-left: 40px;
+}
+
+.data {
+  list-style: none;
+}
+.title2 {
+  font-size: 35px;
+}
+
+.part {
+  display: inline-block;
+  margin: 0px;
+  padding: 0px;
+  padding-right: 30px;
+}
+
+.detailed {
+  color: #34495e;
+  font-weight: bold;
+  font-size: 20px;
+}

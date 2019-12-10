@@ -1,18 +1,18 @@
-import React , { Component } from 'react';
-import style from './style/TheaterInfo.css';
+import React, { Component } from "react";
+import "./style/TheaterInfo.css";
 
 class TheaterInfo extends Component {
   render() {
     return (
-      <div classname="TheaterInfo">
+      <div className="TheaterInfo">
         <h1>THEATER</h1>
-        <div class="TheaterLocation">
-          <h2>CGV{this.props.names}</h2>
-          <div class="DetailLocation">{this.props.Location}</div>
+        <div className="theaterInfo_wrap">
+          <h2>{this.props.theatername}</h2>
+          <div className="detailLocation">{this.props.address}</div>
           <br></br>
-          <div class="Tellnum">{this.props.Tellnum}</div>
-          <div class="TotalScreen">
-            {this.props.Totalscreen}관 / {this.props.Totalseat}석
+          <div className="tele">{this.props.tele}</div>
+          <div className="totalScreen">
+            {this.props.totalscreens}관 / {this.props.totalseats}석
           </div>
         </div>
       </div>

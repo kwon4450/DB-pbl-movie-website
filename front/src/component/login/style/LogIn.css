@@ -3,18 +3,22 @@
 .login {
   width: 410px;
   position: relative;
-  padding: 40px;
+  padding: 20px;
   left: 50%;
   transform: translate(-50%);
   font-family: 'Noto Sans KR', sans-serif;
   font-size:20px;
   text-align: center;
+  border-left: 3px solid  #5D6D7E ;
+  border-right: 3px solid  #5D6D7E ;
+  border-top: 3px solid  #5D6D7E ;
+  border-bottom: 3px solid#5D6D7E;
 }
 .login h2 {
-  padding: 0 0 20px;
+  padding: 20px 0 20px;
   font-size: 32px;
   color:black;
-  border-bottom: 3px solid#5D6D7E; 
+  border-bottom: 3px solid#5D6D7E;
   text-align: center;
   line-height: 1;
   font-family: 'Noto Sans KR', sans-serif;
@@ -65,4 +69,5 @@
   font-size: 14px;
   font-weight: bold;
   color: #111;
+  
 }

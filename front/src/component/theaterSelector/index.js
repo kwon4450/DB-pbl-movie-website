@@ -1,20 +1,20 @@
 import React, { Component } from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-import "./style/selector.css";
 
-import theaterData from "assets/testData/TheaterName.json";
-let favorateTheater = [
-  { name: "DBV안산", region: "경기" },
-  { name: "DBV강남", region: "서울" }
-];
+import "./style/selector.css";
 
 class TheaterSelector extends Component {
   static defaultProps = {
-    handleTheater: (region, theater) => console.log(region, theater)
+    selectTheater: (area, theater) => console.log(area, theater)
   };
-  state = {
-    tabIndex: 0
-  };
+
+  constructor() {
+    super();
+
+    this.state = {
+      tabIndex: 0
+    };
+  }
 
   handleState = index => {
     this.setState({
@@ -26,13 +26,19 @@ class TheaterSelector extends Component {
     return (
       <div className="TheaterSelector">
         <div className="favorite">
-          {favorateTheater.map((item, index) => (
+          좋아하는 영화관 :
+          {this.props.favTheaterList.map((item, index) => (
             <div
               className="item"
               key={index}
-              onClick={() =>
-                this.handleState(Object.keys(theaterData).indexOf(item.region))
-              }
+              onClick={() => {
+                this.handleState(
+                  this.props.allTheaterList
+                    .map(area => area.areacode)
+                    .indexOf(item.areacode)
+                );
+                this.props.selectTheater(item);
+              }}
             >
               {item.name}
             </div>
@@ -45,23 +51,21 @@ class TheaterSelector extends Component {
           onSelect={tabIndex => this.handleState(tabIndex)}
         >
           <TabList className="flex-container">
-            {Object.keys(theaterData).map((region, index) => (
-              <Tab key={index}>{region}</Tab>
+            {this.props.allTheaterList.map(area => (
+              <Tab key={area.areacode}>{area.areaname}</Tab>
             ))}
           </TabList>
           <div className="flex-container2">
-            {Object.keys(theaterData).map((region, index) => (
-              <TabPanel className="theaters" key={index}>
+            {this.props.allTheaterList.map(area => (
+              <TabPanel className="theaters" key={area.areacode}>
                 <ul>
-                  {theaterData[region].map((theater, jndex) => (
-                    <li key={jndex}>
+                  {area.theaterList.map(theater => (
+                    <li key={theater.theatercode}>
                       <div
                         className="item"
-                        onClick={() =>
-                          this.props.handleTheater(region, theater)
-                        }
+                        onClick={() => this.props.selectTheater(theater)}
                       >
-                        {theater}
+                        {theater.theatername}
                       </div>
                     </li>
                   ))}

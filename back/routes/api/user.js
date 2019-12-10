@@ -13,6 +13,7 @@ router.get("/loginCheck", (req, res) => {
   let Auth = req.isAuthenticated();
   console.log("Auth: ", Auth);
   if (!Auth) {
+    res.clearCookie("userID");
     res.clearCookie("connect.sid");
   }
 
@@ -96,6 +97,7 @@ router.post("/login", isNotLoggedIn, async (req, res, next) => {
           return next(loginErr);
         }
         console.log(req.session);
+        res.cookie("userID", user.id);
         return res.json({ user });
       } catch (e) {
         next(e);

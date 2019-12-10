@@ -3,7 +3,7 @@
 .MovieChart {
   background-color: #fafafa;
   display: inline-block;
-  margin: 30px;
+  margin: 25px;
   border-bottom: 3px solid #85929e;
   font-family: "Noto Sans KR", sans-serif;
   text-align: center;
@@ -26,12 +26,10 @@ h1 {
   background-color: #5D6D7E  ;
   color: white;
   font-weight:bold;
-  width: 280px;
+  width: 290px;
 }
 
 .overall {
-  /* margin-left:auto;
-    margin-right:auto; */
   display: flex;
 }
 
@@ -43,5 +41,5 @@ h1 {
   display: inline-block;
   background-color: #5D6D7E;
   color:white;
-  width:280px;
+  width:290px;
 }

@@ -8,7 +8,6 @@ class MovieHome extends Component {
       img: {
         src: "assets/images/movies/1.jpg"
       },
-
       title: "Frozen2",
       rate: "93.2",
       releasedate: "2019.11.21"
@@ -69,7 +68,6 @@ class MovieHome extends Component {
     return (
       <div className="MovieHome">
         <h1>무비차트</h1>
-
         <div className="overall">
           <div className="inner_overall">
             {this.movieChartData.slice(0, 3).map((movieData, index) => {

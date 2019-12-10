@@ -1,72 +1,101 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-import Seat from './Seat';
+import Seat from "./Seat";
 
-class SeatSection extends Component{
+class SeatSection extends Component {
   static defaultProps = {
     isDummy: false
-  }
+  };
 
   renderSeat = () => {
     let tableBody = [];
     let tableHead = [];
     let tmp = [];
     let bSeat = {
-      row:this.props.data.seats[0].row,
-      col:this.props.data.start_col-1
+      row: this.props.data.seats[0].row,
+      col: this.props.data.start_col - 1
     };
 
-    if(this.props.data.start_col === 1){
-      tableHead.push((<tr><td className="rowName" key={0}>{String.fromCharCode(bSeat.row+64)}</td></tr>));
+    if (this.props.data.start_col === 1) {
+      tableHead.push(
+        <tr key={String.fromCharCode(bSeat.row + 64)}>
+          <td className="rowName">{String.fromCharCode(bSeat.row + 64)}</td>
+        </tr>
+      );
     }
-    
-    for(const seat of this.props.data.seats) {
-      if(bSeat.row < seat.row) {
-        tableBody.push(<tr className='SeatRow' key={bSeat.row}>{tmp}</tr>);
+
+    for (const seat of this.props.data.seats) {
+      if (bSeat.row < seat.row) {
+        tableBody.push(
+          <tr className="SeatRow" key={bSeat.row}>
+            {tmp}
+          </tr>
+        );
         tmp = [];
-        if(this.props.data.start_col === 1){
-          tableHead.push((<tr><td className="rowName" key={bSeat.row}>{String.fromCharCode(bSeat.row+65)}</td></tr>));
+        if (this.props.data.start_col === 1) {
+          tableHead.push(
+            <tr key={String.fromCharCode(bSeat.row + 65)}>
+              <td className="rowName">{String.fromCharCode(bSeat.row + 65)}</td>
+            </tr>
+          );
         }
       }
-      if(seat.col-bSeat.col > 1) {
-        for(let i=bSeat.col+1; i<seat.col; i++) {
-          tmp.push(<Seat isDummy={true} key={i}></Seat>)
+      if (seat.col - bSeat.col > 1) {
+        for (let i = bSeat.col + 1; i < seat.col; i++) {
+          tmp.push(<Seat isDummy={true} key={i}></Seat>);
         }
       }
-      tmp.push((<Seat seatInfo={seat} key={seat.col}></Seat>));
+      let isSelected = false;
+      // console.log(
+      //   this.props.selectedSeat,
+      //   seat,
+      //   this.props.selectedSeat.indexOf(seat)
+      // );
+      if (this.props.selectedSeat.indexOf(seat) !== -1) {
+        isSelected = true;
+      }
+
+      tmp.push(
+        <Seat
+          addSeat={this.props.addSeat}
+          isSelected={isSelected}
+          seatInfo={seat}
+          key={seat.col}
+        ></Seat>
+      );
 
       bSeat = seat;
     }
-    tableBody.push(<tr className='SeatRow' key={bSeat.row}>{tmp}</tr>);
+    tableBody.push(
+      <tr className="SeatRow" key={bSeat.row}>
+        {tmp}
+      </tr>
+    );
 
     return [tableBody, tableHead];
-  }
+  };
 
   render() {
     let retVal = [];
     if (this.props.isDummy) {
-      retVal.push(<td className='SeatSection dummy'></td>);
+      retVal.push(<td className="SeatSection dummy"></td>);
     } else {
       let jsx = this.renderSeat();
 
-      if (this.props.data.col_i === 1){
+      if (this.props.data.col_i === 1) {
         retVal.push(
-          <td className='RowAlphabet' key='RowAlphabet'>
+          <td className="RowAlphabet" key="RowAlphabet">
             <table>
-              <thead>
-                {jsx[1]}
-              </thead>
+              <thead>{jsx[1]}</thead>
             </table>
           </td>
         );
       }
 
       retVal.push(
-        <td className='SeatSection' key={this.props.data.col_i}>
+        <td className="SeatSection" key={this.props.data.col_i}>
           <table>
-            <tbody>
-              {jsx[0]}
-            </tbody>
+            <tbody>{jsx[0]}</tbody>
           </table>
         </td>
       );

@@ -13,7 +13,7 @@ class MovieChart extends Component {
             alt={this.props.title + " poster"}
             title={this.props.title}
             width="280px"
-            height="350px"
+            height="300px"
           ></img>
         </div>
         <div className="title">{this.props.title}</div>

@@ -1,9 +1,6 @@
-insert into theater(id, name) values(theaterAI.nextval, '안산');
-
-insert into theateraddress(theater_id, postal, street, street_num, detail, state, city, district) values(theateraddressAI.nextval, 15462, '광덕대로', 194, '고잔동, NC백화점 A관 6층', '경기도', '안산시', '단원구');
 
 -- 1관, 7관 --
-insert into screen(id, theater_id, name) values(screenAI.nextval, (select id from theater where name='안산'), '1관');
+insert into screen(theater_id, name) values((select id from theater where name='안산'), '1관');
 
 declare
   r_idx  number	:=  1;
@@ -22,14 +19,14 @@ begin
       else r_idx := 2;
       end if;
       
-      insert into seat(id, screen_id, row_index, col_index, row_num, col_num) values(seatAI.nextval, (select id from screen where name='1관'), r_idx, c_idx, y, x);
+      insert into seat(screen_id, row_index, col_index, row_num, col_num) values((select id from screen where name='1관'), r_idx, c_idx, y, x);
     end loop;
   end loop;
 end;
 /
 
 -- 2관, 6관 --
-insert into screen(id, theater_id, name) values(screenAI.nextval, (select id from theater where name='안산'), '2관');
+insert into screen(theater_id, name) values((select id from theater where name='안산'), '2관');
 
 declare
   c_idx  number  :=  1;
@@ -44,14 +41,14 @@ begin
       else c_idx := 1;
       end if;
 
-      insert into seat(id, screen_id, row_index, col_index, row_num, col_num) values(seatAI.nextval, (select id from screen where name='2관'), 1, c_idx, y, x);
+      insert into seat(screen_id, row_index, col_index, row_num, col_num) values((select id from screen where name='2관'), 1, c_idx, y, x);
     end loop;
   end loop;
 end;
 /
 
 -- 3관, 5관--
-insert into screen(id, theater_id, name) values(screenAI.nextval, (select id from theater where name='안산'), '3관');
+insert into screen(theater_id, name) values((select id from theater where name='안산'), '3관');
 
 declare
   r_idx  number	:=  1;
@@ -70,14 +67,14 @@ begin
       else r_idx := 2;
       end if;
       
-      insert into seat(id, screen_id, row_index, col_index, row_num, col_num) values(seatAI.nextval, (select id from screen where name='3관'), r_idx, c_idx, y, x);
+      insert into seat(screen_id, row_index, col_index, row_num, col_num) values((select id from screen where name='3관'), r_idx, c_idx, y, x);
     end loop;
   end loop;
 end;
 /
 
 -- 4DX 관 --
-insert into screen(id, theater_id, name) values(screenAI.nextval, (select id from theater where name='안산'), '4DX관');
+insert into screen(theater_id, name) values((select id from theater where name='안산'), '4DX관');
 
 declare
   c_idx  number :=  1;
@@ -88,14 +85,14 @@ begin
       else c_idx := 1;
       end if;
       
-      insert into seat(id, screen_id, row_index, col_index, row_num, col_num) values(seatAI.nextval, (select id from screen where name='4DX관'), 1, c_idx, y, x);
+      insert into seat(screen_id, row_index, col_index, row_num, col_num) values((select id from screen where name='4DX관'), 1, c_idx, y, x);
     end loop;
   end loop;
 end;
 /
 
 -- 8관 --
-insert into screen(id, theater_id, name) values(screenAI.nextval, (select id from theater where name='안산'), '8관');
+insert into screen(theater_id, name) values((select id from theater where name='안산'), '8관');
 
 declare
   c_idx  number	:=  1;
@@ -110,7 +107,7 @@ begin
       else c_idx := 1;
       end if;
       
-      insert into seat(id, screen_id, row_index, col_index, row_num, col_num) values(seatAI.nextval, (select id from screen where name='8관'), 1, c_idx, y, x);
+      insert into seat(screen_id, row_index, col_index, row_num, col_num) values((select id from screen where name='8관'), 1, c_idx, y, x);
     end loop;
   end loop;
 end;

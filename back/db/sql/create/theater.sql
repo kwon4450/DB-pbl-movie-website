@@ -50,7 +50,7 @@ create table if not exists timetable(
   screen_type   varchar(20)     not null,
   screen_id     int             not null,
   start_date    date            not null,
-  start_time    varchar(10)     not null,
+  start_time    varchar(10)    not null,
   PRIMARY KEY (id),
   FOREIGN KEY (movie_id) REFERENCES movie(id),
   FOREIGN KEY (theater_id) REFERENCES theater(id),
