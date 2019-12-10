@@ -4,7 +4,6 @@
   justify-content: center;
   padding-left: 26%;
   padding-right: 26%;
-  
 }
 
 .Reviews > * {
@@ -14,9 +13,7 @@
   border: 2.5px solid #34495e;
   margin-left: -2.5px;
   margin-bottom: -2.5px;
-
 }
-
 
 .input {
   text-align: center;
@@ -25,27 +22,25 @@
   padding-bottom: 20px;
   margin-left: 25%;
   margin-right: 25%;
-  width:50%;
-  color:white;
+  width: 50%;
+  color: white;
   font-size: 20px;
 }
 
-.nickname{
+.nickname {
   display: inline-block;
   text-align: center;
   background-color: rgb(125, 153, 177);
   color: white;
-  font-weight:bold;
-  width: 326px;
+  font-weight: bold;
+  width: 101%;
+  margin: -1px;
 }
 
-.usergrade{
+.usergrade {
   display: inline-block;
-  text-align:center;
+  text-align: center;
   background-color: rgb(125, 153, 177);
-  width:30px;
-  border-radius:4px;
-
-
+  width: 30px;
+  border-radius: 4px;
 }
-

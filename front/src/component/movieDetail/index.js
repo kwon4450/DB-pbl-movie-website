@@ -5,7 +5,7 @@ class Moviedetail extends Component {
   render() {
     return (
       <div className="Moviedetail">
-        <h2>영화 상세페이지</h2>
+        <h2 className="detpage">영화 상세페이지</h2>
         <hr></hr>
         <div className="img2">
           <img
@@ -19,39 +19,56 @@ class Moviedetail extends Component {
         </div>
         <div class="detail">
           <ul class="data">
-          <div className="title2">{this.props.data.title2}</div>
-            </ul>
-          <ul class="data">
-            <li class="part">
-              <div className="releasedate"><span class="detailed">개봉 일자:</span> {this.props.data.releasedate}</div>
-            </li>
-            <li class="part">
-              <div className="rating"><span class="detailed">예매율: </span> {this.props.data.rating} %</div>
-            </li>   
+            <div className="title2">{this.props.data.title2}</div>
           </ul>
           <ul class="data">
             <li class="part">
-              <div className="grade"><span class="detailed">등급: </span> {this.props.data.grade}</div>
+              <div className="releasedate">
+                <span class="detailed">개봉 일자:</span>{" "}
+                {this.props.data.releasedate}
+              </div>
             </li>
             <li class="part">
-              <div className="screening"><span  class="detailed">타입: </span> {this.props.data.screening}</div>
+              <div className="rating">
+                <span class="detailed">예매율: </span> {this.props.data.rating}{" "}
+                %
+              </div>
             </li>
           </ul>
-        
           <ul class="data">
             <li class="part">
-             <div className="pd"><span  class="detailed">감독: </span>{this.props.data.pd}</div>
+              <div className="grade">
+                <span class="detailed">등급: </span> {this.props.data.grade}
+              </div>
             </li>
             <li class="part">
-              <div className="actor"><span  class="detailed">배우: </span>{this.props.data.actor}</div>
+              <div className="screening">
+                <span class="detailed">타입: </span> {this.props.data.screening}
+              </div>
+            </li>
+          </ul>
+
+          <ul class="data">
+            <li class="part">
+              <div className="pd">
+                <span class="detailed">감독: </span>
+                {this.props.data.pd}
+              </div>
+            </li>
+            <li class="part">
+              <div className="actor">
+                <span class="detailed">배우: </span>
+                {this.props.data.actor}
+              </div>
             </li>
           </ul>
           <br></br>
           <div className="ticket2"></div>
           <ul class="data">
-          <div className="story"><h4>시놉시스</h4>
-            {this.props.data.story}
-          </div>
+            <div className="story">
+              <h4>시놉시스</h4>
+              {this.props.data.story}
+            </div>
           </ul>
         </div>
       </div>
