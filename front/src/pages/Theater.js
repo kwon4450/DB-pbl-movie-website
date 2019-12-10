@@ -4,8 +4,8 @@ import axios from "axios";
 import TheaterSelector from "component/theaterSelector";
 import TheaterInfo from "component/TheaterInfo";
 import TimeTable from "component/timeTable";
-// import allTheaterList from "assets/testData/theaterList.json";
-let allTheaterList;
+import allTheaterList from "assets/testData/theaterList.json";
+// let allTheaterList;
 
 class Theater extends Component {
   constructor() {
@@ -28,18 +28,13 @@ class Theater extends Component {
           });
 
           if (res.data.favTheaterList.length === 0) {
-            this.selectTheater(
-              res.data.allTheaterList[0].areacode,
-              res.data.allTheaterList[0].theaterList[0].theatercode
-            );
+            this.selectTheater(res.data.allTheaterList[0].theaterList[0]);
           } else {
-            this.selectTheater(
-              res.data.favTheaterList[0].areacode,
-              res.data.favTheaterList[0].theaterList[0].theatercode
-            );
+            this.selectTheater(res.data.favTheaterList[0].theaterList[0]);
           }
           console.log(res.data, "get theaterList success");
         } else {
+          this.selectTheater();
           console.log(res.data, "get theaterList err");
         }
       })
@@ -53,21 +48,26 @@ class Theater extends Component {
       selectedTheater: theater,
       timeTableList: null
     });
-
-    axios
-      .get(`/theaters/timetable?theatercode=${this.props.theatercode}`)
-      .then(res => {
-        console.log(res.data, "get timeTable data success");
-        this.setState({
-          timeTableList: res.data
+    if (typeof theater === "object") {
+      axios
+        .get(`/theaters/timetable?theatercode=${theater.theatercode}`)
+        .then(res => {
+          console.log(res.data, "get timeTable data success");
+          this.setState({
+            timeTableList: res.data
+          });
+        })
+        .catch(err => {
+          this.setState({
+            timeTableList: undefined
+          });
+          console.log(err, "get timeTable data err");
         });
-      })
-      .catch(err => {
-        this.setState({
-          timeTableList: false
-        });
-        console.log(err, "get timeTable data err");
+    } else {
+      this.setState({
+        timeTableList: undefined
       });
+    }
   };
 
   renderTheaterSelector() {
