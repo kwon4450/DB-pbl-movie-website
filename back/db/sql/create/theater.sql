@@ -53,6 +53,5 @@ create table if not exists timetable(
   start_time    varchar(10)    not null,
   PRIMARY KEY (id),
   FOREIGN KEY (movie_id) REFERENCES movie(id),
-  FOREIGN KEY (theater_id) REFERENCES theater(id),
   FOREIGN KEY (screen_id) REFERENCES screen(id)
 );
