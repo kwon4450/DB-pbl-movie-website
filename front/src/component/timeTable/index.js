@@ -1,9 +1,7 @@
 import React, { Component } from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-import axios from "axios";
 
 import MovieBox from "./MovieBox";
-// import timeTableData from "assets/testData/timeTable.json";
 import "./style/TimeTable.css";
 import "./style/TabMenu.css";
 
