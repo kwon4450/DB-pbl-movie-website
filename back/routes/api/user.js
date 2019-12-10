@@ -24,7 +24,7 @@ router.get("/idCheck", isNotLoggedIn, async (req, res) => {
   const sql = "select * from user where user_id = ?";
   const exUser = await select(sql, [id]);
   console.log("exUser:  ",exUser);
-  if (exUser) return res.json({ info: "이미 등록된 아이디입니다.", possible: false });
+  if (exUser.length) return res.json({ info: "이미 등록된 아이디입니다.", possible: false });
   return res.json({ info: "사용가능한 아이디입니다.", possible: true });
 });
 
@@ -33,7 +33,7 @@ router.get("/mailCheck", isNotLoggedIn, async (req, res) => {
   const sql = "select * from user where mail = ?";
   const exUser = await select(sql, [mail]);
   console.log("exUser:  ",exUser);
-  if (exUser) return res.json({ info: "이미 등록된 메일입니다." });
+  if (exUser.length) return res.json({ info: "이미 등록된 메일입니다." });
   return res.json({ info: "" });
 });
 
@@ -43,7 +43,7 @@ router.get("/phoneCheck", isNotLoggedIn, async (req, res) => {
   const sql = "select * from phone where phone_num = ?";
   const exUser = await select(sql, [phone]);
   console.log("exUser:  ",exUser);
-  if (exUser) return res.json({ info: "이미 등록된 휴대전화 번호입니다." });
+  if (exUser.length) return res.json({ info: "이미 등록된 휴대전화 번호입니다." });
   return res.json({ info: "" });
 });
 
@@ -55,7 +55,7 @@ router.post("/signup", isNotLoggedIn, async (req, res, next) => {
   var sql = `select * from user where user_id = '${id}'`;
   const exUser = await select(sql);
   console.log("exUser:  ", exUser);
-  if (exUser)
+  if (exUser.length)
     return res.status(403).json({ info: "이미 등록된 아이디입니다. " });
   console.log("회원가입중");
   const hashedPW = await bcrypt.hash(password, 10);

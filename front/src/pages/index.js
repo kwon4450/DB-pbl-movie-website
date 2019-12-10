@@ -29,12 +29,12 @@ let pages = [
     isPublic: true,
     component: require("./Theater").default
   },
-  {
-    exact: false,
-    path: "/test",
-    isPublic: true,
-    component: require("./Test").default
-  },
+  // {
+  //   exact: false,
+  //   path: "/test",
+  //   isPublic: true,
+  //   component: require("./Test").default
+  // },
   {
     isPublic: true,
     component: require("./NoMatch").default

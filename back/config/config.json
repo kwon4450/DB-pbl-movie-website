@@ -11,6 +11,7 @@
     "user": "bs",
     "password": "1234",
     "database": "theater_schema",
-    "connectionLimit": 10
+    "connectionLimit": 500,
+    "dateStrings": "date"
   }
 }
