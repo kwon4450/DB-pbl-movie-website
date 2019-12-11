@@ -1,22 +1,21 @@
 import React, { Component } from "react";
 import axios from "axios";
 
-import allTheaterList from "assets/testData/theaterList.json";
-
 class TimeTableUpload extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      allTheaterList: allTheaterList,
-      area: allTheaterList[0].areacode,
-      theater: allTheaterList[0].theaterList[0].theatercode
+      allTheaterList: null,
+      area: null,
+      theater: null
     };
 
     axios
       .get("/api/theaters")
       .then(res => {
-        let allTheaterList = res.data;
+        let allTheaterList = res.data.allTheaterList;
+        console.log(allTheaterList);
         this.setState({
           allTheaterList: allTheaterList,
           area: allTheaterList[0].areacode,
@@ -50,14 +49,14 @@ class TimeTableUpload extends Component {
     const uploadedData = await new Response(file).text();
 
     let data = {
-      area: this.state.area,
-      theater: this.state.theater,
+      theatercode: this.state.theater,
+      date: '2019-12-12',
       json: uploadedData
     };
     axios
       .post("/api/admin/upload/timetable", { data })
       .then(res => {
-        alert("업로드 완료");
+        alert(res.data.info);
       })
       .catch(err => {
         console.log(err);
