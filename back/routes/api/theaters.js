@@ -61,12 +61,21 @@ router.get("/", async (req, res) => {
 router.get("/timetable", async (req, res) => {
   const { theatercode, date } = req.query;
   console.log(theatercode, date);
+  require('date-utils');
+  let d = new Date();
+  let dt = d.toFormat('YYYYMMDD HH24MI');
+  const nowDate = dt.split(' ')[0];
+  const nowTime = dt.split(' ')[1];
+  if (parseInt(nowDate.replace(/-/gi, "")) > date) return res.json([]);
   const timetables = await select(
     "select movie.id movieid, movie.movie_title movietitle, movie.grade grade, movie.genre genre, movie.runnung_time runningtime, movie.opening_date releasedate, screen.id screenid, screen.name screenname, timetable.id timetableid, timetable.screen_type screentype, screen.totalseats totalseats, timetable.start_time starttime from theater join screen on theater.id = screen.theater_id join timetable on screen.id = timetable.screen_id join movie on movie.id = timetable.movie_id where theater.id = ? and timetable.start_date = ? order by starttime",
     [theatercode, date]
   );
   const data = [];
+  
+  console.log(nowDate, nowTime);
   for (const timetable of timetables) {
+    if (parseInt(timetable.starttime) + 20 < parseInt(nowTime)) continue;
     let movieindex = -1;
     let screenindex = -1;
     for (let i = 0; i < data.length; i++) {

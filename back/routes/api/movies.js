@@ -9,9 +9,8 @@ router.get('/', async (req, res) => {
     case "rating":
       const movies = await select("select id movieid, is_screening isscreening, movie_title movietitle, opening_date releasedate, rate rating, grade, director, actor, genre, plot story from movie order by rate desc limit 6");
       return res.json(movies);
-    case "gpa":
+    case "mpa":
       return res.json({info: 준비중});
-      break;
     default:
       return res.status(400).json({info: "잘못된 요청입니다." });
   }
