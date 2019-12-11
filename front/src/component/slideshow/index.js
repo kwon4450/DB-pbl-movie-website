@@ -41,9 +41,9 @@ class Slideshow extends Component {
               movie: item
             }
           }}
+          key={index}
         >
           <img
-            key={index}
             src={`/assets/images/movies/${item.movieid}.jpg`}
             alt={`${item.movietitle} poster`}
             style={{ width: "190px", height: "200px" }}

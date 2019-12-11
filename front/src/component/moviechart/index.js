@@ -20,6 +20,7 @@ class MovieChart extends Component {
           >
             <img
               className="logo"
+              src={`/assets/images/movies/${movie.movieid}.jpg`}
               alt={movie.movietitle + " poster"}
               title={movie.movietitle}
               width="280px"
