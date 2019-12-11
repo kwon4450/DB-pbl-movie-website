@@ -13,7 +13,7 @@ let pages = [
   },
   {
     exact: false,
-    path: "/movie/:moviename",
+    path: "/detail/:moviename",
     isPublic: true,
     component: require("./Detail").default
   },
