@@ -3,7 +3,7 @@ import Mypage from "component/mypage/mypage";
 
 class MyPage extends Component {
   render() {
-    console.log(this.props);
+    console.log("go to mypage", this.props);
     return <Mypage></Mypage>;
   }
 }

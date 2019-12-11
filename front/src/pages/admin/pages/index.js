@@ -7,7 +7,7 @@ let pages = [
   },
   {
     exact: false,
-    path: "/time_table",
+    path: "/timetable",
     isPublic: true,
     component: require("./TimeTableUpload").default
   }
