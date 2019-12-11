@@ -10,7 +10,7 @@ require("dotenv").config();
 const passportConfig = require("./passport");
 const userAPIRouter = require("./routes/api/user");
 const theatersAPIRouter = require("./routes/api/theaters");
-const testAPIRouter = require("./routes/api/test");
+const reserAPIRouter = require('./routes/api/reservation');
 
 const app = express();
 
@@ -44,7 +44,7 @@ app.use(passport.session());
 
 app.use('/api/user', userAPIRouter);
 app.use('/api/theaters', theatersAPIRouter);
-app.use('/api/test', testAPIRouter);
+app.use('/api/reservation', reserAPIRouter);
 app.use('/', (req, res) => {
     res.send('api 서버');
   });

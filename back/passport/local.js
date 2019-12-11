@@ -12,16 +12,15 @@ module.exports = () => {
   }, async (id, password, done) => {
     try {
       const sql = `select * from user where user_id = ? limit 1`;
-      let user = await select(sql, [id]);
-      user = user[0];
+      const user = await select(sql, [id]);
       console.log(user);
-      if (!user) {
+      if (!user.length) {
         return done(null, false, { reason: '존재하지 않은 아이디이거나 비밀번호가 일치하지 않습니다.' });
       }
-      const check = await bcrypt.compare(password, user.user_pw);
+      const check = await bcrypt.compare(password, user[0].user_pw);
       if (check) {
         console.log('login success');
-        return done(null, user);
+        return done(null, user[0]);
       } else {
         return done(null, false, { reason: '존재하지 않은 아이디이거나 비밀번호가 일치하지 않습니다.' });
       }
