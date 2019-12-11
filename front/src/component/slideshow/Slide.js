@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import { Fade } from "react-slideshow-image";
 import "./style/slide.css";
 import { Link } from "react-router-dom";
@@ -85,7 +85,7 @@ const testData = [
   },
   {
     num: 9,
-    img: {  
+    img: {
       src: "/assets/images/movies/10.jpg"
     },
     title: "감쪽같은영희에게",
@@ -103,7 +103,7 @@ const testData = [
   },
   {
     num: 11,
-    img: {  
+    img: {
       src: "/assets/images/movies/12.jpg"
     },
     title: "감쪽같은영희에게",
@@ -112,7 +112,7 @@ const testData = [
   },
   {
     num: 12,
-    img: {  
+    img: {
       src: "/assets/images/movies/13.jpg"
     },
     title: "감쪽같은영희에게",
@@ -121,7 +121,7 @@ const testData = [
   },
   {
     num: 13,
-    img: {  
+    img: {
       src: "/assets/images/movies/14.jpg"
     },
     title: "감쪽같은영희에게",
@@ -130,7 +130,7 @@ const testData = [
   },
   {
     num: 14,
-    img: {  
+    img: {
       src: "/assets/images/movies/15.jpg"
     },
     title: "감쪽같은영희에게",
@@ -139,16 +139,16 @@ const testData = [
   },
   {
     num: 15,
-    img: {  
+    img: {
       src: "/assets/images/movies/16.jpg"
     },
     title: "감쪽같은영희에게",
     rate: "0.9",
-    releasedate: "2019.10.23"}
-  ,
+    releasedate: "2019.10.23"
+  },
   {
     num: 16,
-    img: {  
+    img: {
       src: "/assets/images/movies/17.jpg"
     },
     title: "감쪽같은영희에게",
@@ -157,7 +157,7 @@ const testData = [
   },
   {
     num: 17,
-    img: {  
+    img: {
       src: "/assets/images/movies/18.jpg"
     },
     title: "감쪽같은영희에게",
@@ -166,7 +166,7 @@ const testData = [
   },
   {
     num: 18,
-    img: {  
+    img: {
       src: "/assets/images/movies/19.jpg"
     },
     title: "감쪽같은영희에게",
@@ -175,17 +175,17 @@ const testData = [
   },
   {
     num: 19,
-    img: {  
+    img: {
       src: "/assets/images/movies/20.jpg"
     },
     title: "감쪽같은영희에게",
     rate: "0.9",
-    releasedate: "2019.10.23",
+    releasedate: "2019.10.23"
   },
 
   {
     num: 20,
-    img: {  
+    img: {
       src: "/assets/images/movies/21.jpg"
     },
     title: "감쪽같은영희에게",
@@ -204,21 +204,33 @@ const fadeProperties = {
   }
 };
 
-let renderFadeChild = () => {
-  let jsx = [];
-  for (let i = 0; i < testData.length; i += 10) {
-    let tmp = testData.slice(i, i + 8).map((item, index) =><Link to=""><img key={index} src={ item.img.src } style={ { width: "190px", height: "200px" } }/></Link>);
-    jsx.push(tmp);
+class Slideshow extends Component {
+  state = {
+    movies: null
+  };
+  renderFadeChild = () => {
+    let jsx = [];
+    for (let i = 0; i < testData.length; i += 10) {
+      let tmp = this.state.movies.slice(i, i + 8).map((item, index) => (
+        <Link to={`/movies/detail:${item.movietitle}`}>
+          <img
+            key={index}
+            src={`assets/images/movies/${item.movietitle}`}
+            style={{ width: "190px", height: "200px" }}
+          />
+        </Link>
+      ));
+      jsx.push(tmp);
+    }
+    return jsx;
+  };
+  render() {
+    return (
+      <div className="slide-container">
+        <Fade {...fadeProperties}>{this.renderFadeChild()}</Fade>
+      </div>
+    );
   }
-  return jsx;
-};
-
-const Slideshow = () => {
-  return (
-    <div className="slide-container">
-      <Fade {...fadeProperties}>{renderFadeChild()}</Fade>
-    </div>
-  );
-};
+}
 
 export default Slideshow;
