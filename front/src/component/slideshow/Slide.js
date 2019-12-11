@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Fade } from "react-slideshow-image";
 import "./style/slide.css";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 const testData = [
   {
@@ -208,14 +209,29 @@ class Slideshow extends Component {
   state = {
     movies: testData
   };
+
+  componentDidMount() {
+    axios.get(`/api/movies?num=${16}`).then(res => {
+      console.log(res.data);
+      this.setState({ movies: res.data });
+    });
+  }
   renderFadeChild = () => {
     let jsx = [];
-    for (let i = 0; i < testData.length; i += 10) {
+    for (let i = 0; i < this.state.movies.length; i += 8) {
       let tmp = this.state.movies.slice(i, i + 8).map((item, index) => (
-        <Link to={`/movies/detail:${item.movietitle}`}>
+        <Link
+          to={{
+            pathname: `/movies/detail/${item.movietitle}`,
+            state: {
+              movie: item
+            }
+          }}
+        >
           <img
             key={index}
-            src={`assets/images/movies/${item.movietitle}`}
+            src={`assets/images/movies/${item.movieid}.jpg`}
+            alt={`${item.movietitle} poster`}
             style={{ width: "190px", height: "200px" }}
           />
         </Link>
