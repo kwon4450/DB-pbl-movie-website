@@ -216,7 +216,7 @@ router.get('/mypage', isLoggedIn, async (req, res) => {
       totalseats: ft.totalseats
     })
   }
-  const wmdata = await select("select id movieid, is_screening isscreening, movie_title movietitle, opening_date releasedate, rate rating, grade, director, actor, genre, plot story from movie join wishlist on movie.id = wishlist.id where wishlist.user_id = ?", [req.user.user_id]);
+  const wmdata = await select("select movie.id movieid, is_screening isscreening, movie_title movietitle, opening_date releasedate, rate rating, grade, director, actor, genre, plot story from movie join wishlist on movie.id = wishlist.id where wishlist.user_id = ?", [req.user.user_id]);
 
   return res.json({ user: req.user, wishList: wmdata, favoritetheaterList: ftdata, reservationList: data });
 })
