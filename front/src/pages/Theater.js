@@ -29,7 +29,6 @@ class Theater extends Component {
           } else {
             this.selectTheater(res.data.favTheaterList[0].theaterList[0]);
           }
-          console.log(res.data, "get theaterList success");
         } else {
           this.selectTheater();
           console.log(res.data, "get theaterList err");

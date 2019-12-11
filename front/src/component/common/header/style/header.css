@@ -11,25 +11,22 @@ header .user {
 
 .menuItem{
   background:
-
 }
 
 
 header h1{
   color: white;
   font-family: 'Noto Sans KR', sans-serif;
-  text-align:center;
   margin: 5px;
   padding: 5px;
-  font-size: px;
+  font-size: 30px;
 }
   
-
-header .user-menu {
+header .user-menu{
   display: flex;
 }
 
-header .nav-menu {
+header .nav-menu{
   display: flex;
   justify-content: center;
   margin-bottom: 40px;

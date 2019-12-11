@@ -18,9 +18,8 @@ class TimeTable extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    console.log(nextProps);
     if (nextProps.selectedTheater !== null) {
-      this.getTimeTable(nextProps.selectedTheater, 0);
+      this.getTimeTable(nextProps.selectedTheater, this.state.tabIndex);
     }
   }
 
@@ -43,7 +42,6 @@ class TimeTable extends Component {
   };
 
   selectTab = index => {
-    console.log(`select ${index} tab`);
     this.setState({
       tabIndex: index
     });
@@ -51,14 +49,19 @@ class TimeTable extends Component {
   };
 
   getTimeTable(selectedTheater, index) {
+    this.setState({
+      timeTableList: this.state.timeTableList.map((item, i) => {
+        if (i === index) return null;
+        else return item;
+      })
+    });
+
     let curDate = this.state.dayList[index];
     axios
       .get(
         `/api/theaters/timetable?theatercode=${selectedTheater.theatercode}&date=${curDate.year}-${curDate.month}-${curDate.date}`
       )
       .then(res => {
-        console.log(res.data, "get timeTable data success");
-
         this.setState({
           timeTableList: this.state.timeTableList.map((item, i) => {
             if (i === index) return res.data;

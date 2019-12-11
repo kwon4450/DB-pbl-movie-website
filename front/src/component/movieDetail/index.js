@@ -63,7 +63,6 @@ class Moviedetail extends Component {
             </li>
           </ul>
           <br></br>
-          <div className="ticket2"></div>
           <ul class="data">
             <div className="story">
               <h4>시놉시스</h4>

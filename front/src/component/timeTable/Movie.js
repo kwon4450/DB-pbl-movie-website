@@ -13,7 +13,7 @@ class Movie extends Component {
     return (
       <div className="Movie">
         <div className="Info">
-          <h3>{this.props.movie.name}</h3>
+          <h3>{this.props.movie.movietitle}</h3>
           <div className="isOn">{this.checkIsOn() ? "상영중" : "예매중"}</div>
           <div className="grade">{this.props.movie.grade}</div>
           <div className="genre">{this.props.movie.genre}</div>

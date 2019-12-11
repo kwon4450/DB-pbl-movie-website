@@ -35,7 +35,6 @@ class SelectSeat extends Component {
     }
   };
   render() {
-    console.log(this.props);
     let reserveData = this.props.location.state;
     if (!reserveData || Object.keys(reserveData).length === 0) {
       alert("잘못된 접근입니다!");
@@ -47,6 +46,7 @@ class SelectSeat extends Component {
         <header>인원/좌석</header>
         <div className="mainWrap">
           <ScreenMap
+            seatList={reserveData.time.seatList}
             selectedSeat={this.state.selectedSeat}
             addSeat={this.addSeat}
           ></ScreenMap>
@@ -54,16 +54,10 @@ class SelectSeat extends Component {
             <div className="movieInfo">{reserveData.movie.name}</div>
             <div className="screenInfo">{reserveData.screen.name}</div>
             <div className="timeInfo">
-              {`${reserveData.time.starttime.slice(
-                0,
-                2
-              )}:${reserveData.time.starttime.slice(
-                0,
-                2
-              )} ~ ${reserveData.time.endtime.slice(
-                0,
-                2
-              )}:${reserveData.time.endtime.slice(0, 2)}`}
+              {`${reserveData.time.starttime.slice(0, 2)}:
+              ${reserveData.time.starttime.slice(2)} ~ 
+              ${reserveData.time.endtime.slice(0, 2)}:
+              ${reserveData.time.endtime.slice(2)}`}
             </div>
             <button
               className="reset"

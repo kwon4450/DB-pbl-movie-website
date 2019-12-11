@@ -14,9 +14,9 @@ class Screen extends Component {
     return (
       <div className="Screen">
         <div className="screenInfo">
-          <div className="type">{this.props.screen.type} </div>
-          <div className="name">{this.props.screen.name}</div>
-          <div className="totalSeat">{this.props.screen.total}석</div>
+          <div className="type">{this.props.screen.screentype} </div>
+          <div className="name">{this.props.screen.screenname}</div>
+          <div className="totalSeat">{this.props.screen.totalseats}석</div>
         </div>
         <div className="times">
           {this.props.screen.timetableList.map((item, index) => {
