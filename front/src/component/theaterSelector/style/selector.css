@@ -17,7 +17,6 @@
   justify-content: center;
   position: relative;
   left: 7%;
-  margin: 10px;
   padding: 15px;
   border-radius: 5px;
   width: 83.3%;
@@ -85,6 +84,9 @@
 }
 .theaters ul li:last-child {
   border-right: none;
+}
+.item {
+  cursor:pointer
 }
 .theaters .item {
   display: inline;

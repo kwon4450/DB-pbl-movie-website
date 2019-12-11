@@ -8,13 +8,13 @@ class TheaterSelector extends Component {
     selectTheater: (area, theater) => console.log(area, theater)
   };
 
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       tabIndex: 0
     };
-  }
+  };
 
   handleState = index => {
     this.setState({
@@ -40,7 +40,7 @@ class TheaterSelector extends Component {
                 this.props.selectTheater(item);
               }}
             >
-              {item.name}
+              {item.theatername}
             </div>
           ))}
         </div>
@@ -52,7 +52,7 @@ class TheaterSelector extends Component {
         >
           <TabList className="flex-container">
             {this.props.allTheaterList.map(area => (
-              <Tab key={area.areacode}>{area.areaname}</Tab>
+              <Tab key={area.areacode}><div className="item">{area.areaname}</div></Tab>
             ))}
           </TabList>
           <div className="flex-container2">

@@ -12,14 +12,12 @@ router.get("/loginCheck", (req, res) => {
   console.log("loginCheck");
   let Auth = req.isAuthenticated();
   console.log("Auth: ", Auth);
-  const x = req.user;
-  console.log(x);
   if (!Auth) {
     res.clearCookie("userID");
     res.clearCookie("connect.sid");
   }
 
-  return res.json({ auth: Auth });
+  return res.json({auth: Auth});
 });
 
 router.get("/idCheck", async (req, res) => {
@@ -102,7 +100,7 @@ router.post("/login", async (req, res, next) => {
           return next(loginErr);
         }
         console.log(req.session);
-        res.cookie("userID", user.id);
+        res.cookie("userID", user.user_id);
         return res.json({ user });
       } catch (e) {
         next(e);
