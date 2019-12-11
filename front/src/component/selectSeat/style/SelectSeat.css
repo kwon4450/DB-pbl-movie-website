@@ -1,11 +1,63 @@
-.SelectSeat .mainWrap {
+.Reserve {
   display: flex;
+  justify-content: center;
+}
+.SelectSeat .mainWrap > * {
+  margin-right: 20px;
 }
 
 .SelectSeat .reserveInfo {
   flex: 0 0 auto;
 }
 
+.SelectSeat .wrap {
+  display: flex;
+}
+.SelectSeat .wrap.wrap_col {
+  flex-direction: column;
+  align-items: center;
+}
+
+.SelectSeat .reserveInfo .wrap.box > * {
+  padding: 0 10px;
+  border-right: 1px solid grey;
+}
+.SelectSeat .reserveInfo .wrap.wrap_col > *,
+.SelectSeat .reserveInfo .wrap > *:last-child {
+  border-right: none;
+}
+
+.SelectSeat .numOfPeople {
+  margin-top: 20px;
+}
+.peopleSelector .label {
+  width: 50px;
+}
+.peopleSelector .selectBox {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 6px 0;
+}
+.peopleSelector .selectBox .item {
+  margin-left: 6px;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  border: 1px solid #d6d3ce;
+  background-color: #f2f0e5;
+  text-align: center;
+}
+
+.peopleSelector .selectBox .item.selected {
+  color: white;
+  background-color: #333;
+}
 .SelectSeat .numOfPeople .seatInfo {
   display: flex;
+  word-break: break-all;
+  width: 370px;
+}
+
+.goPayment span {
+  font-size: larger;
 }

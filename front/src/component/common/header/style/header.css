@@ -1,35 +1,32 @@
 @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
-header {
-  background:#34495E;
+.main_header {
+  background: #34495e;
 }
 
-header .user {
+.main_header .user {
   display: flex;
-  
+
   justify-content: space-between;
 }
 
-.menuItem{
-  background:
-
+.menuItem {
+  background: ;
 }
 
-
-header h1{
+.main_header h1 {
   color: white;
-  font-family: 'Noto Sans KR', sans-serif;
-  text-align:center;
+  font-family: "Noto Sans KR", sans-serif;
+  text-align: center;
   margin: 5px;
   padding: 5px;
   font-size: px;
 }
-  
 
-header .user-menu {
+.main_header .user-menu {
   display: flex;
 }
 
-header .nav-menu {
+.main_header .nav-menu {
   display: flex;
   justify-content: center;
   margin-bottom: 40px;

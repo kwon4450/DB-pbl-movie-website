@@ -50,7 +50,6 @@ class ScreenMap extends Component {
   };
 
   render() {
-    console.log(this.props.seatList);
     return (
       <div className="ScreenMap">
         <div className="screen">screen</div>
