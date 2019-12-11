@@ -40,9 +40,8 @@ router.post('/', isLoggedIn, async (req, res) => {
   }
 })
 
-router.get('/reserinfo', isLoggedIn, (req, res) => {
-  const { reserid } = req.body;
-  
+router.get('/reserinfo', isLoggedIn, async (req, res) => {
+  // const data = await select("")
   return res.json({});
 })
 

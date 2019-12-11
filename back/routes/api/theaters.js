@@ -4,7 +4,7 @@ const { select, change } = require("../../db");
 const router = express.Router();
 
 router.get("/", async (req, res) => {
-  let data = [];
+  const data = [];
   const index = {
     "01": 0,
     "02": 1,
@@ -39,21 +39,33 @@ router.get("/", async (req, res) => {
     });
   }
 
-  return res.json({ allTheaterList: data, favTheaterList: [] });
+  const ftdata = []
+  if (req.isAuthenticated()) {
+    const fts = await select("select theater.* from theater join favoritetheater on theater.id = favoritetheater.theater_id where favoritetheater.user_id = ?", [req.user.user_id]);
+    for (const ft of fts) {
+      ftdata.push({
+        areacode: ft.areacode,
+        theatercode: ft.id,
+        theatername: ft.name,
+        address: ft.address,
+        tele: "1544-9801",
+        totalscreens: ft.totalscreens,
+        totalseats: ft.totalseats
+      })
+    }
+  }
+
+  return res.json({ allTheaterList: data, favTheaterList: ftdata });
 });
 
 router.get("/timetable", async (req, res) => {
   const { theatercode, date } = req.query;
   console.log(theatercode, date);
-  const ftdata = []
-  if (req.isAuthenticated()) {
-    // 내일 형식
-  }
   const timetables = await select(
     "select movie.id movieid, movie.movie_title movietitle, movie.grade grade, movie.genre genre, movie.runnung_time runningtime, movie.opening_date releasedate, screen.id screenid, screen.name screenname, timetable.id timetableid, timetable.screen_type screentype, screen.totalseats totalseats, timetable.start_time starttime from theater join screen on theater.id = screen.theater_id join timetable on screen.id = timetable.screen_id join movie on movie.id = timetable.movie_id where theater.id = ? and timetable.start_date = ? order by starttime",
     [theatercode, date]
   );
-  const ttdata = [];
+  const data = [];
   for (const timetable of timetables) {
     let movieindex = -1;
     let screenindex = -1;
