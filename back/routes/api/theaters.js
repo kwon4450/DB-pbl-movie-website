@@ -1,3 +1,5 @@
+const { isLoggedIn } = require('../middleware');
+
 const express = require("express");
 const { select, change } = require("../../db");
 
@@ -57,6 +59,12 @@ router.get("/", async (req, res) => {
 
   return res.json({ allTheaterList: data, favTheaterList: ftdata });
 });
+
+router.post('/favoritetheater', async (req, res) => {
+  const { theaterid } = req.body;
+  await change([{sql: "insert into favoritetheater(user_id, theater_id) values(?, ?)", args: [req.user.user_id, theaterid]}]);
+  return res.json({ info: "ok" });
+})
 
 router.get("/timetable", async (req, res) => {
   const { theatercode, date } = req.query;

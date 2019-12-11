@@ -3,33 +3,39 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 
   width: 800px;
 }
-.ScreenMap tr {
-  margin-bottom: 10px;
-}
 
 .screen {
+  width: 100%;
   background-image: url("../../../assets/images/common/screen_bg.png");
   background-repeat: repeat-x;
   border-radius: 5px;
   text-align: center;
 }
 
-table.SeatMap {
-  border-spacing: 10px;
+.SeatMap {
+  display: flex;
+  flex-direction: column;
+}
+
+.SeatSectionRow {
+  display: flex;
 }
 
 .SeatSection {
   vertical-align: baseline;
+  margin: 10px 5px 0px 5px;
 }
 
 .Seat,
 .rowName {
   padding: 0px;
-  width: 40px;
-  height: 40px;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
 
   text-align: center;
 }

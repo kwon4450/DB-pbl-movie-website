@@ -68,14 +68,14 @@ class Header extends Component {
               </Link>
             </DropdownMenu>
 
-            <DropdownMenu title="예매">
-              <Link to="/ticketing/time-table">
-                <MenuItem>상영 시간표</MenuItem>
-              </Link>
+            <Link to="/ticketing/timetable">
+              <MenuItem>상영 시간표</MenuItem>
+            </Link>
+            {/* <DropdownMenu title="예매">
               <Link to="/ticketing/fast">
                 <MenuItem>빠른 예매</MenuItem>
               </Link>
-            </DropdownMenu>
+            </DropdownMenu> */}
 
             <Link to="/theater">
               <MenuItem>영화관</MenuItem>

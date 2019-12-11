@@ -1,6 +1,6 @@
-const { select, change } = require("../");
+const { select, change } = require("..");
 
-const transfer = async (info, json) => {
+const transTimetable = async (info, json) => {
   const timetables = json;
   for (const movie of timetables) {
     const movieid = await select(
@@ -14,6 +14,7 @@ const transfer = async (info, json) => {
         [info.theatercode, screen.name.replace(/CGV/gi, "DBV").trim()]
       );
       if (!screenid.length) {
+        console.log(info.theatercode);
         await change([
           {
             sql:
@@ -51,6 +52,6 @@ const transfer = async (info, json) => {
   }
 };
 
-module.exports = { transfer };
+module.exports = transTimetable;
 
 

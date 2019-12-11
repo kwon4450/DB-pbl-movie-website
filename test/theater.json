@@ -1,0 +1,23 @@
+{
+  "areacode": "01",
+  "areaname": "서울",
+  "theatercode": "0056",
+  "theatername": "DBV테스트",
+  "address": "예시 주소입니다.",
+  "totalscreens": 3,
+  "totalseats": 240,
+  "screenList": [
+    {
+      "screenname": "1관",
+      "totalseats": 30
+    },
+    {
+      "screenname": "2관",
+      "totalseats": 90
+    },
+    {
+      "screenname": "3관",
+      "totalseats": 120
+    }
+  ]
+}
