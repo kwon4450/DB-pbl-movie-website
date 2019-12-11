@@ -6,13 +6,22 @@ class InputReview extends Component {
     return (
       <div className="input">
         <div classname="inputreview">
-          <h2 classname="h2name">평점 작성</h2>
+          <h2 classname="h2name">평점 및 리뷰 작성</h2>
           <h3>겨울 왕국2</h3>
+          <div className="nowrap">
+            <div className="clippeda">
+              <img src="http://gahyun.wooga.kr/main/img/testImg/star_on.png"></img>
+              <img src="http://gahyun.wooga.kr/main/img/testImg/star_on.png"></img>
+              <img src="http://gahyun.wooga.kr/main/img/testImg/star_on.png"></img>
+              <img src="http://gahyun.wooga.kr/main/img/testImg/star.png"></img>
+              <img src="http://gahyun.wooga.kr/main/img/testImg/star.png"></img>
+            </div>
+          </div>
           <div class="textbox">
             <textarea
               name="input"
               cols="70"
-              rows="2"
+              rows="4"
               maxlength="280"
               placeholder="비방 및 욕설 시 사용이 정지될 수 있습니다."
             ></textarea>
