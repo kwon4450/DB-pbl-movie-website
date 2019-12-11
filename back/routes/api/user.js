@@ -214,7 +214,9 @@ router.get('/mypage', isLoggedIn, async (req, res) => {
       });
     }
     data[reserIndex].seatList.push({
-      seatid: ticket.seatid
+      seatid: ticket.seatid,
+      row: ticket.row_num,
+      col: ticket.col_num
     });
   }
 
