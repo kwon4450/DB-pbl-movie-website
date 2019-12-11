@@ -9,7 +9,6 @@ const testData = [
     img: {
       src: "/assets/images/movies/1.jpg"
     },
-
     title: "Frozen2",
     rate: "93.2",
     releasedate: "2019.11.21"
@@ -18,7 +17,7 @@ const testData = [
   {
     num: 2,
     img: {
-      src: "/assets/images/movies/10.jpg"
+      src: "/assets/images/movies/2.jpg"
     },
     title: "나를 찾아줘",
     rate: "9.2",
@@ -28,7 +27,7 @@ const testData = [
   {
     num: 3,
     img: {
-      src: "/assets/images/movies/7.jpg"
+      src: "/assets/images/movies/3.jpg"
     },
     title: "블랙머니",
     rate: "4.2",
@@ -38,7 +37,7 @@ const testData = [
   {
     num: 4,
     img: {
-      src: "/assets/images/movies/9.jpg",
+      src: "/assets/images/movies/4.jpg",
       alt: "러브앳 poster"
     },
     title: "러브앳",
@@ -49,7 +48,7 @@ const testData = [
   {
     num: 5,
     img: {
-      src: "/assets/images/movies/4.jpg"
+      src: "/assets/images/movies/5.jpg"
     },
     title: "82년생 김지영",
     rate: "1.4",
@@ -59,7 +58,7 @@ const testData = [
   {
     num: 6,
     img: {
-      src: "/assets/images/movies/5.jpg"
+      src: "/assets/images/movies/6.jpg"
     },
     title: "윤희에게",
     rate: "0.9",
@@ -68,7 +67,7 @@ const testData = [
   {
     num: 7,
     img: {
-      src: "/assets/images/movies/8.jpg"
+      src: "/assets/images/movies/7.jpg"
     },
     title: "나이보스이웃",
     rate: "0.9",
@@ -77,7 +76,7 @@ const testData = [
   {
     num: 8,
     img: {
-      src: "/assets/images/movies/7.jpg"
+      src: "/assets/images/movies/8.jpg"
     },
     title: "윤희에게",
     rate: "0.9",
@@ -86,7 +85,7 @@ const testData = [
   {
     num: 9,
     img: {
-      src: "/assets/images/movies/10.jpg"
+      src: "/assets/images/movies/9.jpg"
     },
     title: "감쪽같은영희에게",
     rate: "0.9",
@@ -95,7 +94,7 @@ const testData = [
   {
     num: 10,
     img: {
-      src: "/assets/images/movies/11.jpg"
+      src: "/assets/images/movies/10.jpg"
     },
     title: "크롤",
     rate: "0.9",
@@ -104,7 +103,7 @@ const testData = [
   {
     num: 11,
     img: {
-      src: "/assets/images/movies/12.jpg"
+      src: "/assets/images/movies/11.jpg"
     },
     title: "감쪽같은영희에게",
     rate: "0.9",
@@ -113,7 +112,7 @@ const testData = [
   {
     num: 12,
     img: {
-      src: "/assets/images/movies/13.jpg"
+      src: "/assets/images/movies/12.jpg"
     },
     title: "감쪽같은영희에게",
     rate: "0.9",
@@ -122,7 +121,7 @@ const testData = [
   {
     num: 13,
     img: {
-      src: "/assets/images/movies/14.jpg"
+      src: "/assets/images/movies/13.jpg"
     },
     title: "감쪽같은영희에게",
     rate: "0.9",
@@ -131,7 +130,7 @@ const testData = [
   {
     num: 14,
     img: {
-      src: "/assets/images/movies/15.jpg"
+      src: "/assets/images/movies/14.jpg"
     },
     title: "감쪽같은영희에게",
     rate: "0.9",
@@ -140,7 +139,7 @@ const testData = [
   {
     num: 15,
     img: {
-      src: "/assets/images/movies/16.jpg"
+      src: "/assets/images/movies/15.jpg"
     },
     title: "감쪽같은영희에게",
     rate: "0.9",
@@ -149,7 +148,7 @@ const testData = [
   {
     num: 16,
     img: {
-      src: "/assets/images/movies/17.jpg"
+      src: "/assets/images/movies/16.jpg"
     },
     title: "감쪽같은영희에게",
     rate: "0.9",
@@ -158,7 +157,7 @@ const testData = [
   {
     num: 17,
     img: {
-      src: "/assets/images/movies/18.jpg"
+      src: "/assets/images/movies/17.jpg"
     },
     title: "감쪽같은영희에게",
     rate: "0.9",
@@ -167,7 +166,7 @@ const testData = [
   {
     num: 18,
     img: {
-      src: "/assets/images/movies/19.jpg"
+      src: "/assets/images/movies/18.jpg"
     },
     title: "감쪽같은영희에게",
     rate: "0.9",
@@ -176,7 +175,7 @@ const testData = [
   {
     num: 19,
     img: {
-      src: "/assets/images/movies/20.jpg"
+      src: "/assets/images/movies/19.jpg"
     },
     title: "감쪽같은영희에게",
     rate: "0.9",
@@ -186,7 +185,7 @@ const testData = [
   {
     num: 20,
     img: {
-      src: "/assets/images/movies/21.jpg"
+      src: "/assets/images/movies/20.jpg"
     },
     title: "감쪽같은영희에게",
     rate: "0.9",
@@ -206,7 +205,7 @@ const fadeProperties = {
 
 class Slideshow extends Component {
   state = {
-    movies: null
+    movies: testData
   };
   renderFadeChild = () => {
     let jsx = [];
