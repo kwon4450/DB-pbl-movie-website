@@ -10,7 +10,7 @@ class Moviedetail extends Component {
         <div className="img2">
           <img
             className="logo"
-            {...this.props.data.img2}
+            {...this.props.data.postersrc}
             alt={this.props.data.title2 + "poster"}
             title2={this.props.data.title2}
             width="280px"
@@ -42,8 +42,8 @@ class Moviedetail extends Component {
               </div>
             </li>
             <li class="part">
-              <div className="screening">
-                <span class="detailed">타입: </span> {this.props.data.screening}
+              <div className="runningttime">
+                <span class="detailed">타입: </span> {this.props.data.runningtime}
               </div>
             </li>
           </ul>
@@ -52,7 +52,7 @@ class Moviedetail extends Component {
             <li class="part">
               <div className="pd">
                 <span class="detailed">감독: </span>
-                {this.props.data.pd}
+                {this.props.data.director}
               </div>
             </li>
             <li class="part">
