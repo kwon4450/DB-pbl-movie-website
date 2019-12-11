@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Slideshow from "../component/slideshow";
+import Slideshow from "component/slideshow";
 
 class Home extends Component {
   render() {

@@ -7,9 +7,15 @@ let pages = [
   },
   {
     exact: false,
-    path: "/time_table",
+    path: "/timetable",
     isPublic: true,
     component: require("./TimeTableUpload").default
+  },
+  {
+    exact: false,
+    path: "/theater",
+    isPublic: true,
+    component: require("./TheaterUpload").default
   }
 ];
 
