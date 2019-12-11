@@ -20,10 +20,11 @@ class App extends Component {
     axios
       .get("/api/user/loginCheck")
       .then(res => {
-        console.log("session check success\n", res.data);
         this.handleAuth(res.data.auth);
+        console.log("session check success\n", res.data);
       })
       .catch(err => {
+        this.props.handleAuth(false);
         console.log("session check fail", err);
       });
 

@@ -29,7 +29,7 @@ class LogIn extends Component {
       .then(res => {
         console.log("login success!");
         this.props.handleAuth(true);
-        this.props.history.push("/");
+        this.props.history.goBack();
       })
       .catch(err => {
         console.log(err);
