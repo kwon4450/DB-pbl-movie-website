@@ -26,7 +26,7 @@ class TimeTablePage extends Component {
           if (res.data.favTheaterList.length === 0) {
             this.selectTheater(res.data.allTheaterList[0].theaterList[0]);
           } else {
-            this.selectTheater(res.data.favTheaterList[0].theaterList[0]);
+            this.selectTheater(res.data.favTheaterList[0]);
           }
         } else {
           this.selectTheater();
