@@ -4,7 +4,7 @@ const { select, change } = require("../../db");
 const router = express.Router();
 
 router.get("/", async (req, res) => {
-  let data = [];
+  const data = [];
   const index = {
     "01": 0,
     "02": 1,
@@ -39,7 +39,23 @@ router.get("/", async (req, res) => {
     });
   }
 
-  return res.json({ allTheaterList: data, favTheaterList: [] });
+  const ftdata = []
+  if (req.isAuthenticated()) {
+    const fts = await select("select theater.* from theater join favoritetheater on theater.id = favoritetheater.theater_id where favoritetheater.user_id = ?", [req.user.user_id]);
+    for (const ft of fts) {
+      ftdata.push({
+        areacode: ft.areacode,
+        theatercode: ft.id,
+        theatername: ft.name,
+        address: ft.address,
+        tele: "1544-9801",
+        totalscreens: ft.totalscreens,
+        totalseats: ft.totalseats
+      })
+    }
+  }
+
+  return res.json({ allTheaterList: data, favTheaterList: ftdata });
 });
 
 router.get("/timetable", async (req, res) => {
@@ -136,6 +152,7 @@ router.get("/timetable", async (req, res) => {
   }
   return res.json(data);
 });
+
 router.get("/seats", async (req, res, next) => {
   const { screen } = req.query;
   const temp = await select(`select * from seat where screen_id = ${screen}`);

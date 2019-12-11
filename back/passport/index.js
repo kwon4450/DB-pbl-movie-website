@@ -13,8 +13,8 @@ module.exports = () => {
     try {
       console.log("deserialize");
       const sql = `select * from user where user_id = ? limit 1`;
-      const user = await select(sql, [id]);
-      return done(null, user);
+      const user = await select(sql,[id]);
+      return done(null, user[0]);
     } catch (e) {
       console.error(e);
       return done(e);
