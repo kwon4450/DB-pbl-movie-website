@@ -152,13 +152,19 @@ router.post("pwChange", async (req, res) => {
   }
 })
 
-router.get("/userinfo", isLoggedIn, (req, res) => {
-  console.log("userinfoAPI");
-  console.log(req.user);
-  res.send(req.user);
-});
+router.get("/wishlist", isLoggedIn, async (req, res) => {
+  const data = await select("select id movieid, is_screening isscreening, movie_title movietitle, opening_date releasedate, rate rating, grade, director, actor, genre, plot story from movie join wishlist on movie.id = wishlist.id where wishlist.user_id = ?", [req.user.user_id]);
+  return res.json(data);
+})
 
-// router.post("/wishlist", isLoggedIn, (req, res) => {
-//   const 
-// })
+router.post("/wishlist", isLoggedIn, async (req, res) => {
+  const { movieid } = req.body;
+  try {
+    await change([{sql: "insert into wishlist(user_id, movie_id) values(?, ?)", args: [req.user.user_id, movieid]}]);
+    return res.json({ info: "ok" });
+  } catch(e) {
+    console.error(e);
+    return res.status(500).json({ info: e });
+  }
+})
 module.exports = router;
