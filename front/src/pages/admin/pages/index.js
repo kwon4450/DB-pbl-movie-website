@@ -16,6 +16,12 @@ let pages = [
     path: "/theater",
     isPublic: true,
     component: require("./TheaterUpload").default
+  },
+  {
+    exact: false,
+    path: "/movie",
+    isPublic: true,
+    component: require("./MovieUpload").default
   }
 ];
 

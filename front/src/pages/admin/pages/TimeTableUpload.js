@@ -50,7 +50,7 @@ class TimeTableUpload extends Component {
 
     let data = {
       theatercode: this.state.theater,
-      date: '2019-12-12',
+      date: '2019-12-13',
       json: uploadedData
     };
     axios

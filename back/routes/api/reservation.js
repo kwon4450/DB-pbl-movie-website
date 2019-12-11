@@ -41,46 +41,4 @@ router.post('/', isLoggedIn, async (req, res) => {
   }
 })
 
-router.get('/reserinfo', async (req, res) => {
-  const tickets = await select("select reservation.id reservationcode, reservation.payment_type, reservation.price, movie.id movieid, movie.movie_title movietitle, movie.running_time runningtime, timetable.screen_type screentype, timetable.start_date startdate, timetable.start_time starttime, theater.id theaterid, theater.name theatername, screen.id screenid, screen.name screenname, ticket.seat_id seatid from reservation join timetable on timetable.id = reservation.timetable_id join movie on movie.id = timetable.movie_id join screen on screen.id = timetable.screen_id join theater on theater.id = screen.theater_id join ticket on ticket.reservation_id = reservation.id where reservation.user_id = ?", ['kwon4450']);
-  const data = [];
-  for (const ticket of tickets) {
-    let reserIndex = -1;
-    for (let i = 0; i < data.length; i++) {
-      if (ticket.reservationcode == data[i].reservationcode) {
-        reserIndex = i;
-        break;
-      }
-    }
-    if (reserIndex == -1) {
-      reserIndex = data.length;
-      let endtime = String(parseInt(ticket.starttime + ticket.runningtime + 20));
-      while (endtime.length < 4) {
-        endtime = '0' + endtime;
-      }
-      data.push({
-        reservationcode: ticket.reservationcode,
-        paymenttype: ticket.payment_type,
-        price: ticket.price,
-        movieid: ticket.movieid,
-        movietitle: ticket.movietitle,
-        runningtime: ticket.runningtime,
-        screentype: ticket.screentype,
-        startdate: ticket.startdate,
-        starttime: ticket.starttime,
-        endtime: endtime,
-        theaterid: ticket.theaterid,
-        thaetername: ticket.thaetername,
-        screenid: ticket.screenid,
-        screenname: ticket.screenname,
-        seatList: []
-      })
-    }
-    data[reserIndex].seatList.push({
-      seatid: ticket.seatid
-    })
-  }
-  return res.json(data);
-})
-
 module.exports = router;

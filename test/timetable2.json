@@ -1,0 +1,131 @@
+[
+  {
+    "name": "범수와 민우",
+    "grade": "청불",
+    "genre": "스릴러,범죄",
+    "runningtime": "124분",
+    "releasedate": "2019.12.11",
+    "screens": [
+      {
+        "name": "2관",
+        "type": "2D",
+        "total": "90",
+        "timetables": [
+          {
+            "starttime": "2030"
+          }
+        ]
+      },
+      {
+        "name": "3관",
+        "type": "2D",
+        "total": "120",
+        "timetables": [
+          {
+            "starttime": "1145"
+          },
+          {
+            "starttime": "2300"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "나이브스 아웃",
+    "grade": "12세 이상",
+    "genre": "미스터리, 스릴러",
+    "runningtime": "130분",
+    "releasedate": "2019.12.04",
+    "screens": [
+      {
+        "name": "2관",
+        "type": "2D",
+        "total": "90",
+        "timetables": [
+          {
+            "starttime": "2325"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "겨울왕국 2",
+    "grade": "전체",
+    "genre": "애니메이션",
+    "runningtime": "103분",
+    "releasedate": "2019.11.21",
+    "screens": [
+      {
+        "name": "1관",
+        "type": "2D(자막)",
+        "total": "30",
+        "timetables": [
+          {
+            "starttime": "0855"
+          },
+          {
+            "starttime": "1105"
+          },
+          {
+            "starttime": "1315"
+          },
+          {
+            "starttime": "1520"
+          },
+          {
+            "starttime": "1725"
+          },
+          {
+            "starttime": "1935"
+          },
+          {
+            "starttime": "2140"
+          },
+          {
+            "starttime": "2345"
+          }
+        ]
+      },
+      {
+        "name": "3관",
+        "type": "2D(자막)",
+        "total": "120",
+        "timetables": [
+          {
+            "starttime": "1440"
+          },
+          {
+            "starttime": "1645"
+          },
+          {
+            "starttime": "1850"
+          },
+          {
+            "starttime": "2055"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "속물들",
+    "grade": "15세 이상",
+    "genre": "코미디, 드라마",
+    "runningtime": "107분",
+    "releasedate": "2019.12.12",
+    "screens": [
+      {
+        "name": "3관",
+        "type": "2D",
+        "total": "120",
+        "timetables": [
+          {
+            "starttime": "0935"
+          }
+        ]
+      }
+    ]
+  }
+]

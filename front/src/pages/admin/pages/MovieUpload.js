@@ -9,7 +9,7 @@ class TheaterUpload extends Component {
   submitAction = async event => {
     event.preventDefault();
 
-    const file = document.getElementById("theaterFile").files[0];
+    const file = document.getElementById("movieFile").files[0];
     if (!file) return;
     const uploadedData = await new Response(file).text();
 
@@ -17,7 +17,7 @@ class TheaterUpload extends Component {
       json: uploadedData
     };
     axios
-      .post("/api/admin/upload/theater", { data })
+      .post("/api/admin/upload/movie", { data })
       .then(res => {
         alert(res.data.info);
       })
@@ -30,11 +30,11 @@ class TheaterUpload extends Component {
   render() {
     return (
       <form onSubmit={this.submitAction}>
-        영화관 정보 파일
+        영화 정보
         <input
           type="file"
-          id="theaterFile"
-          name="theaterFile"
+          id="movieFile"
+          name="movieFile"
           accept=".json"
           required
         ></input>
