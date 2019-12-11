@@ -87,7 +87,13 @@
 }
 .item {
   cursor: pointer;
+  font-weight: 400;
 }
+
+.item.selected {
+  font-weight: 800;
+}
+
 .theaters .item {
   display: inline;
 }
