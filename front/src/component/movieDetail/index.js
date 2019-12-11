@@ -12,16 +12,16 @@ class Moviedetail extends Component {
       <div className="Moviedetail">
         <h2 className="detpage">영화 상세페이지</h2>
         <hr></hr>
-        <div className="img2">
-          <img
-            className="logo"
-            alt={`${movie.movietitle} poster`}
-            title={movie.movietitle}
-            width="280px"
-            height="300px"
-          ></img>
-        </div>
         <div class="detail">
+          <div className="img2">
+            <img
+              className="logo"
+              src={`/assets/images/movies/${movie.movieid}.jpg`}
+              alt={`${movie.movietitle} poster`}
+              title={movie.movietitle}
+              width="260px"
+            ></img>
+          </div>
           <ul class="data">
             <div className="title2">{movie.movietitle}</div>
           </ul>
@@ -45,7 +45,7 @@ class Moviedetail extends Component {
             </li>
             <li class="part">
               <div className="runningttime">
-                <span class="detailed">상영시간: </span> {movie.runningtime}
+                <span class="detailed">상영시간: </span> {movie.runningtime}분
               </div>
             </li>
           </ul>
@@ -64,7 +64,6 @@ class Moviedetail extends Component {
               </div>
             </li>
           </ul>
-          <br></br>
           <ul class="data">
             <div className="story">
               <h4>시놉시스</h4>

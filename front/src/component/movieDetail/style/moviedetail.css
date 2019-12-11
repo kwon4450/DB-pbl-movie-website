@@ -28,9 +28,11 @@ h4 {
   font-size: 20px;
 }
 .img2 {
-  width: 28%;
+  width: 280px;
   float: left;
+  margin: 30px;
   background-color: #34495e;
+  margin: 20px;
   border-top: 3px solid#34495E;
   border-bottom: 3px solid #34495e;
   border-left: 3px solid #34495e;
