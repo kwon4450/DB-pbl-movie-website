@@ -176,8 +176,11 @@ router.post("/wishlist", isLoggedIn, async (req, res) => {
   }
 });
 
-router.get('/mypage', isLoggedIn, async (req, res) => {
-  const tickets = await select("select reservation.id reservationcode, reservation.payment_type, reservation.price, movie.id movieid, movie.movie_title movietitle, movie.runnung_time runningtime, timetable.screen_type screentype, timetable.start_date startdate, timetable.start_time starttime, theater.id theaterid, theater.name theatername, screen.id screenid, screen.name screenname, seat.id seatid, seat.row_num, seat.col_num from reservation join timetable on timetable.id = reservation.timetable_id join movie on movie.id = timetable.movie_id join screen on screen.id = timetable.screen_id join theater on theater.id = screen.theater_id join ticket on ticket.reservation_id = reservation.id join seat on seat.id = ticket.seat_id where reservation.user_id = ?", [req.user.user_id]);
+router.get("/mypage", isLoggedIn, async (req, res) => {
+  const tickets = await select(
+    "select reservation.id reservationcode, reservation.payment_type, reservation.price, movie.id movieid, movie.movie_title movietitle, movie.runnung_time runningtime, timetable.screen_type screentype, timetable.start_date startdate, timetable.start_time starttime, theater.id theaterid, theater.name theatername, screen.id screenid, screen.name screenname, ticket.seat_id seatid from reservation join timetable on timetable.id = reservation.timetable_id join movie on movie.id = timetable.movie_id join screen on screen.id = timetable.screen_id join theater on theater.id = screen.theater_id join ticket on ticket.reservation_id = reservation.id where reservation.user_id = ?",
+    [req.user.user_id]
+  );
   const data = [];
   for (const ticket of tickets) {
     let reserIndex = -1;
@@ -217,6 +220,7 @@ router.get('/mypage', isLoggedIn, async (req, res) => {
       seatid: ticket.seatid
     });
   }
+  console.log(data);
 
   const fts = await select(
     "select theater.* from theater join favoritetheater on theater.id = favoritetheater.theater_id where favoritetheater.user_id = ?",
@@ -235,9 +239,17 @@ router.get('/mypage', isLoggedIn, async (req, res) => {
     });
   }
 
-  const wmdata = await select("select movie.id movieid, is_screening isscreening, movie_title movietitle, opening_date releasedate, rate rating, grade, director, actor, genre, plot story from movie join wishlist on movie.id = wishlist.id where wishlist.user_id = ?", [req.user.user_id]);
+  const wmdata = await select(
+    "select movie.id movieid, is_screening isscreening, movie_title movietitle, opening_date releasedate, rate rating, grade, director, actor, genre, plot story from movie join wishlist on movie.id = wishlist.id where wishlist.user_id = ?",
+    [req.user.user_id]
+  );
 
-  return res.json({ user: req.user, wishList: wmdata, favoritetheaterList: ftdata, reservationList: data });
-})
+  return res.json({
+    user: req.user,
+    wishList: wmdata,
+    favoritetheaterList: ftdata,
+    reservationList: data
+  });
+});
 
 module.exports = router;

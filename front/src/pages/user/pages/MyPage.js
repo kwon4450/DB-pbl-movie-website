@@ -10,7 +10,6 @@ class MyPage extends Component {
     axios
       .get("/api/user/mypage")
       .then(res => {
-        console.log(res.data);
         this.setState({
           data: res.data
         });
@@ -26,7 +25,7 @@ class MyPage extends Component {
     if (this.state.data === null) {
       return <h2>Loading...</h2>;
     } else if (typeof this.state.data === "object") {
-      return <Mypage {...this.props}></Mypage>;
+      return <Mypage {...this.props} data={this.state.data}></Mypage>;
     } else {
       return <h2>Fail to loading Mypage :(</h2>;
     }
