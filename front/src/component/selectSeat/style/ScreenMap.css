@@ -1,11 +1,24 @@
 .ScreenMap {
   flex: 0 0 auto;
-}
-table.SeatMap {
-  border-spacing: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  width: 800px;
 }
 .ScreenMap tr {
   margin-bottom: 10px;
+}
+
+.screen {
+  background-image: url("../../../assets/images/common/screen_bg.png");
+  background-repeat: repeat-x;
+  border-radius: 5px;
+  text-align: center;
+}
+
+table.SeatMap {
+  border-spacing: 10px;
 }
 
 .SeatSection {

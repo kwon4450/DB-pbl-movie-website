@@ -18,7 +18,7 @@ const testData = [
   {
     num: 2,
     img: {
-      src: "/assets/images/movies/find_me.jpg"
+      src: "/assets/images/movies/10.jpg"
     },
     title: "나를 찾아줘",
     rate: "9.2",
@@ -28,7 +28,7 @@ const testData = [
   {
     num: 3,
     img: {
-      src: "/assets/images/movies/2.jpg"
+      src: "/assets/images/movies/7.jpg"
     },
     title: "블랙머니",
     rate: "4.2",
@@ -38,7 +38,7 @@ const testData = [
   {
     num: 4,
     img: {
-      src: "/assets/images/movies/loveat.jpg",
+      src: "/assets/images/movies/9.jpg",
       alt: "러브앳 poster"
     },
     title: "러브앳",

@@ -110,6 +110,7 @@ class TimeTable extends Component {
               <MovieBox
                 timeTableData={item}
                 reserveData={{
+                  theater: this.props.selectedTheater,
                   day: this.state.dayList[index]
                 }}
               />
