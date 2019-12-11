@@ -8,13 +8,19 @@ class Review extends Component {
     {
       nickname: "정인",
       reviews:
-        "이번 영화는 전편보다 훨씬 더 스토리가 감동적이였고 개인적으로 엘사가 아닌 울라프가 주인공인 것 같네요 !!",
+        "겨울왕국2는 전편보다 훨씬 더 스토리가 감동적이였고 개인적으로 엘사가 아닌 울라프가 주인공인 것 같네요 !!",
       usergrade: "VIP",
       data: "2019.12.12"
     },
     {
       nickname: "병서",
       reviews: "정말 재미있어요",
+      usergrade: "VIP",
+      data: "2019.12.12"
+    },
+    {
+      nickname: "냐냐냐옹",
+      reviews: "브루니, 게일, 물과 땅의 정령 그리고 엘사의 마법 그 자체..",
       usergrade: "VIP",
       data: "2019.12.12"
     },
@@ -52,12 +58,6 @@ class Review extends Component {
     {
       nickname: "이지은",
       reviews: "재밌었어요~ 4DX로 보니까 더 좋네요 ㅎㅎ",
-      usergrade: "VIP",
-      data: "2019.12.12"
-    },
-    {
-      nickname: "냐냐냐옹",
-      reviews: "브루니, 게일, 물과 땅의 정령 그리고 엘사의 마법 그 자체..",
       usergrade: "VIP",
       data: "2019.12.12"
     },
