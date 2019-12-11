@@ -13,7 +13,7 @@ const getHtml = async (theatercode, date) => {
 };
 list.forEach(city => {
   city.theaters.forEach(theater => {
-    let date = '20191214';
+    let date = '20191215';
     getHtml(theater.theatercode, date)
       .then(html => {
         let res = [];
