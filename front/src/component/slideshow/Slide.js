@@ -206,7 +206,7 @@ const fadeProperties = {
 
 class Slideshow extends Component {
   state = {
-    movies: null
+    movies: testData
   };
   renderFadeChild = () => {
     let jsx = [];

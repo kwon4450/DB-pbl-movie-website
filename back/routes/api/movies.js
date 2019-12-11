@@ -4,12 +4,12 @@ const { select, change } = require('../../db');
 const router = express.Router();
 
 router.get('/', async (req, res) => {
-  const { sortby } = req.query;
+  const { sortby, num } = req.query;
   switch (sortby) {
     case "mpa":
       return res.json({info: 준비중});
     default:
-      let movies = await select("select id movieid, is_screening isscreening, movie_title movietitle, opening_date releasedate, rate rating, grade, director, actor, genre, plot story from movie order by rate desc limit 6");
+      let movies = await select("select id movieid, is_screening isscreening, movie_title movietitle, opening_date releasedate, rate rating, grade, director, actor, genre, plot story from movie order by rate desc limit ?", [num]);
       for (const movie of movies) {
         const rating = await select("select avg(rating) mga from review where movie_id = ?", [movie.movieid]);
         console.log(rating)
