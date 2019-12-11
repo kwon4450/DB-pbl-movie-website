@@ -29,19 +29,21 @@ class TheaterUpload extends Component {
 
   render() {
     return (
-      <form onSubmit={this.submitAction}>
-        영화관 정보 파일
-        <input
-          type="file"
-          id="theaterFile"
-          name="theaterFile"
-          accept=".json"
-          required
-        ></input>
-        <button type="submit" className="submitBtn">
-          업로드
-        </button>
-      </form>
+      <div>
+        <h2>TheaterUpload</h2>
+        <form onSubmit={this.submitAction}>
+          <input
+            type="file"
+            id="theaterFile"
+            name="theaterFile"
+            accept=".json"
+            required
+          ></input>
+          <button type="submit" className="submitBtn">
+            업로드
+          </button>
+        </form>
+      </div>
     );
   }
 }
