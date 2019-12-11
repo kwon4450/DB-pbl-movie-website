@@ -44,3 +44,8 @@
   width: 30px;
   border-radius: 4px;
 }
+
+.nowrap * {
+  border-width: 0px;
+  margin: 0 auto;
+}

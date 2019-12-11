@@ -16,7 +16,7 @@
   display: flex;
   justify-content: center;
   position: relative;
-  left: 7%;
+  margin: 0 auto;
   padding: 15px;
   border-radius: 5px;
   width: 83.3%;
@@ -86,7 +86,7 @@
   border-right: none;
 }
 .item {
-  cursor:pointer
+  cursor: pointer;
 }
 .theaters .item {
   display: inline;
