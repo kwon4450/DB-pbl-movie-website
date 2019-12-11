@@ -6,7 +6,7 @@ const router = express.Router();
 router.get('/', async (req, res) => {
   const { num } = req.query;
   console.log(num)
-  let movies = await select("select id movieid, is_screening isscreening, movie_title movietitle, opening_date releasedate, runnung_time runningtime, rate rating, grade, director, actor, genre, plot story from movie order by rate desc limit ?", [num]);
+  let movies = await select("select id movieid, is_screening isscreening, movie_title movietitle, opening_date releasedate, runnung_time runningtime, rate rating, grade, director, actor, genre, plot story from movie order by rate desc limit ?", [parseInt(num)]);
   for (const movie of movies) {
     const rating = await select("select avg(rating) mga from review where movie_id = ?", [movie.movieid]);
     console.log(rating)
