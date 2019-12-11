@@ -12,6 +12,7 @@ class RouterContainer extends Component {
           this.props.handleAuth(res.data.auth);
         })
         .catch(err => {
+          this.props.handleAuth(false);
           console.log("session check fail", err);
         });
       // console.log(action, location.pathname);

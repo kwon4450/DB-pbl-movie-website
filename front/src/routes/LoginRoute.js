@@ -31,7 +31,8 @@ class LoginRoute extends Component {
         <Route
           {...rest}
           render={props => (
-            <this.props.LoginComponent
+            <this.props.component
+              {...props}
               handleAuth={this.props.handleAuth}
               isAuthenticated={this.props.isAuthenticated}
             />
