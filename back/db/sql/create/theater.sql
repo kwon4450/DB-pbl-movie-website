@@ -16,7 +16,7 @@ create table if not exists theater(
 );
 
 create table if not exists favoritetheater(
-  id          int,
+  id          int             auto_increment,
   user_id     varchar(20)       not null,
   theater_id  int               not null,
   PRIMARY KEY (id),
