@@ -15,7 +15,6 @@ class TheaterInfo extends Component {
       });
   };
   render() {
-    console.log(this.props);
     return (
       <div className="TheaterInfo">
         <h1>THEATER</h1>
