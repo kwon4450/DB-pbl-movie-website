@@ -49,7 +49,6 @@ class TimeTable extends Component {
   };
 
   getTimeTable(selectedTheater, index) {
-    console.log(selectedTheater);
     this.setState({
       timeTableList: this.state.timeTableList.map((item, i) => {
         if (i === index) return null;

@@ -19,16 +19,15 @@ class Theater extends Component {
       .get("/api/theaters")
       .then(res => {
         if (typeof res.data === "object") {
-          this.setState({
-            allTheaterList: res.data.allTheaterList,
-            favTheaterList: res.data.favTheaterList
-          });
-
           if (res.data.favTheaterList.length === 0) {
             this.selectTheater(res.data.allTheaterList[0].theaterList[0]);
           } else {
             this.selectTheater(res.data.favTheaterList[0]);
           }
+          this.setState({
+            allTheaterList: res.data.allTheaterList,
+            favTheaterList: res.data.favTheaterList
+          });
         } else {
           this.selectTheater();
           console.log(res.data, "get theaterList err");
@@ -38,6 +37,15 @@ class Theater extends Component {
         console.log(err, "get theaterList err");
       });
   }
+
+  getFavTheaterList = () => {
+    // console.log("getting favTheaterList");
+    axios.get("/api/theaters/favoritetheater").then(res => {
+      this.setState({
+        favTheaterList: res.data
+      });
+    });
+  };
 
   selectTheater = theater => {
     this.setState({
@@ -59,7 +67,12 @@ class Theater extends Component {
             selectedTheater={this.state.selectedTheater}
           ></TheaterSelector>
 
-          <TheaterInfo {...this.state.selectedTheater}></TheaterInfo>
+          <TheaterInfo
+            {...this.props}
+            selectedTheater={this.state.selectedTheater}
+            favTheaterList={this.state.favTheaterList}
+            getFavTheaterList={this.getFavTheaterList}
+          ></TheaterInfo>
         </>
       );
     } else {
@@ -69,6 +82,7 @@ class Theater extends Component {
   }
 
   render() {
+    // console.log("currentSelectedTheater : ", this.state.selectedTheater);
     return (
       <div className="Theater">
         {this.renderTheaterSelector()}

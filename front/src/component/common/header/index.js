@@ -56,17 +56,17 @@ class Header extends Component {
 
         <nav className="site">
           <Menu className="nav-menu">
-            <DropdownMenu title="영화">
-              <Link exact="true" to="/movies">
-                <MenuItem>무비 차트</MenuItem>
-              </Link>
+            <Link exact="true" to="/movies">
+              <MenuItem>무비 차트</MenuItem>
+            </Link>
+            {/* <DropdownMenu title="영화">
               <Link to="/movies/finder">
                 <MenuItem>무비 파인더</MenuItem>
               </Link>
               <Link to="/movies/review">
                 <MenuItem>리뷰/평점</MenuItem>
               </Link>
-            </DropdownMenu>
+            </DropdownMenu> */}
 
             <Link to="/ticketing/timetable">
               <MenuItem>상영 시간표</MenuItem>

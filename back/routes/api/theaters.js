@@ -44,7 +44,7 @@ router.get("/", async (req, res) => {
   const ftdata = [];
   if (req.isAuthenticated()) {
     const fts = await select(
-      "select theater.* from theater join favoritetheater on theater.id = favoritetheater.theater_id where favoritetheater.user_id = ?",
+      "select distinct theater.* from theater join favoritetheater on theater.id = favoritetheater.theater_id where favoritetheater.user_id = ?",
       [req.user.user_id]
     );
     for (const ft of fts) {
@@ -63,11 +63,44 @@ router.get("/", async (req, res) => {
   return res.json({ allTheaterList: data, favTheaterList: ftdata });
 });
 
-router.post("/favoritetheater", async (req, res) => {
+router.get("/favoritetheater", isLoggedIn, async (req, res) => {
+  const ftdata = [];
+  if (req.isAuthenticated()) {
+    const fts = await select(
+      "select distinct theater.* from theater join favoritetheater on theater.id = favoritetheater.theater_id where favoritetheater.user_id = ?",
+      [req.user.user_id]
+    );
+    for (const ft of fts) {
+      ftdata.push({
+        areacode: ft.areacode,
+        theatercode: ft.id,
+        theatername: ft.name,
+        address: ft.address,
+        tele: "1544-9801",
+        totalscreens: ft.totalscreens,
+        totalseats: ft.totalseats
+      });
+    }
+  }
+  return res.json(ftdata);
+});
+
+router.post("/favoritetheater", isLoggedIn, async (req, res) => {
   const { theaterid } = req.body.data;
   await change([
     {
       sql: "insert into favoritetheater(user_id, theater_id) values(?, ?)",
+      args: [req.user.user_id, theaterid]
+    }
+  ]);
+  return res.json({ info: "ok" });
+});
+
+router.post("/deletefavoritetheater", isLoggedIn, async (req, res) => {
+  const { theaterid } = req.body.data;
+  await change([
+    {
+      sql: "delete from favoritetheater where user_id = ? and theater_id = ?",
       args: [req.user.user_id, theaterid]
     }
   ]);
@@ -164,7 +197,10 @@ router.get("/timetable", async (req, res) => {
           seats: []
         });
       }
-      const isFull = await select("select * from ticket where seat_id = ? and timetable_id = ?", [seat.seatid, timetable.timetableid]);
+      const isFull = await select(
+        "select * from ticket where seat_id = ? and timetable_id = ?",
+        [seat.seatid, timetable.timetableid]
+      );
       seatList[index].seats.push({
         seatid: seat.seatid,
         row: seat.row_num,

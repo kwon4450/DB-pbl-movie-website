@@ -18,16 +18,15 @@ class TimeTablePage extends Component {
       .get("/api/theaters")
       .then(res => {
         if (typeof res.data === "object") {
-          this.setState({
-            allTheaterList: res.data.allTheaterList,
-            favTheaterList: res.data.favTheaterList
-          });
-
           if (res.data.favTheaterList.length === 0) {
             this.selectTheater(res.data.allTheaterList[0].theaterList[0]);
           } else {
             this.selectTheater(res.data.favTheaterList[0]);
           }
+          this.setState({
+            allTheaterList: res.data.allTheaterList,
+            favTheaterList: res.data.favTheaterList
+          });
         } else {
           this.selectTheater();
           console.log(res.data, "get theaterList err");

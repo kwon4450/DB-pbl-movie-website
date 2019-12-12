@@ -72,7 +72,7 @@ class LogIn extends Component {
             </li>
           </ul>
         </form>
-        <div>
+        {/* <div>
           <ul>
             <li>
               <Link to="">아이디 찾기</Link>
@@ -84,7 +84,7 @@ class LogIn extends Component {
               <Link to="/user/join">회원가입</Link>
             </li>
           </ul>
-        </div>
+        </div> */}
       </div>
     );
   }

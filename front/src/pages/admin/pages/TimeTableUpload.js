@@ -8,7 +8,8 @@ class TimeTableUpload extends Component {
     this.state = {
       allTheaterList: null,
       area: null,
-      theater: null
+      theater: null,
+      date: null
     };
 
     axios
@@ -50,7 +51,7 @@ class TimeTableUpload extends Component {
 
     let data = {
       theatercode: this.state.theater,
-      date: '2019-12-13',
+      date: this.state.date,
       json: uploadedData
     };
     axios
@@ -94,6 +95,13 @@ class TimeTableUpload extends Component {
                 );
               })}
           </select>
+          <input
+            type="date"
+            onChange={e => {
+              console.log(e.target.value);
+              this.setState({ date: e.target.value });
+            }}
+          ></input>
           <input
             type="file"
             id="timeTableFile"

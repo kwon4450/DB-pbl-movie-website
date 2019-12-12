@@ -16,7 +16,16 @@ class TheaterSelector extends Component {
     };
   }
 
+  componentDidMount() {
+    let index = this.props.allTheaterList
+      .map(area => area.areacode)
+      .indexOf(this.props.selectedTheater.areacode);
+    console.log(index);
+    this.setState({ tabIndex: index });
+  }
+
   handleState = index => {
+    console.log("handleState");
     this.setState({
       tabIndex: index
     });
@@ -65,7 +74,8 @@ class TheaterSelector extends Component {
                     <li key={theater.theatercode}>
                       <div
                         className={`item${
-                          this.props.selectedTheater === theater
+                          this.props.selectedTheater.theatercode ===
+                          theater.theatercode
                             ? " selected"
                             : ""
                         }`}
