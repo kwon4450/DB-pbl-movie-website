@@ -37,8 +37,8 @@ router.post("/", isLoggedIn, async (req, res) => {
   });
   for (const seat of seats) {
     querys.push({
-      sql: "insert into ticket(reservation_id, seat_id) values(?, ?)",
-      args: [reserid, seat.seatid]
+      sql: "insert into ticket(reservation_id, timetable_id, seat_id) values(?, ?, ?)",
+      args: [reserid, timetable_id, seat.seatid]
     });
   }
   try {

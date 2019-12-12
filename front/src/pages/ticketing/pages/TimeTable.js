@@ -54,6 +54,7 @@ class TimeTablePage extends Component {
           allTheaterList={this.state.allTheaterList}
           favTheaterList={this.state.favTheaterList}
           selectTheater={this.selectTheater}
+          selectedTheater={this.state.selectedTheater}
         ></TheaterSelector>
       );
     } else {

@@ -4,12 +4,23 @@ import { Link } from "react-router-dom";
 import "./style/Screen.css";
 
 class Screen extends Component {
+  getLeftSeat = seatList => {
+    let left = 0;
+    for (const seatSection of seatList) {
+      for (const seat of seatSection.seats) {
+        if (!seat.full) left += 1;
+      }
+    }
+    return left;
+  };
+
   getTime = item => {
     let time = `${item.starttime.slice(0, 2)}:${item.starttime.slice(
       2
     )} ~ ${item.endtime.slice(0, 2)}:${item.endtime.slice(2)}`;
     return time;
   };
+
   render() {
     return (
       <div className="Screen">
@@ -34,7 +45,9 @@ class Screen extends Component {
               >
                 <div className="item">
                   <div className="time">{this.getTime(item)}</div>
-                  <div className="seatLeft">{item.seatList.length}좌석</div>
+                  <div className="seatLeft">
+                    {this.getLeftSeat(item.seatList)}좌석
+                  </div>
                 </div>
               </Link>
             );
