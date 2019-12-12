@@ -121,7 +121,7 @@ router.get("/timetable", async (req, res) => {
       };
     }
     let endtime = String(
-      parseInt(timetable.starttime) + timetable.runningtime + 10
+      parseInt(timetable.starttime) + parseInt(timetable.runningtime) + 10
     );
     while (endtime.length != 4) endtime = "0" + endtime;
     const timetableindex =
@@ -134,8 +134,8 @@ router.get("/timetable", async (req, res) => {
     });
     let seatList = [];
     const seats = await select(
-      "select ticket.id ticketid, seat.id seatid, seat.row_index, seat.col_index, seat.row_num, seat.col_num from seat left outer join ticket on ticket.seat_id = seat.id inner join screen on screen.id = seat.screen_id inner join timetable on timetable.screen_id = screen.id where timetable.id = ?",
-      [timetable.timetableid]
+      "select id seatid, row_index, col_index, row_num, col_num from seat where screen_id = ?",
+      [timetable.screenid]
     );
     for (const seat of seats) {
       let index = -1;
@@ -156,13 +156,15 @@ router.get("/timetable", async (req, res) => {
           seats: []
         });
       }
+      const isFull = await select("select * from ticket where seat_id = ? and timetable_id = ?", [seat.seatid, timetable.timetableid]);
       seatList[index].seats.push({
         seatid: seat.seatid,
         row: seat.row_num,
         col: seat.col_num,
-        full: seat.ticketid === null ? false : true
+        full: isFull.length ? true : false
       });
     }
+
     data[movieindex].screenList[screenindex].timetableList[
       timetableindex
     ].seatList = seatList;

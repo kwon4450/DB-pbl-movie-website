@@ -210,7 +210,7 @@ router.get("/mypage", isLoggedIn, async (req, res) => {
         starttime: ticket.starttime,
         endtime: endtime,
         theaterid: ticket.theaterid,
-        thaetername: ticket.thaetername,
+        theatername: ticket.theatername,
         screenid: ticket.screenid,
         screenname: ticket.screenname,
         seatList: []
