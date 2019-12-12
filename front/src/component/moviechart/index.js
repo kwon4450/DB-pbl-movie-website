@@ -8,7 +8,7 @@ class MovieChart extends Component {
     console.log(this.props);
     return (
       <div className="MovieChart">
-        <div className="num">No.{this.props.num}</div>
+        <div className="num">No.{this.props.no}</div>
         <div className="img">
           <Link
             to={{
