@@ -1,4 +1,4 @@
-const { isLoggedIn } = require('../middleware');
+const { isLoggedIn } = require("../middleware");
 
 const express = require("express");
 const { select, change } = require("../../db");
@@ -41,9 +41,12 @@ router.get("/", async (req, res) => {
     });
   }
 
-  const ftdata = []
+  const ftdata = [];
   if (req.isAuthenticated()) {
-    const fts = await select("select theater.* from theater join favoritetheater on theater.id = favoritetheater.theater_id where favoritetheater.user_id = ?", [req.user.user_id]);
+    const fts = await select(
+      "select theater.* from theater join favoritetheater on theater.id = favoritetheater.theater_id where favoritetheater.user_id = ?",
+      [req.user.user_id]
+    );
     for (const ft of fts) {
       ftdata.push({
         areacode: ft.areacode,
@@ -53,34 +56,39 @@ router.get("/", async (req, res) => {
         tele: "1544-9801",
         totalscreens: ft.totalscreens,
         totalseats: ft.totalseats
-      })
+      });
     }
   }
 
   return res.json({ allTheaterList: data, favTheaterList: ftdata });
 });
 
-router.post('/favoritetheater', async (req, res) => {
-  const { theaterid } = req.body;
-  await change([{sql: "insert into favoritetheater(user_id, theater_id) values(?, ?)", args: [req.user.user_id, theaterid]}]);
+router.post("/favoritetheater", async (req, res) => {
+  const { theaterid } = req.body.data;
+  await change([
+    {
+      sql: "insert into favoritetheater(user_id, theater_id) values(?, ?)",
+      args: [req.user.user_id, theaterid]
+    }
+  ]);
   return res.json({ info: "ok" });
-})
+});
 
 router.get("/timetable", async (req, res) => {
   const { theatercode, date } = req.query;
   console.log(theatercode, date);
-  require('date-utils');
+  require("date-utils");
   let d = new Date();
-  let dt = d.toFormat('YYYYMMDD HH24MI');
-  const nowDate = dt.split(' ')[0];
-  const nowTime = dt.split(' ')[1];
+  let dt = d.toFormat("YYYYMMDD HH24MI");
+  const nowDate = dt.split(" ")[0];
+  const nowTime = dt.split(" ")[1];
   if (parseInt(nowDate.replace(/-/gi, "")) > date) return res.json([]);
   const timetables = await select(
     "select movie.id movieid, movie.movie_title movietitle, movie.grade grade, movie.genre genre, movie.runnung_time runningtime, movie.opening_date releasedate, screen.id screenid, screen.name screenname, timetable.id timetableid, timetable.screen_type screentype, screen.totalseats totalseats, timetable.start_time starttime from theater join screen on theater.id = screen.theater_id join timetable on screen.id = timetable.screen_id join movie on movie.id = timetable.movie_id where theater.id = ? and timetable.start_date = ? order by starttime",
     [theatercode, date]
   );
   const data = [];
-  
+
   console.log(nowDate, nowTime);
   for (const timetable of timetables) {
     if (parseInt(timetable.starttime) + 20 < parseInt(nowTime)) continue;

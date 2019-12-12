@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 
+import "./style/mypage.css";
+
 class Mypage extends Component {
   render() {
     console.log(this.props.data);
@@ -26,14 +28,20 @@ class Mypage extends Component {
         <div className="MyTicketing">
           {reservationList.map((reservation, index) => {
             return (
-              <div>
+              <div key={index}>
                 <div className="Ticket">
                   예매 번호 : {reservation.reservationcode}
                 </div>
                 <div>{reservation.movietitle}</div>
-                <div>관람극장 : {reservation.thaetername}</div>
+                <div>관람극장 : {reservation.theatername}</div>
                 <div>상영관 : {reservation.screenname}</div>
                 <div>관람일시 : {reservation.startdate}</div>
+                <div>
+                  시작시간 :{" "}
+                  {reservation.starttime.slice(0, 2) +
+                    ":" +
+                    reservation.starttime.slice(2)}
+                </div>
                 <div>결제정보 : {reservation.paymenttype}</div>
                 <div>
                   예매 좌석 :{" "}
